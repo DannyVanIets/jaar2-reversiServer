@@ -1,0 +1,6 @@
+D:\code\homework\servertechnology\testingSpelInConsole\bin\Debug\testingSpelInConsole.exe.config
+D:\code\homework\servertechnology\testingSpelInConsole\bin\Debug\testingSpelInConsole.exe
+D:\code\homework\servertechnology\testingSpelInConsole\bin\Debug\testingSpelInConsole.pdb
+D:\code\homework\servertechnology\testingSpelInConsole\obj\Debug\testingSpelInConsole.csprojAssemblyReference.cache
+D:\code\homework\servertechnology\testingSpelInConsole\obj\Debug\testingSpelInConsole.exe
+D:\code\homework\servertechnology\testingSpelInConsole\obj\Debug\testingSpelInConsole.pdb

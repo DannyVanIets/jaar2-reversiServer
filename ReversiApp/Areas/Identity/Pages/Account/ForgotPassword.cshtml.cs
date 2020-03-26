@@ -60,7 +60,9 @@ namespace ReversiApp.Areas.Identity.Pages.Account
                 await _emailSender.SendEmailAsync(
                     Input.Email,
                     "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    $"Beste meneer/mevrouw,<br><br>U kunt uw wachtwoord aanpassen voor Reversi door <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>hier</a> te klikken. Als u dit niet was, kunt u deze e-mail gewoon negeren.<br><br>Met vriendelijke groet,<br><br>DannyvanIets");
+
+                await Task.Delay(1000);
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }

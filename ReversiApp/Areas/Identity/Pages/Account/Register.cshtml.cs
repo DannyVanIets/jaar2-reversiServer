@@ -90,7 +90,7 @@ namespace ReversiApp.Areas.Identity.Pages.Account
                         protocol: Request.Scheme);
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                        $"Beste meneer/mevrouw,<br><br>U kunt uw account activeren door <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>hier</a> te klikken. Als u niet zich heeft opgegeven om mee te doen met Reversi, kunt u deze e-mail negeren.<br><br>Met vriendelijke groet,<br><br>DannyvanIets");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

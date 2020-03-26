@@ -1140,6 +1140,18 @@
           }
         }
       },
+      "SendGrid/9.13.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/SendGrid.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SendGrid.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4427,6 +4439,26 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "SendGrid/9.13.1": {
+      "sha512": "a0RA3c4wcjwucH8HTwOtw3Wd/ea71P4hbHxWgJ3mojsyPx2vJigMjl0xVgVOwnaaPPyB7Mfg3hlNahi9Y5IpqQ==",
+      "type": "package",
+      "path": "sendgrid/9.13.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/SendGrid.dll",
+        "lib/net452/SendGrid.pdb",
+        "lib/net452/SendGrid.xml",
+        "lib/netstandard1.3/SendGrid.dll",
+        "lib/netstandard1.3/SendGrid.pdb",
+        "lib/netstandard1.3/SendGrid.xml",
+        "lib/netstandard2.0/SendGrid.dll",
+        "lib/netstandard2.0/SendGrid.pdb",
+        "lib/netstandard2.0/SendGrid.xml",
+        "sendgrid.9.13.1.nupkg.sha512",
+        "sendgrid.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -8492,7 +8524,8 @@
       "Microsoft.EntityFrameworkCore >= 3.1.3",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.3",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
+      "SendGrid >= 9.13.1"
     ]
   },
   "packageFolders": {
@@ -8502,11 +8535,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiApp\\ReversiApp.csproj",
+      "projectUniqueName": "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj",
       "projectName": "ReversiApp",
-      "projectPath": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiApp\\ReversiApp.csproj",
+      "projectPath": "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj",
       "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
-      "outputPath": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiApp\\obj\\",
+      "outputPath": "D:\\code\\git\\reversiServer\\ReversiApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8561,6 +8594,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.1, )"
+          },
+          "SendGrid": {
+            "target": "Package",
+            "version": "[9.13.1, )"
           }
         },
         "imports": [

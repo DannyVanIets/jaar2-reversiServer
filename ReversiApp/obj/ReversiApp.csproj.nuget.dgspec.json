@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiApp\\ReversiApp.csproj": {}
+    "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj": {}
   },
   "projects": {
-    "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiApp\\ReversiApp.csproj": {
+    "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiApp\\ReversiApp.csproj",
+        "projectUniqueName": "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj",
         "projectName": "ReversiApp",
-        "projectPath": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiApp\\ReversiApp.csproj",
+        "projectPath": "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj",
         "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiApp\\obj\\",
+        "outputPath": "D:\\code\\git\\reversiServer\\ReversiApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -66,6 +66,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.13.1, )"
             }
           },
           "imports": [

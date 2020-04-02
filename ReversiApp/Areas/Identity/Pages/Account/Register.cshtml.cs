@@ -47,6 +47,10 @@ namespace ReversiApp.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [Display(Name = "Gebruikersnaam")]
+            public string UserName { get; set; }
+
+            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
@@ -54,13 +58,16 @@ namespace ReversiApp.Areas.Identity.Pages.Account
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Wachtwoord")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
+            [Display(Name = "Wachtwoord bevestigen")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Display(Name = "Rol")]
+            public string Rol { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -91,6 +98,8 @@ namespace ReversiApp.Areas.Identity.Pages.Account
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"Beste meneer/mevrouw,<br><br>U kunt uw account activeren door <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>hier</a> te klikken. Als u niet zich heeft opgegeven om mee te doen met Reversi, kunt u deze e-mail negeren.<br><br>Met vriendelijke groet,<br><br>DannyvanIets");
+
+                    Task.Delay(1000);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

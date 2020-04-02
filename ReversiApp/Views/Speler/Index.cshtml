@@ -1,10 +1,11 @@
-﻿@model IEnumerable<ReversiApp.Models.SpelerModel>
+﻿@model IEnumerable<UserAndRolesModel>
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Alle spelers</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,19 +14,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Naam)
+                @Html.DisplayNameFor(model => model.UserName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Wachtwoord)
+                @Html.DisplayNameFor(model => model.EmailConfirmed)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Rol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Token)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Kleur)
@@ -34,32 +32,30 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Naam)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Wachtwoord)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rol)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Token)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Kleur)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.SpelerId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.SpelerId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.SpelerId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var speler in Model)
+        {
+            <tr>
+                <td> 
+                    @Html.DisplayFor(modelItem => speler.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => speler.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => speler.EmailConfirmed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => speler.Rol)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => speler.Kleur)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@speler.UserId">Edit</a>
+                    <a asp-action="Details" asp-route-id="@speler.UserId">Details</a>
+                    <a asp-action="Delete" asp-route-id="@speler.UserId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

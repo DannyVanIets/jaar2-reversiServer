@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -42,9 +43,15 @@ namespace ReversiApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            //For sending an e-mail
+            //For sending an e-mail=
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
+
+            //For redirecting always to the login page and email inactivity timeout
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Identity/Account/Login";
+            });
 
             services.AddRazorPages();
         }
@@ -73,7 +80,8 @@ namespace ReversiApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}").RequireAuthorization();
+                //endpoints.MapDefaultControllerRoute().RequireAuthorization();
                 endpoints.MapRazorPages();
             });
         }

@@ -1,58 +1,49 @@
-﻿@model ReversiApp.Models.SpelerModel
+﻿@using ReversiApp.Areas.Identity.Pages.Account;
+@model RegisterModel
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+<h1>Create new account</h1>
 
-<h4>Speler</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h4>Create a new account.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Naam" class="control-label"></label>
-                <input asp-for="Naam" class="form-control" />
-                <span asp-validation-for="Naam" class="text-danger"></span>
+                <label asp-for="Input.UserName"></label>
+                <input asp-for="Input.UserName" class="form-control" />
+                <span asp-validation-for="Input.UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Wachtwoord" class="control-label"></label>
-                <input asp-for="Wachtwoord" class="form-control" />
-                <span asp-validation-for="Wachtwoord" class="text-danger"></span>
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Rol" class="control-label"></label>
-                <input asp-for="Rol" class="form-control" />
-                <span asp-validation-for="Rol" class="text-danger"></span>
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Token" class="control-label"></label>
-                <input asp-for="Token" class="form-control" />
-                <span asp-validation-for="Token" class="text-danger"></span>
+                <label asp-for="Input.Rol" class="control-label"></label>
+                <select asp-for="Input.Rol" asp-items="ViewBag.Rollen" class="form-control"></select>
+                <span asp-validation-for="Input.Rol" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Kleur" class="control-label"></label>
-                <select asp-for="Kleur" asp-items="new SelectList(Enum.GetValues(typeof(Kleur)))" class="form-control"></select>
-                <span asp-validation-for="Kleur" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+            <button type="submit" class="btn btn-primary">Aanmaken</button>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <partial name="_ValidationScriptsPartial" />
 }

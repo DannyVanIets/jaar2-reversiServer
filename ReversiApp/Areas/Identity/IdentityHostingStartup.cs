@@ -20,8 +20,9 @@ namespace ReversiApp.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("IdentityContextConnection")));
 
-                services.AddDefaultIdentity<Speler>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<IdentityContext>();
+                services.AddIdentity<Speler, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddEntityFrameworkStores<IdentityContext>()
+                    .AddDefaultTokenProviders();
             });
         }
     }

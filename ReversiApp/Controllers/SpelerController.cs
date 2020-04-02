@@ -18,13 +18,13 @@ using ReversiApp.Models;
 
 namespace ReversiApp.Controllers
 {
-    public class AccountController : Controller
+    public class SpelerController : Controller
     {
         private readonly UserManager<Speler> UserManager;
         private readonly RoleManager<IdentityRole> RoleManager;
         private readonly ILogger<RegisterModel> Logger;
 
-        public AccountController(UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager,
+        public SpelerController(UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager,
             ILogger<RegisterModel> logger)
         {
             UserManager = userManager;
@@ -33,7 +33,7 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
         {
             List<UserAndRolesModel> users = new List<UserAndRolesModel>();
@@ -70,7 +70,7 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public IActionResult AlleRollen() => View(RoleManager.Roles.ToList());
 
         [HttpGet]

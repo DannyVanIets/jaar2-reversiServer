@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eCftfZxfquCWbs+92y5ZAw/lDH5ObvBnpnViWyLEwY4/8KCVYs8qEXhaT32TMIdOvae2mLUHu20DQM1VasFn4w==",
+  "dgSpecHash": "FSvYIHWfqQL/ciQ3r6sHKGo0F6KnmROM2rV3qVBXRhoyhCDOqd2s3dR8n0j1YlnUtSgKNftygsH7OwQoJnejjQ==",
   "success": true,
-  "projectFilePath": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiApp\\ReversiApp.csproj",
+  "projectFilePath": "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Danny\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",
     "C:\\Users\\Danny\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.3\\microsoft.aspnetcore.cryptography.keyderivation.3.1.3.nupkg.sha512",
@@ -80,6 +80,7 @@
     "C:\\Users\\Danny\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Danny\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Danny\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\sendgrid\\9.13.1\\sendgrid.9.13.1.nupkg.sha512",
     "C:\\Users\\Danny\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\Danny\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\Danny\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

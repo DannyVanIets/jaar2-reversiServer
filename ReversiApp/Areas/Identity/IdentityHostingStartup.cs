@@ -22,7 +22,8 @@ namespace ReversiApp.Areas.Identity
 
                 services.AddIdentity<Speler, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<IdentityContext>()
-                    .AddDefaultTokenProviders();
+                    .AddDefaultTokenProviders()
+                    .AddDefaultUI();
             });
         }
     }

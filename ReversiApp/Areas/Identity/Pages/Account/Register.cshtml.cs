@@ -84,6 +84,7 @@ namespace ReversiApp.Areas.Identity.Pages.Account
             {
                 var user = new Speler { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
@@ -99,7 +100,7 @@ namespace ReversiApp.Areas.Identity.Pages.Account
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"Beste meneer/mevrouw,<br><br>U kunt uw account activeren door <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>hier</a> te klikken. Als u niet zich heeft opgegeven om mee te doen met Reversi, kunt u deze e-mail negeren.<br><br>Met vriendelijke groet,<br><br>DannyvanIets");
 
-                    Task.Delay(1000);
+                    await Task.Delay(1000);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

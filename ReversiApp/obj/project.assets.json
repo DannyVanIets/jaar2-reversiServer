@@ -1140,7 +1140,7 @@
           }
         }
       },
-      "SendGrid/9.13.1": {
+      "SendGrid/9.13.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "9.0.1"
@@ -4441,10 +4441,10 @@
         "version.txt"
       ]
     },
-    "SendGrid/9.13.1": {
-      "sha512": "a0RA3c4wcjwucH8HTwOtw3Wd/ea71P4hbHxWgJ3mojsyPx2vJigMjl0xVgVOwnaaPPyB7Mfg3hlNahi9Y5IpqQ==",
+    "SendGrid/9.13.2": {
+      "sha512": "wtdeav+dxC9jGEH0NQxT8IEEs39OEvyN4MS05eLyGXo6Uors7syA/SghrLZUcAnXjRHN0ay25Z2UgI/KFlxTZQ==",
       "type": "package",
-      "path": "sendgrid/9.13.1",
+      "path": "sendgrid/9.13.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4457,7 +4457,7 @@
         "lib/netstandard2.0/SendGrid.dll",
         "lib/netstandard2.0/SendGrid.pdb",
         "lib/netstandard2.0/SendGrid.xml",
-        "sendgrid.9.13.1.nupkg.sha512",
+        "sendgrid.9.13.2.nupkg.sha512",
         "sendgrid.nuspec"
       ]
     },
@@ -8525,11 +8525,12 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.3",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
-      "SendGrid >= 9.13.1"
+      "SendGrid >= 9.13.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Danny\\.nuget\\packages\\": {}
+    "C:\\Users\\Danny\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -8540,6 +8541,9 @@
       "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
       "outputPath": "D:\\code\\git\\reversiServer\\ReversiApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -8593,7 +8597,7 @@
           },
           "SendGrid": {
             "target": "Package",
-            "version": "[9.13.1, )"
+            "version": "[9.13.2, )"
           }
         },
         "imports": [
@@ -8614,7 +8618,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

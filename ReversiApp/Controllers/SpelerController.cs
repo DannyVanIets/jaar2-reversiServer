@@ -33,39 +33,60 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> Index()
         {
             List<UserAndRolesModel> users = new List<UserAndRolesModel>();
-            var role = "Normal";
 
             foreach (var user in UserManager.Users)
             {
-                if (await UserManager.IsInRoleAsync(user, "Moderator"))
-                {
-                    role = "Moderator";
-                }
-                else if (await UserManager.IsInRoleAsync(user, "Admin"))
-                {
-                    role = "Admin";
-                }
+                string rol = await ReturnRoleAsync(user);
 
-                users.Add(new UserAndRolesModel
+                if (User.IsInRole("Moderator") && rol == "Normal" && !user.Archived || User.IsInRole("Admin") && !user.Archived)
                 {
-                    UserId = user.Id,
-                    UserName = user.UserName,
-                    Email = user.Email,
-                    EmailConfirmed = user.EmailConfirmed,
-                    Rol = role,
-                    Kleur = user.Kleur
-                });
+                    users.Add(new UserAndRolesModel
+                    {
+                        UserId = user.Id,
+                        UserName = user.UserName,
+                        Email = user.Email,
+                        EmailConfirmed = user.EmailConfirmed,
+                        TwoFactorEnabled = user.TwoFactorEnabled,
+                        Rol = rol,
+                        Kleur = user.Kleur,
+                        Highscore = user.Highscore
+                    });
+                }
             }
             return View(users);
         }
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public IActionResult AlleRollen() => View(RoleManager.Roles.ToList());
+        public async Task<IActionResult> ArchivedAsync()
+        {
+            List<UserAndRolesModel> users = new List<UserAndRolesModel>();
+
+            foreach (var user in UserManager.Users)
+            {
+                string rol = await ReturnRoleAsync(user);
+
+                if (User.IsInRole("Admin") && user.Archived)
+                {
+                    users.Add(new UserAndRolesModel
+                    {
+                        UserId = user.Id,
+                        UserName = user.UserName,
+                        Email = user.Email,
+                        EmailConfirmed = user.EmailConfirmed,
+                        TwoFactorEnabled = user.TwoFactorEnabled,
+                        Rol = rol,
+                        Kleur = user.Kleur,
+                        Highscore = user.Highscore
+                    });
+                }
+            }
+            return View(users);
+        }
 
         [HttpGet]
         public IActionResult Create()
@@ -87,7 +108,7 @@ namespace ReversiApp.Controllers
             {
                 var claims = new List<Claim>();
 
-                var user = new Speler { UserName = Input.Email, Email = Input.Email };
+                var user = new Speler { UserName = Input.Email, Email = Input.Email, EmailConfirmed = true };
                 var result = await UserManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -113,7 +134,6 @@ namespace ReversiApp.Controllers
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-
             // If we got this far, something failed, redisplay form
             return View();
         }
@@ -128,16 +148,7 @@ namespace ReversiApp.Controllers
                 return NotFound();
             }
 
-            var role = "Normal";
-
-            if (await UserManager.IsInRoleAsync(userInformation, "Moderator"))
-            {
-                role = "Moderator";
-            }
-            else if (await UserManager.IsInRoleAsync(userInformation, "Admin"))
-            {
-                role = "Admin";
-            }
+            string rol = await ReturnRoleAsync(userInformation);
 
             var speler = new UserAndRolesModel
             {
@@ -145,10 +156,12 @@ namespace ReversiApp.Controllers
                 UserName = userInformation.UserName,
                 Email = userInformation.Email,
                 EmailConfirmed = userInformation.EmailConfirmed,
-                Rol = role,
-                Kleur = userInformation.Kleur
+                TwoFactorEnabled = userInformation.TwoFactorEnabled,
+                Rol = rol,
+                Kleur = userInformation.Kleur,
+                Highscore = userInformation.Highscore,
+                Archived = userInformation.Archived,
             };
-            
             return View(speler);
         }
 
@@ -164,25 +177,16 @@ namespace ReversiApp.Controllers
 
             ViewBag.Rollen = new SelectList(RoleManager.Roles);
 
-            var role = "Normal";
-
-            if (await UserManager.IsInRoleAsync(userInformation, "Moderator"))
-            {
-                role = "Moderator";
-            }
-            else if (await UserManager.IsInRoleAsync(userInformation, "Admin"))
-            {
-                role = "Admin";
-            }
+            string rol = await ReturnRoleAsync(userInformation);
 
             var speler = new UserAndRolesModel
             {
                 UserId = userInformation.Id,
                 UserName = userInformation.UserName,
                 Email = userInformation.Email,
-                Rol = role
+                TwoFactorEnabled = userInformation.TwoFactorEnabled,
+                Rol = rol
             };
-
             return View(speler);
         }
 
@@ -195,25 +199,21 @@ namespace ReversiApp.Controllers
 
             if (speler != null)
             {
-                speler.UserName = userAndRoles.UserName;
-                speler.Email = userAndRoles.Email;
+                if(User.IsInRole("Admin"))
+                {
+                    speler.UserName = userAndRoles.Email;
+                    speler.Email = userAndRoles.Email;
+                    speler.Highscore = userAndRoles.Highscore;
+                }
+                speler.TwoFactorEnabled = userAndRoles.TwoFactorEnabled;
 
                 var result = await UserManager.UpdateAsync(speler);
-                
+
                 var claims = new List<Claim>();
 
-                if (result.Succeeded)
+                if (result.Succeeded && User.IsInRole("Admin"))
                 {
-                    var rol = "Normal";
-
-                    if (await UserManager.IsInRoleAsync(speler, "Moderator"))
-                    {
-                        rol = "Moderator";
-                    }
-                    else if (await UserManager.IsInRoleAsync(speler, "Admin"))
-                    {
-                        rol = "Admin";
-                    }
+                    string rol = await ReturnRoleAsync(speler);
 
                     if (rol != userAndRoles.Rol)
                     {
@@ -233,18 +233,60 @@ namespace ReversiApp.Controllers
 
                         var claimResult = await UserManager.AddClaimsAsync(speler, claims);
                     }
-
                     var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
                     Logger.LogInformation("De admin " + loggedinUser.UserName + " changed the account with the name " + Input.Email + ".");
-
-                    return RedirectToAction(nameof(Index));
                 }
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
+                return RedirectToAction(nameof(Index));
+            }
+            // If we got this far, something failed, redisplay form
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ArchiveSpeler(string id)
+        {
+            var userInformation = await UserManager.FindByIdAsync(id);
+
+            if (userInformation == null)
+            {
+                return NotFound();
             }
 
+            var speler = new UserAndRolesModel
+            {
+                UserId = userInformation.Id,
+                Archived = userInformation.Archived
+            };
+            return View(speler);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ArchiveSpeler(UserAndRolesModel userAndRoles)
+        {
+            Speler speler = await UserManager.FindByIdAsync(userAndRoles.UserId);
+
+            if (speler != null)
+            {
+                speler.Archived = userAndRoles.Archived;
+
+                var result = await UserManager.UpdateAsync(speler);
+
+                if (result.Succeeded && User.IsInRole("Admin"))
+                {
+                    var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
+                    Logger.LogInformation("De admin " + loggedinUser.UserName + " archived the account with the email " + Input.Email + ".");
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                return RedirectToAction(nameof(Index));
+            }
             // If we got this far, something failed, redisplay form
             return View();
         }
@@ -259,16 +301,7 @@ namespace ReversiApp.Controllers
                 return NotFound();
             }
 
-            var role = "Normal";
-
-            if (await UserManager.IsInRoleAsync(userInformation, "Moderator"))
-            {
-                role = "Moderator";
-            }
-            else if (await UserManager.IsInRoleAsync(userInformation, "Admin"))
-            {
-                role = "Admin";
-            }
+            string rol = await ReturnRoleAsync(userInformation);
 
             var speler = new UserAndRolesModel
             {
@@ -276,7 +309,7 @@ namespace ReversiApp.Controllers
                 UserName = userInformation.UserName,
                 Email = userInformation.Email,
                 EmailConfirmed = userInformation.EmailConfirmed,
-                Rol = role,
+                Rol = rol,
                 Kleur = userInformation.Kleur
             };
 
@@ -316,9 +349,22 @@ namespace ReversiApp.Controllers
                     }
                 }
             }
-
             // If we got this far, something failed, redisplay form
             return View();
+        }
+
+        public async Task<string> ReturnRoleAsync(Speler speler)
+        {
+            var rolNaam = "Normal";
+            if (await UserManager.IsInRoleAsync(speler, "Moderator"))
+            {
+                rolNaam = "Moderator";
+            }
+            else if (await UserManager.IsInRoleAsync(speler, "Admin"))
+            {
+                rolNaam = "Admin";
+            }
+            return rolNaam;
         }
     }
 }

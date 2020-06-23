@@ -12,5 +12,7 @@ namespace ReversiApp.Areas.Identity.Data
     {
         public string Token { get; set; }
         public Kleur Kleur { get; set; }
+        public int Highscore { get; set; }
+        public bool Archived { get; set; }
     }
 }

@@ -13,9 +13,8 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="UserId" />
             <div class="form-group">
-                <label>Authentication</label>
-                <input asp-for="Authentication" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <label asp-for="TwoFactorEnabled" class="control-label"></label>
+                @Html.CheckBoxFor(m => m.TwoFactorEnabled)
             </div>
             @if (User.IsInRole("Admin"))
             {
@@ -23,6 +22,11 @@
                     <label asp-for="Email"></label>
                     <input asp-for="Email" class="form-control" />
                     <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Highscore"></label>
+                    <input asp-for="Highscore" class="form-control" />
+                    <span asp-validation-for="Highscore" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Rol" class="control-label"></label>

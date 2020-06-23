@@ -62,6 +62,16 @@ namespace ReversiApp
         {
             Seeddata.Initialize(context, userManager, roleManager);
 
+            // Through this we don't need to use a middleware application.
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+                context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
+                context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
+                context.Response.Headers.Remove("X-Powered-By");
+                await next();
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

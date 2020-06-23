@@ -1,0 +1,33 @@
+﻿@model UserAndRolesModel
+
+@{
+    ViewData["Title"] = "ArchiveSpeler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Archiveren speler</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ArchiveSpeler">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserId" />
+            <div class="form-group">
+                <label asp-for="Archived" class="control-label"></label>
+                @Html.CheckBoxFor(m => m.Archived)
+            </div>
+            @if (Model.Archived)
+            {
+                <button type="submit" class="btn btn-primary">Terugzetten</button>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-primary">Archive</button>
+            }
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

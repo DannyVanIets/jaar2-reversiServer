@@ -35,7 +35,7 @@
         @foreach (var speler in Model)
         {
             <tr>
-                <td> 
+                <td>
                     @Html.DisplayFor(modelItem => speler.UserName)
                 </td>
                 <td>
@@ -52,8 +52,13 @@
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@speler.UserId">Edit</a>
-                    <a asp-action="Details" asp-route-id="@speler.UserId">Details</a>
-                    <a asp-action="Delete" asp-route-id="@speler.UserId">Delete</a>
+                    @{
+                        if (User.IsInRole("Admin"))
+                        { 
+                            <a asp-action="Details" asp-route-id="@speler.UserId">Details</a>
+                            <a asp-action="Delete" asp-route-id="@speler.UserId">Delete</a>
+                        }
+                    }
                 </td>
             </tr>
         }

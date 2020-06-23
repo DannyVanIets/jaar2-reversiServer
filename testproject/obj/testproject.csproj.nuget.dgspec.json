@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "D:\\code\\git\\revarsi\\ReversiRestApi\\testproject\\testproject.csproj": {}
+    "D:\\code\\git\\reversiServer\\testproject\\testproject.csproj": {}
   },
   "projects": {
-    "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiRestApi\\ReversiRestApi.csproj": {
+    "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiRestApi\\ReversiRestApi.csproj",
+        "projectUniqueName": "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj",
         "projectName": "ReversiRestApi",
-        "projectPath": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiRestApi\\ReversiRestApi.csproj",
+        "projectPath": "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj",
         "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiRestApi\\obj\\",
+        "outputPath": "D:\\code\\git\\reversiServer\\ReversiRestApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -58,22 +55,19 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\code\\git\\revarsi\\ReversiRestApi\\testproject\\testproject.csproj": {
+    "D:\\code\\git\\reversiServer\\testproject\\testproject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\git\\revarsi\\ReversiRestApi\\testproject\\testproject.csproj",
+        "projectUniqueName": "D:\\code\\git\\reversiServer\\testproject\\testproject.csproj",
         "projectName": "testproject",
-        "projectPath": "D:\\code\\git\\revarsi\\ReversiRestApi\\testproject\\testproject.csproj",
+        "projectPath": "D:\\code\\git\\reversiServer\\testproject\\testproject.csproj",
         "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\git\\revarsi\\ReversiRestApi\\testproject\\obj\\",
+        "outputPath": "D:\\code\\git\\reversiServer\\testproject\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -88,8 +82,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiRestApi\\ReversiRestApi.csproj": {
-                "projectPath": "D:\\code\\git\\revarsi\\ReversiRestApi\\ReversiRestApi\\ReversiRestApi.csproj"
+              "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj": {
+                "projectPath": "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj"
               }
             }
           }
@@ -134,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

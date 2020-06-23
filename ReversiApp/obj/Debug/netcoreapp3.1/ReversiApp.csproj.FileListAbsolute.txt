@@ -394,3 +394,5 @@ D:\code\git\reversiServer\ReversiApp\bin\Debug\netcoreapp3.1\SendGrid.dll
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.MvcApplicationPartsAssemblyInfo.cs
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.MvcApplicationPartsAssemblyInfo.cache
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Speler\AlleRollen.cshtml.g.cs
+D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.csproj.CoreCompileInputs.cache
+D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.genruntimeconfig.cache

@@ -47,10 +47,6 @@ namespace ReversiApp.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [Display(Name = "Gebruikersnaam")]
-            public string UserName { get; set; }
-
-            [Required]
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }

@@ -13,20 +13,23 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="UserId" />
             <div class="form-group">
-                <label asp-for="UserName"></label>
-                <input asp-for="UserName" class="form-control" />
-                <span asp-validation-for="UserName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email"></label>
-                <input asp-for="Email" class="form-control" />
+                <label>Authentication</label>
+                <input asp-for="Authentication" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Rol" class="control-label"></label>
-                <select asp-for="Rol" asp-items="ViewBag.Rollen" class="form-control"></select>
-                <span asp-validation-for="Rol" class="text-danger"></span>
-            </div>
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Rol" class="control-label"></label>
+                    <select asp-for="Rol" asp-items="ViewBag.Rollen" class="form-control"></select>
+                    <span asp-validation-for="Rol" class="text-danger"></span>
+                </div>
+            }
             <button type="submit" class="btn btn-primary">Aanpassen</button>
         </form>
     </div>

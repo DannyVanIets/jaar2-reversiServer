@@ -9,40 +9,58 @@ using System.Threading.Tasks;
 
 namespace ReversiApp.DAL
 {
-    public class Seeddata
+    public static class Seeddata
     {
-        private static readonly UserManager<Speler> UserManager;
-        private static readonly RoleManager<IdentityRole> RoleManager;
-
-        public static async Task InitializeAsync(IdentityContext context)
+        public static void Initialize(IdentityContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager)
         {
             context.Database.EnsureCreated();
 
-            await AddSpeler("DannyvanIets", "dannyvanbokhorst@live.nl", "Iets123", "Admin");
-            await AddSpeler("AMonkey", "amonkeyeatingicecream@live.nl", "Nogwat123", "Moderator");
+            AddRol(roleManager, "Admin").Wait();
+            AddRol(roleManager, "Moderator").Wait();
+            AddRol(roleManager, "Normal").Wait();
+
+            AddSpeler(userManager, roleManager, "dannyvanbokhorst@live.nl", "Iets-123", "Admin").Wait();
+            AddSpeler(userManager, roleManager, "amonkeyeatingicecream@live.nl", "Nogwat-123", "Moderator").Wait();
+            AddSpeler(userManager, roleManager, "test@live.nl", "Test-123", "Normal").Wait();
+            context.SaveChanges();
         }
 
-        private static async Task AddSpeler(string username, string email, string password, string rol)
-        { 
-            var userExists = await UserManager.FindByNameAsync(username);
+        private static async Task AddRol(RoleManager<IdentityRole> roleManager, string rolNaam)
+        {
+            var roleExists = await roleManager.FindByNameAsync(rolNaam);
+
+            if (roleExists == null)
+            {
+                var role = new IdentityRole { Name = rolNaam };
+                await roleManager.CreateAsync(role);
+            }
+        }
+
+        private static async Task AddSpeler(UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager, string email, string password, string rol)
+        {
+            var userExists = await userManager.FindByEmailAsync(email);
         
             //We voegen alleen een speler toe als het nog niet bestaat!
             if(userExists == null)
             {
                 var claims = new List<Claim>();
 
-                var user = new Speler { UserName = username, Email = email, EmailConfirmed = true };
-                var result = await UserManager.CreateAsync(user, password);
+                var speler = new Speler { UserName = email, Email = email, EmailConfirmed = true };
+                var result = await userManager.CreateAsync(speler, password);
 
                 if (result.Succeeded)
                 {
-                    var role = await RoleManager.FindByNameAsync(rol);
-                    await UserManager.AddToRoleAsync(user, role.Name);
+                    var role = await roleManager.FindByNameAsync(rol);
 
-                    claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
-                    claims.Add(new Claim(ClaimTypes.Role, role.Name));
+                    if(role != null)
+                    {
+                        await userManager.AddToRoleAsync(speler, role.Name);
 
-                    await UserManager.AddClaimsAsync(user, claims);
+                        claims.Add(new Claim(ClaimTypes.NameIdentifier, speler.Id));
+                        claims.Add(new Claim(ClaimTypes.Role, role.Name));
+
+                        await userManager.AddClaimsAsync(speler, claims);
+                    }
                 }
             }
         }

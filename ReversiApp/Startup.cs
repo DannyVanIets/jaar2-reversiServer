@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ReversiApp.Areas.Identity.Data;
 using ReversiApp.DAL;
 using ReversiApp.Data;
 using ReversiApp.Services;
@@ -57,9 +58,9 @@ namespace ReversiApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IdentityContext context)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IdentityContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager)
         {
-            Seeddata.InitializeAsync(context);
+            Seeddata.Initialize(context, userManager, roleManager);
 
             if (env.IsDevelopment())
             {

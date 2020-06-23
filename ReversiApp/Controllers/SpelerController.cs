@@ -33,7 +33,7 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
         {
             List<UserAndRolesModel> users = new List<UserAndRolesModel>();
@@ -41,7 +41,7 @@ namespace ReversiApp.Controllers
 
             foreach (var user in UserManager.Users)
             {
-                if (await UserManager.IsInRoleAsync(user, "Moderator") )
+                if (await UserManager.IsInRoleAsync(user, "Moderator"))
                 {
                     role = "Moderator";
                 }
@@ -49,28 +49,22 @@ namespace ReversiApp.Controllers
                 {
                     role = "Admin";
                 }
-                else if (await UserManager.IsInRoleAsync(user, "Normal"))
-                {
-                    role = "Normal";
-                }
 
                 users.Add(new UserAndRolesModel
-                    {
-                        UserId = user.Id,
-                        UserName = user.UserName,
-                        Email = user.Email,
-                        EmailConfirmed = user.EmailConfirmed,
-                        Rol = role,
-                        Kleur = user.Kleur
-                    }
-                );
+                {
+                    UserId = user.Id,
+                    UserName = user.UserName,
+                    Email = user.Email,
+                    EmailConfirmed = user.EmailConfirmed,
+                    Rol = role,
+                    Kleur = user.Kleur
+                });
             }
-
             return View(users);
         }
 
         [HttpGet]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult AlleRollen() => View(RoleManager.Roles.ToList());
 
         [HttpGet]
@@ -93,7 +87,7 @@ namespace ReversiApp.Controllers
             {
                 var claims = new List<Claim>();
 
-                var user = new Speler { UserName = Input.UserName, Email = Input.Email };
+                var user = new Speler { UserName = Input.Email, Email = Input.Email };
                 var result = await UserManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -110,7 +104,7 @@ namespace ReversiApp.Controllers
                     {
                         var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
 
-                        Logger.LogInformation("De admin " + loggedinUser.UserName + " created a new account with the name " + Input.UserName + ".");
+                        Logger.LogInformation("De admin " + loggedinUser.UserName + " created a new account with the name " + Input.Email + ".");
                         return RedirectToAction(nameof(Index));
                     }
                 }
@@ -241,7 +235,7 @@ namespace ReversiApp.Controllers
                     }
 
                     var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
-                    Logger.LogInformation("De admin " + loggedinUser.UserName + " changed the account with the name " + Input.UserName + ".");
+                    Logger.LogInformation("De admin " + loggedinUser.UserName + " changed the account with the name " + Input.Email + ".");
 
                     return RedirectToAction(nameof(Index));
                 }

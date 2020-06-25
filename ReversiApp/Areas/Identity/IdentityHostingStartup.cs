@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ReversiApp.Areas.Identity.Data;
-using ReversiApp.Data;
+using ReversiApp.DAL;
+using ReversiApp.Models;
 
 [assembly: HostingStartup(typeof(ReversiApp.Areas.Identity.IdentityHostingStartup))]
 namespace ReversiApp.Areas.Identity
@@ -16,14 +16,6 @@ namespace ReversiApp.Areas.Identity
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<IdentityContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("IdentityContextConnection")));
-
-                services.AddIdentity<Speler, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<IdentityContext>()
-                    .AddDefaultTokenProviders()
-                    .AddDefaultUI();
             });
         }
     }

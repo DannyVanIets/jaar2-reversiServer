@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using ReversiApp.Areas.Identity.Data;
+using ReversiApp.Models;
 
 namespace ReversiApp.Areas.Identity.Pages.Account.Manage
 {

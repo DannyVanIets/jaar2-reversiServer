@@ -12,9 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ReversiApp.Areas.Identity.Data;
 using ReversiApp.DAL;
-using ReversiApp.Data;
+using ReversiApp.Models;
 using ReversiApp.Services;
 
 namespace ReversiApp
@@ -32,8 +31,11 @@ namespace ReversiApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<SpelerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SpelerDatabase")));
-            services.AddDbContext<IdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityContextConnection")));
+            services.AddIdentity<Speler, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddEntityFrameworkStores<ReversiContext>()
+                    .AddDefaultTokenProviders()
+                    .AddDefaultUI();
+            services.AddDbContext<ReversiContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ReversiContextConnection")));
             services.AddMvc();
 
             //for the captcha
@@ -54,11 +56,13 @@ namespace ReversiApp
                 options.LoginPath = "/Identity/Account/Login";
             });
 
+            services.AddControllers().AddNewtonsoftJson();
+
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IdentityContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager)
         {
             Seeddata.Initialize(context, userManager, roleManager);
 

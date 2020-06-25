@@ -397,3 +397,4 @@ D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.csproj.C
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.genruntimeconfig.cache
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Speler\Archived.cshtml.g.cs
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Speler\ArchiveSpeler.cshtml.g.cs
+D:\code\git\reversiServer\ReversiApp\bin\Debug\netcoreapp3.1\web.config

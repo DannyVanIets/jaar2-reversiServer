@@ -10,7 +10,7 @@
     <h4>Spelers: 
     @foreach(var speler in Model.Spelers)
     {
-        @speler.Email
+        <p>@speler.Email (Highscore: @speler.Highscore, kleur: @speler.Kleur)</p>
         <br />
     }
     </h4>

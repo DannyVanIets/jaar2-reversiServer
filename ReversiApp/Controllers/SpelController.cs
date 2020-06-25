@@ -99,6 +99,7 @@ namespace ReversiApp.Controllers
 
                 Speler speler = await UserManager.FindByNameAsync(User.Identity.Name);
                 speler.SpelId = lastAddedGame.ID;
+                speler.Kleur = Kleur.Wit;
                 var result = await UserManager.UpdateAsync(speler);
 
                 return RedirectToAction(nameof(Game), new { ID = lastAddedGame.ID });
@@ -193,6 +194,7 @@ namespace ReversiApp.Controllers
             if (speler != null)
             {
                 speler.SpelId = id;
+                speler.Kleur = Kleur.Zwart;
                 var result = await UserManager.UpdateAsync(speler);
                 if (result.Succeeded)
                 {
@@ -230,6 +232,7 @@ namespace ReversiApp.Controllers
             if (speler != null && spel != null)
             {
                 speler.SpelId = null;
+                speler.Kleur = Kleur.Geen;
                 var result = await UserManager.UpdateAsync(speler);
                 if (result.Succeeded)
                 {

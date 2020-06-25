@@ -44,7 +44,7 @@ namespace ReversiApp.DAL
             {
                 var claims = new List<Claim>();
 
-                var speler = new Speler { UserName = email, Email = email, EmailConfirmed = true };
+                var speler = new Speler { UserName = email, Email = email, EmailConfirmed = true, Kleur = Kleur.Geen };
                 var result = await userManager.CreateAsync(speler, password);
 
                 if (result.Succeeded)

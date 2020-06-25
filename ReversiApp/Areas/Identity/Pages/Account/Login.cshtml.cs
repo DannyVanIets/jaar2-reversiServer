@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using ReversiApp.Areas.Identity.Data;
 using System.Net;
 using Newtonsoft.Json;
 using ReversiApp.Models;

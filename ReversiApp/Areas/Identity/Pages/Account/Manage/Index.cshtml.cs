@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using ReversiApp.Models;
+using ReversiApp.Areas.Identity.Data;
 
 namespace ReversiApp.Areas.Identity.Pages.Account.Manage
 {

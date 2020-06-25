@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using ReversiApp.Models;
+using ReversiApp.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 
 namespace ReversiApp.Areas.Identity.Pages.Account

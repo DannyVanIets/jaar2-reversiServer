@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using ReversiApp.Models;
+using ReversiApp.Areas.Identity.Data;
+using ReversiApp.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace ReversiApp.DAL
 {
     public static class Seeddata
     {
-        public static void Initialize(ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager)
+        public static void Initialize(IdentityContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager)
         {
             context.Database.EnsureCreated();
 

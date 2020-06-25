@@ -12,8 +12,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using ReversiApp.Models;
+using ReversiApp.Areas.Identity.Data;
 using ReversiApp.Areas.Identity.Pages.Account;
+using ReversiApp.Models;
 
 namespace ReversiApp.Controllers
 {

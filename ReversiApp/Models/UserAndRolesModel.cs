@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 
 namespace ReversiApp.Models
 {
-    public enum Kleur { Wit, Zwart, Geen }
-
     public class UserAndRolesModel
     {
         public string UserId { get; set; }

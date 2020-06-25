@@ -1,10 +1,5 @@
 ﻿using NUnit.Framework;
-using ScrabbleApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using testproject;
-using static testproject.Spel;
+using ReversiApp.Models;
 
 namespace NUnitTestProject1
 {

@@ -4,14 +4,14 @@
     "D:\\code\\git\\reversiServer\\testproject\\testproject.csproj": {}
   },
   "projects": {
-    "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj": {
+    "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj",
-        "projectName": "ReversiRestApi",
-        "projectPath": "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj",
+        "projectUniqueName": "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj",
+        "projectName": "ReversiApp",
+        "projectPath": "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj",
         "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
-        "outputPath": "D:\\code\\git\\reversiServer\\ReversiRestApi\\obj\\",
+        "outputPath": "D:\\code\\git\\reversiServer\\ReversiApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,46 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.17.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -82,8 +122,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj": {
-                "projectPath": "D:\\code\\git\\reversiServer\\ReversiRestApi\\ReversiRestApi.csproj"
+              "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj": {
+                "projectPath": "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj"
               }
             }
           }

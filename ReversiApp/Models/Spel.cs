@@ -8,6 +8,11 @@ using System.Threading.Tasks;
 
 namespace ReversiApp.Models
 {
+    // geen kleur = 0
+    // Wit = 1
+    // Zwart = 2
+    public enum Kleur { Geen, Wit, Zwart }
+
     //Deze enum gebruiken we om alle mogelijke richtingen toe te voegen in een lijst.
     //Die lijst gebruiken we om elke disk van kleur te veranderen als dat mogelijk is.
     //De naam van die lijst is RichtingMogelijk.

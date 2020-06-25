@@ -24,7 +24,7 @@ namespace ReversiApp.Areas.Identity.Pages.Account
         private readonly SignInManager<Speler> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<Speler> signInManager, 
+        public LoginModel(SignInManager<Speler> signInManager,
             ILogger<LoginModel> logger,
             UserManager<Speler> userManager)
         {
@@ -104,11 +104,11 @@ namespace ReversiApp.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return LocalRedirect(returnUrl);
+                    return LocalRedirect("/Spel");
                 }
                 if (result.RequiresTwoFactor)
                 {
-                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
+                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = "/Spel", RememberMe = Input.RememberMe });
                 }
                 if (result.IsLockedOut)
                 {

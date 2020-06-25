@@ -15,6 +15,5 @@ namespace ReversiApp.Models
         public bool Archived { get; set; }
         public int? SpelId { get; set; }
         public Spel Spel { get; set; }
-
     }
 }

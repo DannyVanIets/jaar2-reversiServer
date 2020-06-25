@@ -1,0 +1,28 @@
+﻿@model ReversiApp.Models.Spel
+
+@{
+    ViewData["Title"] = "Game";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h4>Omschrijving: @Html.DisplayFor(model => model.Omschrijving)</h4>
+    <h4>Spelers: 
+    @foreach(var speler in Model.Spelers)
+    {
+        @speler.Email
+        <br />
+    }
+    </h4>
+    <hr />
+    <div>
+        <p>Plek voor de javascript bord.</p>
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary">Aanpassen</a>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Dit spel verlaten" class="btn btn-danger" />
+    </form>
+</div>

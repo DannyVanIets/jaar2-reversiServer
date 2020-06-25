@@ -300,3 +300,4 @@ D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.csproj
 D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.dll
 D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.pdb
 D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.genruntimeconfig.cache
+D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\testhost.exe

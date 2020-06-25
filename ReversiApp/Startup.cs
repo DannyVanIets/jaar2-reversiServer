@@ -46,7 +46,7 @@ namespace ReversiApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            //For sending an e-mail=
+            //For sending an e-mail
             services.AddTransient<IEmailSender, EmailSender>();
             services.Configure<AuthMessageSenderOptions>(Configuration);
 
@@ -97,7 +97,7 @@ namespace ReversiApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}").RequireAuthorization();
+                    pattern: "{controller=Spel}/{action=Index}/{id?}").RequireAuthorization();
                 endpoints.MapRazorPages();
             });
         }

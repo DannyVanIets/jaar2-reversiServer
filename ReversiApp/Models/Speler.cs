@@ -13,5 +13,8 @@ namespace ReversiApp.Models
         public Kleur Kleur { get; set; }
         public int Highscore { get; set; }
         public bool Archived { get; set; }
+        public int? SpelId { get; set; }
+        public Spel Spel { get; set; }
+
     }
 }

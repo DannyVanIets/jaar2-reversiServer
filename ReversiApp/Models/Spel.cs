@@ -19,13 +19,13 @@ namespace ReversiApp.Models
         public int ID { get; set; }
         public string Omschrijving { get; set; }
         public string Token { get; set; }
-        public ICollection<Speler> Spelers { get; set; }
         [Required]
         public string SerializedBord { get => JsonConvert.SerializeObject(Bord); set => Bord = JsonConvert.DeserializeObject<Kleur[,]>(value); }
         [NotMapped]
         public Kleur[,] Bord { get; set; }
         public Kleur AandeBeurt { get; set; }
         private List<Richting> RichtingMogelijk { get; set; }
+        public ICollection<Speler> Spelers { get; set; }
 
         //Constructor
         public Spel()

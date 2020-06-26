@@ -32,7 +32,7 @@ namespace ReversiApp.Controllers
             {
                 return RedirectToAction(nameof(Game), new { ID = speler.SpelId });
             }
-            var spellen = await _context.Spel.Include(s => s.Spelers).Where(s => s.Spelers.Count < 2).ToListAsync();
+            var spellen = await _context.Spel.Include(s => s.Spelers).Where(s => s.Spelers.Count < 2 && s.Status == Status.NietGestart).ToListAsync();
             ViewBag.AantalSpellen = spellen.Count;
             return View(spellen);
         }
@@ -76,7 +76,6 @@ namespace ReversiApp.Controllers
                     {
                         Response.Headers.Add("Refresh", "5");
                     }
-                    ViewBag.Gewonnen = speler.Won;
                     return View(spel);
                 }
             }
@@ -201,6 +200,11 @@ namespace ReversiApp.Controllers
                 speler.SpelId = id;
                 speler.Kleur = Kleur.Zwart;
                 var result = await UserManager.UpdateAsync(speler);
+
+                spel.Status = Status.Bezig;
+                _context.Update(spel);
+                await _context.SaveChangesAsync();
+
                 if (result.Succeeded)
                 {
                     return RedirectToAction(nameof(Index));
@@ -211,64 +215,23 @@ namespace ReversiApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> WhiteWon(int id)
+        public async Task<IActionResult> Won(int id, Kleur kleur)
         {
             var spel = await _context.Spel.Include(s => s.Spelers).Where(s => s.ID == id).FirstOrDefaultAsync();
             if (spel != null)
             {
-                Speler whiteSpeler = null;
-                Speler blackSpeler = null;
-                foreach (var everyUser in spel.Spelers)
+                if (kleur == Kleur.Wit)
                 {
-                    if (everyUser.Kleur == Kleur.Wit)
-                    {
-                        whiteSpeler = everyUser;
-                    }
-                    else
-                    {
-                        blackSpeler = everyUser;
-                    }
+                    spel.Status = Status.WitGewonnen;
                 }
-                if (whiteSpeler != null && blackSpeler != null)
+                else
                 {
-                    whiteSpeler.Won = true;
-                    blackSpeler.Won = false;
-                    await UserManager.UpdateAsync(whiteSpeler);
-                    await UserManager.UpdateAsync(blackSpeler);
+                    spel.Status = Status.ZwartGewonnen;
                 }
+                _context.Update(spel);
+                await _context.SaveChangesAsync();
             }
-            return RedirectToAction(nameof(Game), new { ID = spel.ID });
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> BlackWon(int id)
-        {
-            var spel = await _context.Spel.Include(s => s.Spelers).Where(s => s.ID == id).FirstOrDefaultAsync();
-            if (spel != null)
-            {
-                Speler whiteSpeler = null;
-                Speler blackSpeler = null;
-                foreach (var everyUser in spel.Spelers)
-                {
-                    if (everyUser.Kleur == Kleur.Zwart)
-                    {
-                        blackSpeler = everyUser;
-                    }
-                    else
-                    {
-                        whiteSpeler = everyUser;
-                    }
-                }
-                if (whiteSpeler != null && blackSpeler != null)
-                {
-                    blackSpeler.Won = true;
-                    whiteSpeler.Won = false;
-                    await UserManager.UpdateAsync(whiteSpeler);
-                    await UserManager.UpdateAsync(blackSpeler);
-                }
-            }
-            return RedirectToAction(nameof(Game), new { ID = spel.ID });
+            return RedirectToAction(nameof(Game), new { ID = id });
         }
 
         // GET: Spel/Delete/5
@@ -320,7 +283,6 @@ namespace ReversiApp.Controllers
             {
                 speler.SpelId = null;
                 speler.Kleur = Kleur.Geen;
-                speler.Won = null;
                 var result = await UserManager.UpdateAsync(speler);
                 if (result.Succeeded && spel.Spelers.Count < 1)
                 {

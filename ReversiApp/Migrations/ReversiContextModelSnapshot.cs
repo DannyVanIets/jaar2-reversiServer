@@ -238,6 +238,9 @@ namespace ReversiApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<string>("Token")
                         .HasColumnType("nvarchar(max)");
 
@@ -264,9 +267,6 @@ namespace ReversiApp.Migrations
 
                     b.Property<string>("Token")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool?>("Won")
-                        .HasColumnType("bit");
 
                     b.HasIndex("SpelId");
 

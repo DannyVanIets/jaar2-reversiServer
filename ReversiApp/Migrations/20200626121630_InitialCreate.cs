@@ -30,7 +30,8 @@ namespace ReversiApp.Migrations
                     Omschrijving = table.Column<string>(nullable: true),
                     Token = table.Column<string>(nullable: true),
                     SerializedBord = table.Column<string>(nullable: false),
-                    AandeBeurt = table.Column<int>(nullable: false)
+                    AandeBeurt = table.Column<int>(nullable: false),
+                    Status = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -81,7 +82,6 @@ namespace ReversiApp.Migrations
                     Token = table.Column<string>(nullable: true),
                     Kleur = table.Column<int>(nullable: true),
                     Highscore = table.Column<int>(nullable: true),
-                    Won = table.Column<bool>(nullable: true),
                     Archived = table.Column<bool>(nullable: true),
                     SpelId = table.Column<int>(nullable: true)
                 },

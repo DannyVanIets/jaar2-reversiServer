@@ -12,7 +12,6 @@ namespace ReversiApp.Models
         public string Token { get; set; }
         public Kleur Kleur { get; set; }
         public int Highscore { get; set; }
-        public bool? Won { get; set; } = null;
         public bool Archived { get; set; }
         public int? SpelId { get; set; }
         public Spel Spel { get; set; }

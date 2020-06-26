@@ -12,6 +12,8 @@ namespace ReversiApp.Models
     // Wit = 1
     // Zwart = 2
     public enum Kleur { Geen, Wit, Zwart }
+    // Alle statussen voor een spel
+    public enum Status { NietGestart, Bezig, WitGewonnen, ZwartGewonnen }
 
     //Deze enum gebruiken we om alle mogelijke richtingen toe te voegen in een lijst.
     //Die lijst gebruiken we om elke disk van kleur te veranderen als dat mogelijk is.
@@ -29,6 +31,7 @@ namespace ReversiApp.Models
         [NotMapped]
         public Kleur[,] Bord { get; set; }
         public Kleur AandeBeurt { get; set; }
+        public Status Status { get; set; } = Status.NietGestart;
         private List<Richting> RichtingMogelijk { get; set; }
         public ICollection<Speler> Spelers { get; set; }
 

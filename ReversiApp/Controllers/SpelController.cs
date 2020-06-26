@@ -28,7 +28,7 @@ namespace ReversiApp.Controllers
         public async Task<IActionResult> Index()
         {
             Speler speler = await UserManager.FindByNameAsync(User.Identity.Name);
-            if(speler.SpelId != null)
+            if (speler.SpelId != null)
             {
                 return RedirectToAction(nameof(Game), new { ID = speler.SpelId });
             }
@@ -72,6 +72,11 @@ namespace ReversiApp.Controllers
             {
                 if (speler.Email == User.Identity.Name)
                 {
+                    if (spel.Spelers.Count == 1)
+                    {
+                        Response.Headers.Add("Refresh", "5");
+                    }
+                    ViewBag.Gewonnen = speler.Won;
                     return View(spel);
                 }
             }
@@ -204,6 +209,68 @@ namespace ReversiApp.Controllers
             return View(spel);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> WhiteWon(int id)
+        {
+            var spel = await _context.Spel.Include(s => s.Spelers).Where(s => s.ID == id).FirstOrDefaultAsync();
+            if (spel != null)
+            {
+                Speler whiteSpeler = null;
+                Speler blackSpeler = null;
+                foreach (var everyUser in spel.Spelers)
+                {
+                    if (everyUser.Kleur == Kleur.Wit)
+                    {
+                        whiteSpeler = everyUser;
+                    }
+                    else
+                    {
+                        blackSpeler = everyUser;
+                    }
+                }
+                if (whiteSpeler != null && blackSpeler != null)
+                {
+                    whiteSpeler.Won = true;
+                    blackSpeler.Won = false;
+                    await UserManager.UpdateAsync(whiteSpeler);
+                    await UserManager.UpdateAsync(blackSpeler);
+                }
+            }
+            return RedirectToAction(nameof(Game), new { ID = spel.ID });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> BlackWon(int id)
+        {
+            var spel = await _context.Spel.Include(s => s.Spelers).Where(s => s.ID == id).FirstOrDefaultAsync();
+            if (spel != null)
+            {
+                Speler whiteSpeler = null;
+                Speler blackSpeler = null;
+                foreach (var everyUser in spel.Spelers)
+                {
+                    if (everyUser.Kleur == Kleur.Zwart)
+                    {
+                        blackSpeler = everyUser;
+                    }
+                    else
+                    {
+                        whiteSpeler = everyUser;
+                    }
+                }
+                if (whiteSpeler != null && blackSpeler != null)
+                {
+                    blackSpeler.Won = true;
+                    whiteSpeler.Won = false;
+                    await UserManager.UpdateAsync(whiteSpeler);
+                    await UserManager.UpdateAsync(blackSpeler);
+                }
+            }
+            return RedirectToAction(nameof(Game), new { ID = spel.ID });
+        }
+
         // GET: Spel/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -235,6 +302,27 @@ namespace ReversiApp.Controllers
                 speler.Kleur = Kleur.Geen;
                 var result = await UserManager.UpdateAsync(speler);
                 if (result.Succeeded)
+                {
+                    _context.Spel.Remove(spel);
+                    await _context.SaveChangesAsync();
+                }
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Leave(int id)
+        {
+            Speler speler = await UserManager.FindByNameAsync(User.Identity.Name);
+            var spel = await _context.Spel.Include(s => s.Spelers).Where(s => s.ID == id).FirstOrDefaultAsync();
+            if (speler != null && spel != null)
+            {
+                speler.SpelId = null;
+                speler.Kleur = Kleur.Geen;
+                speler.Won = null;
+                var result = await UserManager.UpdateAsync(speler);
+                if (result.Succeeded && spel.Spelers.Count < 1)
                 {
                     _context.Spel.Remove(spel);
                     await _context.SaveChangesAsync();

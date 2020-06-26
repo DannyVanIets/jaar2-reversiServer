@@ -75,7 +75,6 @@ namespace ReversiApp.Models
                 AandeBeurt = Kleur.Wit;
                 return true;
             }
-
             return false;
         }
 

@@ -15,7 +15,7 @@ namespace ReversiApp.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.3")
+                .HasAnnotation("ProductVersion", "3.1.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -264,6 +264,9 @@ namespace ReversiApp.Migrations
 
                     b.Property<string>("Token")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("Won")
+                        .HasColumnType("bit");
 
                     b.HasIndex("SpelId");
 

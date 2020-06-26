@@ -81,6 +81,7 @@ namespace ReversiApp.Migrations
                     Token = table.Column<string>(nullable: true),
                     Kleur = table.Column<int>(nullable: true),
                     Highscore = table.Column<int>(nullable: true),
+                    Won = table.Column<bool>(nullable: true),
                     Archived = table.Column<bool>(nullable: true),
                     SpelId = table.Column<int>(nullable: true)
                 },

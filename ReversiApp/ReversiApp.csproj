@@ -11,8 +11,8 @@
     <None Remove="Migrations\**" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\20200625093455_InitialCreate.cs" />
-    <Compile Include="Migrations\20200625093455_InitialCreate.Designer.cs" />
+    <Compile Include="Migrations\20200626090343_InitialCreate.cs" />
+    <Compile Include="Migrations\20200626090343_InitialCreate.Designer.cs" />
     <Compile Include="Migrations\ReversiContextModelSnapshot.cs" />
   </ItemGroup>
   <ItemGroup>

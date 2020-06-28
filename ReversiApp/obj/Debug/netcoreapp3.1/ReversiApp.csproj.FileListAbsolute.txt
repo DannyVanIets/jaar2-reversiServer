@@ -319,7 +319,6 @@ D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.csproj.C
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.dll
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.pdb
 D:\code\git\reversiServer\ReversiApp\bin\Debug\netcoreapp3.1\SendGrid.dll
-D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.genruntimeconfig.cache
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Speler\Archived.cshtml.g.cs
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Speler\ArchiveSpeler.cshtml.g.cs
 D:\code\git\reversiServer\ReversiApp\bin\Debug\netcoreapp3.1\web.config
@@ -421,7 +420,6 @@ D:\code\git\reversiServer\ReversiApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAn
 D:\code\git\reversiServer\ReversiApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\code\git\reversiServer\ReversiApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\code\git\reversiServer\ReversiApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.csproj.CoreCompileInputs.cache
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.MvcApplicationPartsAssemblyInfo.cs
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.MvcApplicationPartsAssemblyInfo.cache
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Spel\Create.cshtml.g.cs

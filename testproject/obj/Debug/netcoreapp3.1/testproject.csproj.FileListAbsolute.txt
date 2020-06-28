@@ -290,13 +290,11 @@ D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.
 D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.csprojAssemblyReference.cache
-D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.csproj.CoreCompileInputs.cache
 D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.AssemblyInfoInputs.cache
 D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.AssemblyInfo.cs
 D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.csproj.CopyComplete
 D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.dll
 D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.pdb
-D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.genruntimeconfig.cache
 D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\testhost.exe
 D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\ReversiApp.Views.dll
 D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\ReversiApp.Views.pdb

@@ -236,10 +236,8 @@ D:\code\git\reversiServer\testproject\bin\Release\netcoreapp3.1\runtimes\win\lib
 D:\code\git\reversiServer\testproject\bin\Release\netcoreapp3.1\ReversiApp.dll
 D:\code\git\reversiServer\testproject\bin\Release\netcoreapp3.1\ReversiApp.pdb
 D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.csprojAssemblyReference.cache
-D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.csproj.CoreCompileInputs.cache
 D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.AssemblyInfoInputs.cache
 D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.AssemblyInfo.cs
 D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.csproj.CopyComplete
 D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.dll
 D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.pdb
-D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.genruntimeconfig.cache

@@ -429,3 +429,5 @@ D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Spel\Ed
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Spel\Index.cshtml.g.cs
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Spel\Join.cshtml.g.cs
 D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\Razor\Views\Spel\Game.cshtml.g.cs
+D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.csproj.CoreCompileInputs.cache
+D:\code\git\reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.genruntimeconfig.cache

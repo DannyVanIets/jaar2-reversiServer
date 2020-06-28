@@ -441,3 +441,5 @@ D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\runtimes\win\lib\n
 D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\ReversiApp.dll
 D:\code\git\reversiServer\testproject\bin\Debug\netcoreapp3.1\ReversiApp.pdb
+D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.csproj.CoreCompileInputs.cache
+D:\code\git\reversiServer\testproject\obj\Debug\netcoreapp3.1\testproject.genruntimeconfig.cache

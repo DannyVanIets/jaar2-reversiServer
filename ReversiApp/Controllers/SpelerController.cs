@@ -14,18 +14,21 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using ReversiApp.Models;
 using ReversiApp.Areas.Identity.Pages.Account;
+using ReversiApp.DAL;
 
 namespace ReversiApp.Controllers
 {
     public class SpelerController : Controller
     {
+        private readonly ReversiContext _context;
         private readonly UserManager<Speler> UserManager;
         private readonly RoleManager<IdentityRole> RoleManager;
         private readonly ILogger<RegisterModel> Logger;
 
-        public SpelerController(UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager,
+        public SpelerController(ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager,
             ILogger<RegisterModel> logger)
         {
+            _context = context;
             UserManager = userManager;
             RoleManager = roleManager;
             Logger = logger;
@@ -37,24 +40,44 @@ namespace ReversiApp.Controllers
         {
             List<UserAndRolesModel> users = new List<UserAndRolesModel>();
 
-            foreach (var user in UserManager.Users)
+            try
             {
-                string rol = await ReturnRoleAsync(user);
-
-                if (User.IsInRole("Moderator") && rol == "Normal" && !user.Archived || User.IsInRole("Admin") && !user.Archived)
+                foreach (var user in UserManager.Users)
                 {
-                    users.Add(new UserAndRolesModel
+                    //string rol = await ReturnRoleAsync(user);
+
+                    var rol = "Normal";
+                    var isUserModerator = await UserManager.IsInRoleAsync(user, "Moderator");
+                    var isAdmin = await UserManager.IsInRoleAsync(user, "Admin");
+
+                    if (isUserModerator)
                     {
-                        UserId = user.Id,
-                        UserName = user.UserName,
-                        Email = user.Email,
-                        EmailConfirmed = user.EmailConfirmed,
-                        TwoFactorEnabled = user.TwoFactorEnabled,
-                        Rol = rol,
-                        Kleur = user.Kleur,
-                        Highscore = user.Highscore
-                    });
+                        rol = "Moderator";
+                    }
+                    else if (isAdmin)
+                    {
+                        rol = "Admin";
+                    }
+
+                    if (User.IsInRole("Moderator") && rol == "Normal" && !user.Archived || User.IsInRole("Admin") && !user.Archived)
+                    {
+                        users.Add(new UserAndRolesModel
+                        {
+                            UserId = user.Id,
+                            UserName = user.UserName,
+                            Email = user.Email,
+                            EmailConfirmed = user.EmailConfirmed,
+                            TwoFactorEnabled = user.TwoFactorEnabled,
+                            Rol = rol,
+                            Kleur = user.Kleur,
+                            Highscore = user.Highscore
+                        });
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                ViewBag.Error = e.ToString();
             }
             return View(users);
         }
@@ -198,7 +221,7 @@ namespace ReversiApp.Controllers
 
             if (speler != null)
             {
-                if(User.IsInRole("Admin"))
+                if (User.IsInRole("Admin"))
                 {
                     speler.UserName = userAndRoles.Email;
                     speler.Email = userAndRoles.Email;
@@ -355,6 +378,7 @@ namespace ReversiApp.Controllers
         public async Task<string> ReturnRoleAsync(Speler speler)
         {
             var rolNaam = "Normal";
+
             if (await UserManager.IsInRoleAsync(speler, "Moderator"))
             {
                 rolNaam = "Moderator";

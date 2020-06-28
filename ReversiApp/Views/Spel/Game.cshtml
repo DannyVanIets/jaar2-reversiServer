@@ -21,7 +21,7 @@
     @{
         var userKleur = userManager.FindByNameAsync(User.Identity.Name).Result.Kleur;
     }
-    @if (Model.Status == Status.Bezig)
+    @if (Model.Status == Status.Bezig || Model.Status == Status.NietGestart)
     {
         <div>
             @if (Model.Spelers.Count == 1)

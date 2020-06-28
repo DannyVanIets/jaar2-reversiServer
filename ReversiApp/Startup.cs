@@ -48,7 +48,8 @@ namespace ReversiApp
 
             //For sending an e-mail
             services.AddTransient<IEmailSender, EmailSender>();
-            services.Configure<AuthMessageSenderOptions>(Configuration);
+            services.AddSingleton<IConfiguration>(Configuration);
+            //services.Configure<AuthMessageSenderOptions>(Configuration);
 
             //For redirecting always to the login page and email inactivity timeout
             services.ConfigureApplicationCookie(options =>

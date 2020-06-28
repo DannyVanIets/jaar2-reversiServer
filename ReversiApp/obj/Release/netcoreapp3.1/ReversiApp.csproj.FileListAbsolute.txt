@@ -127,7 +127,6 @@ D:\code\git\reversiServer\ReversiApp\bin\Release\netcoreapp3.1\runtimes\unix\lib
 D:\code\git\reversiServer\ReversiApp\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\code\git\reversiServer\ReversiApp\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\ReversiApp.csprojAssemblyReference.cache
-D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\ReversiApp.csproj.CoreCompileInputs.cache
 D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\ReversiApp.MvcApplicationPartsAssemblyInfo.cs
 D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\ReversiApp.MvcApplicationPartsAssemblyInfo.cache
 D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\ReversiApp.RazorAssemblyInfo.cache
@@ -199,7 +198,6 @@ D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\staticwebassets\R
 D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\staticwebassets\ReversiApp.StaticWebAssets.xml
 D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\ReversiApp.dll
 D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\ReversiApp.pdb
-D:\code\git\reversiServer\ReversiApp\obj\Release\netcoreapp3.1\ReversiApp.genruntimeconfig.cache
 D:\code\git\reversiServer\ReversiApp\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 D:\code\git\reversiServer\ReversiApp\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\code\git\reversiServer\ReversiApp\bin\Release\netcoreapp3.1\Microsoft.Data.Sqlite.dll

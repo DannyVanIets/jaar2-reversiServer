@@ -241,3 +241,5 @@ D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.Asse
 D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.csproj.CopyComplete
 D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.dll
 D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.pdb
+D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.csproj.CoreCompileInputs.cache
+D:\code\git\reversiServer\testproject\obj\Release\netcoreapp3.1\testproject.genruntimeconfig.cache

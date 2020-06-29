@@ -73,10 +73,9 @@
 </div>
 @section scripts {
     <script type="text/javascript">
-        $(".game").append(spa_templates.templates.speelbord.speelbord({
-            bord: @Html.DisplayFor(model => model.SerializedBord)
-        }));
-
         Game.Stats.init("production");
+        // We call the board through Game.Init and we give the ID to it,
+        // so the Client side knows where the board needs to be placed
+        Game.init(@Model.ID);
     </script>
 }

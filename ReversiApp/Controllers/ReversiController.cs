@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ReversiApp.DAL;
 using ReversiApp.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,30 +14,30 @@ namespace ReversiRestApi.Controllers
     [ApiController]
     public class ReversiController : Controller
     {
-        private static List<Spel> games = new List<Spel>()
+        /*private static List<Spel> games = new List<Spel>()
         {
             new Spel{ ID = 1, Omschrijving = "Naam1", AandeBeurt = Kleur.Wit, Token = "5EPNSFGFGEE55" },
             new Spel{ ID = 2, Omschrijving = "Naam2", AandeBeurt = Kleur.Zwart, Token = "MFD2948REWRT" },
             new Spel{ ID = 3, Omschrijving = "Naam3", AandeBeurt = Kleur.Wit, Token = "ERWELRFN8545" },
-        };
+        };*/
 
-        // GET: api/Spel
-        [HttpGet]
-        public ActionResult<IEnumerable<Spel>> Get()
+        private readonly ReversiContext _context;
+
+        public ReversiController(ReversiContext context)
         {
-            return games;
+            _context = context;
         }
 
         // GET: api/Spel/5
-        [HttpGet("{id}", Name = "Get")]
-        public ActionResult<Spel> Get(int id)
+        [HttpGet("{id}")]
+        public ActionResult<Kleur[,]> Get(int id)
         {
-            var result = games.FirstOrDefault(item => item.ID == id);
+            var result = _context.Spel.FirstOrDefault(item => item.ID == id);
             if (result != null)
             {
-                return result;
+                return result.Bord;
             }
-            return new Spel { ID = 0, Omschrijving = "Invalid ID! Error!", AandeBeurt = Kleur.Geen, Token = "Error" };
+            return null;
         }
 
         // POST: api/Spel

@@ -40,35 +40,16 @@ namespace ReversiRestApi.Controllers
             return null;
         }
 
-        // POST: api/Spel
-        [HttpPost]
-        public void Post([FromBody] Spel spel)
+        // GET: api/Spel/IsBezig/5
+        [HttpGet("IsBezig/{id}")]
+        public ActionResult<bool> IsBezig(int id)
         {
-            games.Add(spel);
-        }
-
-        // PUT: api/Spel/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Spel spel)
-        {
-            var result = games.FirstOrDefault(item => item.ID == id);
+            var result = _context.Spel.FirstOrDefault(item => item.ID == id);
             if (result != null)
             {
-                result.Omschrijving = spel.Omschrijving;
-                result.AandeBeurt = spel.AandeBeurt;
-                result.Token = spel.Token;
+                return result.Status == Status.Bezig;
             }
-        }
-
-        // DELETE: api/Spel/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-            var itemToRemove = games.FirstOrDefault(item => item.ID == id);
-            if (itemToRemove != null)
-            {
-                games.Remove(itemToRemove);
-            }
+            return false;
         }
     }
 }

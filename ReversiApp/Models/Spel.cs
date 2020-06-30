@@ -93,7 +93,7 @@ namespace ReversiApp.Models
                     }
                 }
             }
-
+            
             return true;
         }
 
@@ -200,9 +200,7 @@ namespace ReversiApp.Models
                         kanDiagonaalNoordOost(rijZet, kolomZet, true);
                     }
                 }
-
                 AandeBeurt = tegenOvergesteldeKleur(AandeBeurt);
-
                 return true;
             }
 

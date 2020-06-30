@@ -48,6 +48,9 @@
             </div>
             @if (Model.Spelers.Count == 2)
             {
+                <div class="catFact">
+
+                </div>
                 <div class="aanDeBeurt" style="margin-bottom: 50px;">
 
                 </div>
@@ -78,6 +81,6 @@
     <script type="text/javascript">
         // We call the board through Game.Init and we give the ID to it,
         // so the Client side knows where the board needs to be placed
-        Game.init(@Model.ID);
+        Game.init(@Model.ID, @Convert.ToInt32(userKleur));
     </script>
 }

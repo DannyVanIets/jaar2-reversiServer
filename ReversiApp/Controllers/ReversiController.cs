@@ -30,12 +30,12 @@ namespace ReversiRestApi.Controllers
 
         // GET: api/Spel/Speelbord/5
         [HttpGet("Speelbord/{id}")]
-        public ActionResult<string> Speelbord(int id)
+        public ActionResult<Kleur[,]> Speelbord(int id)
         {
             var result = _context.Spel.FirstOrDefault(item => item.ID == id);
             if (result != null)
             {
-                return result.SerializedBord;
+                return result.Bord;
             }
             return null;
         }
@@ -64,19 +64,34 @@ namespace ReversiRestApi.Controllers
             return null;
         }
 
-        // GET: api/Spel/ZetMogelijk/5
-        [HttpGet("ZetMogelijk/{id}/{rij}/kolom")]
-        public ActionResult<bool> ZetMogelijk(int id, int rij, int kolom)
+        // PUT: api/Spel/ZetMogelijk/object
+        [HttpPut("ZetMogelijk")]
+        //[ProducesResponseType(Statuscode.Status404NotFound)]
+        public ActionResult ZetMogelijk([FromBody] ZetModel zet)
         {
-            var result = _context.Spel.FirstOrDefault(item => item.ID == id);
+            var result = _context.Spel.FirstOrDefault(item => item.ID == zet.Id);
             if (result != null)
             {
-                if (result.DoeZet(rij, kolom))
+                if (result.DoeZet(zet.Rij, zet.Kolom))
                 {
-                    return true;
+                    _context.SaveChanges();
+                    return StatusCode(204);
+                }
+                else
+                {
+                    if (result.Afgelopen() && result.OverwegendeKleur() == Kleur.Wit)
+                    {
+                        result.Status = Status.WitGewonnen;
+                    }
+                    else if (result.Afgelopen() && result.OverwegendeKleur() == Kleur.Zwart)
+                    {
+                        result.Status = Status.ZwartGewonnen;
+                    }
+                    _context.SaveChanges();
+                    return StatusCode(406);
                 }
             }
-            return false;
+            return NotFound();
         }
     }
 }

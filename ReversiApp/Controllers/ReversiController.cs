@@ -66,7 +66,6 @@ namespace ReversiRestApi.Controllers
 
         // PUT: api/Spel/ZetMogelijk/object
         [HttpPut("ZetMogelijk")]
-        //[ProducesResponseType(Statuscode.Status404NotFound)]
         public ActionResult ZetMogelijk([FromBody] ZetModel zet)
         {
             var result = _context.Spel.FirstOrDefault(item => item.ID == zet.Id);

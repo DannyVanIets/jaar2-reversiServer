@@ -93,7 +93,7 @@ namespace ReversiApp.Models
                     }
                 }
             }
-            
+
             return true;
         }
 
@@ -165,8 +165,14 @@ namespace ReversiApp.Models
             {
                 //Daarna gaan we door elke mogelijk richting die in RichtingMogelijk lijst is gezet.
                 //We gebruiken dezelfde functies als in ZetMogelijk, om het overzichtelijk te houden.
+                int counter = 0;
                 foreach (Richting richting in RichtingMogelijk)
                 {
+                    if (counter >= 1 && RichtingMogelijk.Count >= 1)
+                    {
+                        Bord[rijZet, kolomZet] = Kleur.Geen;
+                    }
+
                     if (richting == Richting.VerticaalOmlaag)
                     {
                         kanVerticaalOmlaag(rijZet, kolomZet, true);
@@ -199,6 +205,7 @@ namespace ReversiApp.Models
                     {
                         kanDiagonaalNoordOost(rijZet, kolomZet, true);
                     }
+                    counter++;
                 }
                 AandeBeurt = tegenOvergesteldeKleur(AandeBeurt);
                 return true;
@@ -232,6 +239,11 @@ namespace ReversiApp.Models
             for (int i = rijZet; Bord[rijZet, kolomZet] == Kleur.Geen && i < Bord.GetLength(0) - 1 && i != 7 ||
                 Bord[i, kolomZet] == tegenSpelerKleur && i < Bord.GetLength(0) - 1 && i != rijZet; i++)
             {
+                if (i != rijZet && Bord[i, kolomZet] == Kleur.Geen || Bord[i, kolomZet] == AandeBeurt && Bord[i - 1, kolomZet] == Kleur.Geen)
+                {
+                    break;
+                }
+
                 //In deze kijken we of de volgende plek dezelfde kleur is als de speler
                 //en of de huidige zet die van de tegenstander is.
                 //Als dat zo is, dan wordt deze richting aan de lijst van mogelijke richtingen toegevoegd.
@@ -257,6 +269,11 @@ namespace ReversiApp.Models
             for (int i = rijZet; Bord[rijZet, kolomZet] == Kleur.Geen && i > 0 && i != 0 ||
                 Bord[i, kolomZet] == tegenSpelerKleur && i > 0 && i != rijZet; i--)
             {
+                if (i != rijZet && Bord[i, kolomZet] == Kleur.Geen || Bord[i, kolomZet] == AandeBeurt && Bord[i + 1, kolomZet] == Kleur.Geen)
+                {
+                    break;
+                }
+
                 if (Bord[i - 1, kolomZet] == AandeBeurt && Bord[i, kolomZet] == tegenSpelerKleur && zetDisks == false)
                 {
                     RichtingMogelijk.Add(Richting.VerticaalOmhoog);
@@ -276,6 +293,11 @@ namespace ReversiApp.Models
             for (int i = kolomZet; Bord[rijZet, kolomZet] == Kleur.Geen && i < Bord.GetLength(1) - 1 && i != 7 ||
                 Bord[rijZet, i] == tegenSpelerKleur && i < Bord.GetLength(1) - 1 && i != kolomZet; i++)
             {
+                if (i != kolomZet && Bord[rijZet, i] == Kleur.Geen || Bord[rijZet, i] == AandeBeurt && Bord[rijZet, i - 1] == Kleur.Geen)
+                {
+                    break;
+                }
+
                 if (Bord[rijZet, i + 1] == AandeBeurt && Bord[rijZet, i] == tegenSpelerKleur && zetDisks == false)
                 {
                     RichtingMogelijk.Add(Richting.HorizontaalRechts);
@@ -295,6 +317,11 @@ namespace ReversiApp.Models
             for (int i = kolomZet; Bord[rijZet, kolomZet] == Kleur.Geen && i > 0 && i != 0 ||
                 Bord[rijZet, i] == tegenSpelerKleur && i > 0 && i != kolomZet; i--)
             {
+                if (i != kolomZet && Bord[rijZet, i] == Kleur.Geen || Bord[rijZet, i] == AandeBeurt && Bord[rijZet, i + 1] == Kleur.Geen)
+                {
+                    break;
+                }
+
                 if (Bord[rijZet, i - 1] == AandeBeurt && Bord[rijZet, i] == tegenSpelerKleur && zetDisks == false)
                 {
                     RichtingMogelijk.Add(Richting.HorizontaalLinks);
@@ -321,6 +348,11 @@ namespace ReversiApp.Models
                 j > 0 && j != 0 && j != kolomZet;
                 i++, j--)
             {
+                if (i != rijZet && j != kolomZet && Bord[i, j] == Kleur.Geen || Bord[i, j] == AandeBeurt && Bord[i - 1, j + 1] == Kleur.Geen)
+                {
+                    break;
+                }
+
                 if (Bord[i + 1, j - 1] == AandeBeurt && Bord[i, j] == tegenSpelerKleur && zetDisks == false)
                 {
                     RichtingMogelijk.Add(Richting.DiagonaalZuidWest);
@@ -347,6 +379,11 @@ namespace ReversiApp.Models
                 j < Bord.GetLength(1) - 1 && i != kolomZet;
                 i++, j++)
             {
+                if (i != rijZet && j != kolomZet && Bord[i, j] == Kleur.Geen || Bord[i, j] == AandeBeurt && Bord[i - 1, j - 1] == Kleur.Geen)
+                {
+                    break;
+                }
+
                 if (Bord[i + 1, j + 1] == AandeBeurt && Bord[i, j] == tegenSpelerKleur && zetDisks == false)
                 {
                     RichtingMogelijk.Add(Richting.DiagonaalZuidOost);
@@ -371,6 +408,11 @@ namespace ReversiApp.Models
                 && j > 0 && j != 0 ||
             Bord[i, j] == tegenSpelerKleur && i > 0 && i != rijZet && j > 0 && j != kolomZet; i--, j--)
             {
+                if (i != rijZet && j != kolomZet && Bord[i, j] == Kleur.Geen || Bord[i, j] == AandeBeurt && Bord[i + 1, j + 1] == Kleur.Geen)
+                {
+                    break;
+                }
+
                 if (Bord[i - 1, j - 1] == AandeBeurt && Bord[i, j] == tegenSpelerKleur && zetDisks == false)
                 {
                     RichtingMogelijk.Add(Richting.DiagonaalNoordWest);
@@ -396,6 +438,11 @@ namespace ReversiApp.Models
             Bord[i, j] == tegenSpelerKleur && i > 0 && i != rijZet &&
             j < Bord.GetLength(0) - 1 && j != kolomZet; i--, j++)
             {
+                if (i != rijZet && j != kolomZet && Bord[i, j] == Kleur.Geen || Bord[i, j] == AandeBeurt && Bord[i + 1, j - 1] == Kleur.Geen)
+                {
+                    break;
+                }
+
                 if (Bord[i - 1, j + 1] == AandeBeurt && Bord[i, j] == tegenSpelerKleur && zetDisks == false)
                 {
                     RichtingMogelijk.Add(Richting.DiagonaalNoordOost);

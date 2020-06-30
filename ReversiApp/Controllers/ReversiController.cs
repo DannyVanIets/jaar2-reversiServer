@@ -21,21 +21,21 @@ namespace ReversiRestApi.Controllers
             new Spel{ ID = 3, Omschrijving = "Naam3", AandeBeurt = Kleur.Wit, Token = "ERWELRFN8545" },
         };*/
 
-        private readonly ReversiContext _context;
+        public readonly ReversiContext _context;
 
         public ReversiController(ReversiContext context)
         {
             _context = context;
         }
 
-        // GET: api/Spel/5
-        [HttpGet("{id}")]
-        public ActionResult<Kleur[,]> Get(int id)
+        // GET: api/Spel/Speelbord/5
+        [HttpGet("Speelbord/{id}")]
+        public ActionResult<string> Speelbord(int id)
         {
             var result = _context.Spel.FirstOrDefault(item => item.ID == id);
             if (result != null)
             {
-                return result.Bord;
+                return result.SerializedBord;
             }
             return null;
         }
@@ -48,6 +48,33 @@ namespace ReversiRestApi.Controllers
             if (result != null)
             {
                 return result.Status == Status.Bezig;
+            }
+            return false;
+        }
+
+        // GET: api/Spel/AanDeBeurt/5
+        [HttpGet("AanDeBeurt/{id}")]
+        public ActionResult<Kleur> AanDeBeurt(int id)
+        {
+            var result = _context.Spel.FirstOrDefault(item => item.ID == id);
+            if (result != null)
+            {
+                return result.AandeBeurt;
+            }
+            return null;
+        }
+
+        // GET: api/Spel/ZetMogelijk/5
+        [HttpGet("ZetMogelijk/{id}/{rij}/kolom")]
+        public ActionResult<bool> ZetMogelijk(int id, int rij, int kolom)
+        {
+            var result = _context.Spel.FirstOrDefault(item => item.ID == id);
+            if (result != null)
+            {
+                if (result.DoeZet(rij, kolom))
+                {
+                    return true;
+                }
             }
             return false;
         }

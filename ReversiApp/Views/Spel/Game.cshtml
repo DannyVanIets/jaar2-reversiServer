@@ -9,71 +9,73 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div>
-    <h4>Omschrijving: @Html.DisplayFor(model => model.Omschrijving)</h4>
-    <h4>
-        Spelers:
-        @foreach (var speler in Model.Spelers)
-        {
-            <p>@speler.Email (Highscore: @speler.Highscore, kleur: @speler.Kleur)</p>
+    <div>
+        <h4>Omschrijving: @Html.DisplayFor(model => model.Omschrijving)</h4>
+        <h4>
+            Spelers:
+            @foreach (var speler in Model.Spelers)
+            {
+                <p>@speler.Email (Highscore: @speler.Highscore, kleur: @speler.Kleur)</p>
+            }
+        </h4>
+        @{
+            var userKleur = userManager.FindByNameAsync(User.Identity.Name).Result.Kleur;
         }
-    </h4>
-    @{
-        var userKleur = userManager.FindByNameAsync(User.Identity.Name).Result.Kleur;
-    }
-    @if (Model.Status == Status.Bezig || Model.Status == Status.NietGestart)
-    {
-        <div>
-            @if (Model.Spelers.Count == 1)
-            {
-                <a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary">Aanpassen</a>
-            }
-            else
-            {
-                <form asp-action="Won">
-                    <input type="hidden" asp-for="ID" />
-                    <input type="hidden" name="Kleur" value="1" />
-                    <input type="submit" value="Wit wint" class="btn btn-light" />
-                </form>
-                <form asp-action="Won">
-                    <input type="hidden" asp-for="ID" />
-                    <input type="hidden" name="Kleur" value="2" />
-                    <input type="submit" value="Zwart wint" class="btn btn-dark" />
-                </form>
-            }
-            <form asp-action="Delete">
-                <input type="hidden" asp-for="ID" />
-                <input type="submit" value="Dit spel verlaten & verwijderen" class="btn btn-danger" />
-            </form>
-        </div>
-        @if (Model.Spelers.Count == 2)
+        @if (Model.Status == Status.Bezig || Model.Status == Status.NietGestart)
         {
-            <div class="game" style="margin-bottom: 50px;">
-
+            <div>
+                @if (Model.Spelers.Count == 1)
+                {
+                    <a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-primary">Aanpassen</a>
+                }
+                else
+                {
+                    <form asp-action="Won">
+                        <input type="hidden" asp-for="ID" />
+                        <input type="hidden" name="Kleur" value="1" />
+                        <input type="submit" value="Wit wint" class="btn btn-light" />
+                    </form>
+                    <form asp-action="Won">
+                        <input type="hidden" asp-for="ID" />
+                        <input type="hidden" name="Kleur" value="2" />
+                        <input type="submit" value="Zwart wint" class="btn btn-dark" />
+                    </form>
+                }
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="ID" />
+                    <input type="submit" value="Dit spel verlaten & verwijderen" class="btn btn-danger" />
+                </form>
             </div>
+            @if (Model.Spelers.Count == 2)
+            {
+                <div class="aanDeBeurt" style="margin-bottom: 50px;">
+
+                </div>
+                <div class="game" style="margin-bottom: 50px;">
+
+                </div>
+            }
         }
-    }
-    else if (Model.Status == Status.WitGewonnen && userKleur == Kleur.Wit ||
-        Model.Status == Status.ZwartGewonnen && userKleur == Kleur.Zwart)
-    {
-        <h4>U heeft gewonnen! Je highscore is omhoog gegaan.</h4>
-        <form asp-action="Leave">
-            <input type="hidden" asp-for="ID" />
-            <input type="submit" value="Dit spel verlaten" class="btn btn-danger" />
-        </form>
-    }
-    else
-    {
-        <h4>U heeft verloren! Je highscore is hetzelfde gebleven.</h4>
-        <form asp-action="Leave">
-            <input type="hidden" asp-for="ID" />
-            <input type="submit" value="Dit spel verlaten" class="btn btn-danger" />
-        </form>
-    }
-</div>
+        else if (Model.Status == Status.WitGewonnen && userKleur == Kleur.Wit ||
+            Model.Status == Status.ZwartGewonnen && userKleur == Kleur.Zwart)
+        {
+            <h4>U heeft gewonnen! Je highscore is omhoog gegaan.</h4>
+            <form asp-action="Leave">
+                <input type="hidden" asp-for="ID" />
+                <input type="submit" value="Dit spel verlaten" class="btn btn-danger" />
+            </form>
+        }
+        else
+        {
+            <h4>U heeft verloren! Je highscore is hetzelfde gebleven.</h4>
+            <form asp-action="Leave">
+                <input type="hidden" asp-for="ID" />
+                <input type="submit" value="Dit spel verlaten" class="btn btn-danger" />
+            </form>
+        }
+    </div>
 @section scripts {
     <script type="text/javascript">
-        Game.Stats.init("production");
         // We call the board through Game.Init and we give the ID to it,
         // so the Client side knows where the board needs to be placed
         Game.init(@Model.ID);

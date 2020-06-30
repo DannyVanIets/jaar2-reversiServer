@@ -30,7 +30,7 @@ namespace ReversiApp.Models
         public string SerializedBord { get => JsonConvert.SerializeObject(Bord); set => Bord = JsonConvert.DeserializeObject<Kleur[,]>(value); }
         [NotMapped]
         public Kleur[,] Bord { get; set; }
-        public Kleur AandeBeurt { get; set; }
+        public Kleur AandeBeurt { get; set; } = Kleur.Wit;
         public Status Status { get; set; } = Status.NietGestart;
         private List<Richting> RichtingMogelijk { get; set; }
         public ICollection<Speler> Spelers { get; set; }

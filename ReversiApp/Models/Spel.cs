@@ -372,11 +372,11 @@ namespace ReversiApp.Models
             int i = rijZet;
             int j = kolomZet;
 
-            //Bij Zuidoost gaat de verticale (i) omhoog en de horizontale (j) omhoog.
-            for (; Bord[rijZet, kolomZet] == Kleur.Geen && i < Bord.GetLength(0) - 1 && i != 7 &&
+                //Bij Zuidoost gaat de verticale (i) omhoog en de horizontale (j) omhoog.
+                for (; Bord[rijZet, kolomZet] == Kleur.Geen && i < Bord.GetLength(0) - 1 && i != 7 &&
                 j < Bord.GetLength(1) - 1 && j != 7 ||
                 Bord[i, j] == tegenSpelerKleur && i < Bord.GetLength(0) - 1 && i != rijZet &&
-                j < Bord.GetLength(1) - 1 && i != kolomZet;
+                j < Bord.GetLength(1) - 1 && j != kolomZet;
                 i++, j++)
             {
                 if (i != rijZet && j != kolomZet && Bord[i, j] == Kleur.Geen || Bord[i, j] == AandeBeurt && Bord[i - 1, j - 1] == Kleur.Geen)

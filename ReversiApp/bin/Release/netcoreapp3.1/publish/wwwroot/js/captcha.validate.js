@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     $.validator.setDefaults({
         // only validate fields when the form is submitted:
         // the Captcha input must only be validated when the whole code string is

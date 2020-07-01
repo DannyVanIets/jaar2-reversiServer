@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ReversiApp.DAL;
 using ReversiApp.Models;
 
@@ -14,18 +16,13 @@ namespace ReversiRestApi.Controllers
     [ApiController]
     public class ReversiController : Controller
     {
-        /*private static List<Spel> games = new List<Spel>()
-        {
-            new Spel{ ID = 1, Omschrijving = "Naam1", AandeBeurt = Kleur.Wit, Token = "5EPNSFGFGEE55" },
-            new Spel{ ID = 2, Omschrijving = "Naam2", AandeBeurt = Kleur.Zwart, Token = "MFD2948REWRT" },
-            new Spel{ ID = 3, Omschrijving = "Naam3", AandeBeurt = Kleur.Wit, Token = "ERWELRFN8545" },
-        };*/
-
         public readonly ReversiContext _context;
+        private readonly UserManager<Speler> UserManager;
 
-        public ReversiController(ReversiContext context)
+        public ReversiController(ReversiContext context, UserManager<Speler> userManager)
         {
             _context = context;
+            UserManager = userManager;
         }
 
         // GET: api/Spel/Speelbord/5
@@ -68,7 +65,7 @@ namespace ReversiRestApi.Controllers
         [HttpPut("ZetMogelijk")]
         public ActionResult ZetMogelijk([FromBody] ZetModel zet)
         {
-            var result = _context.Spel.FirstOrDefault(item => item.ID == zet.Id);
+            var result = _context.Spel.Include(s => s.Spelers).FirstOrDefault(item => item.ID == zet.Id);
             if (result != null)
             {
                 if (result.DoeZet(zet.Rij, zet.Kolom))
@@ -81,10 +78,26 @@ namespace ReversiRestApi.Controllers
                     if (result.Afgelopen() && result.OverwegendeKleur() == Kleur.Wit)
                     {
                         result.Status = Status.WitGewonnen;
+                        foreach(var speler in result.Spelers)
+                        {
+                            if(speler.Kleur == Kleur.Wit)
+                            {
+                                speler.Highscore++;
+                                UserManager.UpdateAsync(speler).Wait();
+                            }
+                        }
                     }
                     else if (result.Afgelopen() && result.OverwegendeKleur() == Kleur.Zwart)
                     {
                         result.Status = Status.ZwartGewonnen;
+                        foreach (var speler in result.Spelers)
+                        {
+                            if (speler.Kleur == Kleur.Zwart)
+                            {
+                                speler.Highscore++;
+                                UserManager.UpdateAsync(speler).Wait();
+                            }
+                        }
                     }
                     _context.SaveChanges();
                     return StatusCode(406);

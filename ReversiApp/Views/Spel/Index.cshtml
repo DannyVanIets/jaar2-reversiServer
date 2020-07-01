@@ -5,6 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script>
+    if (localStorage.getItem("aantal_fishies") != undefined) {
+        localStorage.removeItem("aantal_fishies");
+        localStorage.removeItem("beurten");
+    }
+</script>
+
 <h1>Spellen waar je aan kan meedoen</h1>
 
 <p>

@@ -20,7 +20,7 @@ namespace ReversiApp.DAL
 
             AddSpeler(userManager, roleManager, "dannyvanbokhorst@live.nl", "Iets-123", "Admin").Wait();
             AddSpeler(userManager, roleManager, "amonkeyeatingicecream@live.nl", "Nogwat-123", "Moderator").Wait();
-            AddSpeler(userManager, roleManager, "test@live.nl", "Test-123", "Normal").Wait();
+            AddSpeler(userManager, roleManager, "hendrikgroen@live.nl", "Test-123", "Normal").Wait();
             context.SaveChanges();
         }
 

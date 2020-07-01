@@ -275,6 +275,40 @@ namespace ReversiApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Lose(int id)
+        {
+            Speler speler = await UserManager.FindByNameAsync(User.Identity.Name);
+            var spel = await _context.Spel.Include(s => s.Spelers).Where(s => s.ID == id).FirstOrDefaultAsync();
+            if (speler != null && spel != null)
+            {
+                if (speler.Kleur == Kleur.Wit)
+                {
+                    spel.Status = Status.ZwartGewonnen;
+                }
+                else
+                {
+                    spel.Status = Status.WitGewonnen;
+                }
+                await _context.SaveChangesAsync();
+
+                speler.SpelId = null;
+                speler.Kleur = Kleur.Geen;
+                await UserManager.UpdateAsync(speler);
+
+                foreach (var winner in spel.Spelers)
+                {
+                    if(winner.Id != speler.Id)
+                    {
+                        winner.Highscore++;
+                        await UserManager.UpdateAsync(winner);
+                    }
+                }
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Leave(int id)
         {
             Speler speler = await UserManager.FindByNameAsync(User.Identity.Name);

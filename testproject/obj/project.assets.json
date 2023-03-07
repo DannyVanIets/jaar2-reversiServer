@@ -8710,19 +8710,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Danny\\.nuget\\packages\\": {}
+    "C:\\Users\\Danny\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\code\\git\\reversiServer\\testproject\\testproject.csproj",
+      "projectUniqueName": "D:\\code\\git\\jaar2-reversiServer\\testproject\\testproject.csproj",
       "projectName": "testproject",
-      "projectPath": "D:\\code\\git\\reversiServer\\testproject\\testproject.csproj",
+      "projectPath": "D:\\code\\git\\jaar2-reversiServer\\testproject\\testproject.csproj",
       "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
-      "outputPath": "D:\\code\\git\\reversiServer\\testproject\\obj\\",
+      "outputPath": "D:\\code\\git\\jaar2-reversiServer\\testproject\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8734,9 +8741,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj": {
-              "projectPath": "D:\\code\\git\\reversiServer\\ReversiApp\\ReversiApp.csproj"
+            "D:\\code\\git\\jaar2-reversiServer\\ReversiApp\\ReversiApp.csproj": {
+              "projectPath": "D:\\code\\git\\jaar2-reversiServer\\ReversiApp\\ReversiApp.csproj"
             }
           }
         }
@@ -8749,6 +8757,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -8776,14 +8785,11 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

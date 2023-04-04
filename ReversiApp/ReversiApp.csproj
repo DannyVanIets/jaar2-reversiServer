@@ -13,6 +13,10 @@
   <ItemGroup>
     <Compile Include="Migrations\20200626121630_InitialCreate.cs" />
     <Compile Include="Migrations\20200626121630_InitialCreate.Designer.cs" />
+    <Compile Include="Migrations\20230403143128_testrun.cs" />
+    <Compile Include="Migrations\20230403143128_testrun.Designer.cs" />
+    <Compile Include="Migrations\20230404082656_test.cs" />
+    <Compile Include="Migrations\20230404082656_test.Designer.cs" />
     <Compile Include="Migrations\ReversiContextModelSnapshot.cs" />
   </ItemGroup>
   <ItemGroup>

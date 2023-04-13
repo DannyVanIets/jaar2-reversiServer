@@ -59,6 +59,13 @@ namespace ReversiApp.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
+            // User already logged in? We don't want that. DOESN'T WORK RIGHT NOW!
+            var user = await _userManager.GetUserAsync(User);
+            if (user != null)
+            {
+                return;
+            }
+
             if (!string.IsNullOrEmpty(ErrorMessage))
             {
                 ModelState.AddModelError(string.Empty, ErrorMessage);
@@ -100,7 +107,7 @@ namespace ReversiApp.Areas.Identity.Pages.Account
 
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, true);
                 if (result.Succeeded)
                 {
                     Speler user = await _userManager.FindByEmailAsync(Input.Email);

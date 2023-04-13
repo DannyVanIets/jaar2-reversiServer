@@ -27,14 +27,26 @@ namespace ReversiApp
 
         public IConfiguration Configuration { get; }
 
+
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var lockoutOptions = new LockoutOptions()
+            {
+                AllowedForNewUsers = true,
+                DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5),
+                MaxFailedAccessAttempts = 5
+            };
+
             services.AddControllersWithViews();
-            services.AddIdentity<Speler, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<ReversiContext>()
-                    .AddDefaultTokenProviders()
-                    .AddDefaultUI();
+            services.AddIdentity<Speler, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = true;
+            })
+                .AddEntityFrameworkStores<ReversiContext>()
+                .AddDefaultTokenProviders()
+                .AddDefaultUI();
             services.AddDbContext<ReversiContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ReversiContextConnection")));
             services.AddMvc();
 

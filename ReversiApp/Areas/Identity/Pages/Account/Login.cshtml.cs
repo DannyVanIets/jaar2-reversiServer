@@ -105,40 +105,49 @@ namespace ReversiApp.Areas.Identity.Pages.Account
                     return Page();
                 }
 
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, true);
-                if (result.Succeeded)
+                // Look up if the e-mail exists. If not? Invalid login attempt.
+                var resultEmail = await _signInManager.UserManager.FindByEmailAsync(Input.Email);
+
+                if (resultEmail != null)
                 {
-                    Speler user = await _userManager.FindByEmailAsync(Input.Email);
-                    if (!user.Archived)
+                    // This doesn't count login failures towards account lockout
+                    // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                    // This uses the username to login, so it's a roundabout solution. E-mail just makes it more secure.
+                    var result = await _signInManager.PasswordSignInAsync(resultEmail.UserName, Input.Password, Input.RememberMe, true);
+
+                    if (result.Succeeded)
                     {
-                        _logger.LogInformation("User logged in.");
-                        return LocalRedirect("/Spel");
+                        Speler user = await _userManager.FindByEmailAsync(Input.Email);
+                        if (!user.Archived)
+                        {
+                            _logger.LogInformation("User logged in.");
+                            return LocalRedirect("/Spel");
+                        }
+                        else
+                        {
+                            ModelState.AddModelError(string.Empty, "Dit account is gearchiveerd en kan niet worden gebruikt om mee in te loggen.");
+                            return Page();
+                        }
+                    }
+                    // Test if this works.
+                    else if (result.RequiresTwoFactor)
+                    {
+                        return RedirectToPage("./LoginWith2fa", new { ReturnUrl = "/Spel", RememberMe = Input.RememberMe });
+                    }
+                    else if (result.IsLockedOut)
+                    {
+                        _logger.LogWarning("User account locked out.");
+                        return RedirectToPage("./Lockout");
                     }
                     else
                     {
-                        ModelState.AddModelError(string.Empty, "Dit account is gearchiveerd en kan niet worden gebruikt om mee in te loggen.");
+                        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                         return Page();
                     }
                 }
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = "/Spel", RememberMe = Input.RememberMe });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToPage("./Lockout");
-                }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return Page();
-                }
             }
 
-            // If we got this far, something failed, redisplay form
+            // If we got this far, something failed or went wrong, redisplay form.
             return Page();
         }
     }

@@ -18,9 +18,9 @@ namespace ReversiApp.DAL
             AddRol(roleManager, "Moderator").Wait();
             AddRol(roleManager, "Normal").Wait();
 
-            AddSpeler(userManager, roleManager, "dannyvanbokhorst@live.nl", "Iets-123", "Admin").Wait();
-            AddSpeler(userManager, roleManager, "amonkeyeatingicecream@live.nl", "Nogwat-123", "Moderator").Wait();
-            AddSpeler(userManager, roleManager, "hendrikgroen@live.nl", "Test-123", "Normal").Wait();
+            AddSpeler(userManager, roleManager, "De grote enge baas", "dannyvanbokhorst@live.nl", "Iets-123", "Admin").Wait();
+            AddSpeler(userManager, roleManager, "Aapje123", "amonkeyeatingicecream@live.nl", "Nogwat-123", "Moderator").Wait();
+            AddSpeler(userManager, roleManager, "Groentje", "hendrikgroen@live.nl", "Test-123", "Normal").Wait();
             context.SaveChanges();
         }
 
@@ -35,7 +35,7 @@ namespace ReversiApp.DAL
             }
         }
 
-        private static async Task AddSpeler(UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager, string email, string password, string rol)
+        private static async Task AddSpeler(UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager, string username, string email, string password, string rol)
         {
             var userExists = await userManager.FindByEmailAsync(email);
         
@@ -44,7 +44,7 @@ namespace ReversiApp.DAL
             {
                 var claims = new List<Claim>();
 
-                var speler = new Speler { UserName = email, Email = email, EmailConfirmed = true, Kleur = Kleur.Geen };
+                var speler = new Speler { UserName = username, Email = email, EmailConfirmed = true, Kleur = Kleur.Geen };
                 var result = await userManager.CreateAsync(speler, password);
 
                 if (result.Succeeded)

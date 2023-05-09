@@ -130,7 +130,7 @@ namespace ReversiApp.Controllers
             {
                 var claims = new List<Claim>();
 
-                var user = new Speler { UserName = Input.Email, Email = Input.Email, EmailConfirmed = true, Kleur = Kleur.Geen };
+                var user = new Speler { UserName = Input.Username, Email = Input.Email, EmailConfirmed = true, Kleur = Kleur.Geen };
                 var result = await UserManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -223,7 +223,7 @@ namespace ReversiApp.Controllers
             {
                 if (User.IsInRole("Admin"))
                 {
-                    speler.UserName = userAndRoles.Email;
+                    speler.UserName = userAndRoles.UserName;
                     speler.Email = userAndRoles.Email;
                     speler.Highscore = userAndRoles.Highscore;
                 }

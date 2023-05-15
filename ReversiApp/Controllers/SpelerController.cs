@@ -23,21 +23,23 @@ namespace ReversiApp.Controllers
         private readonly ReversiContext _context;
         private readonly UserManager<Speler> UserManager;
         private readonly RoleManager<IdentityRole> RoleManager;
-        private readonly ILogger<RegisterModel> Logger;
+        private readonly ILogger _logger;
 
         public SpelerController(ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager,
-            ILogger<RegisterModel> logger)
+            ILogger<SpelerController> logger)
         {
             _context = context;
             UserManager = userManager;
             RoleManager = roleManager;
-            Logger = logger;
+            _logger = logger;
         }
 
         [HttpGet]
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> Index()
         {
+            _logger.LogInformation("Whatever");
+
             List<UserAndRolesModel> users = new List<UserAndRolesModel>();
 
             try
@@ -77,6 +79,7 @@ namespace ReversiApp.Controllers
             }
             catch (Exception e)
             {
+                _logger.LogError($"Something went wrong while going through every account: {e}");
                 ViewBag.Error = e.ToString();
             }
             return View(users);
@@ -147,7 +150,7 @@ namespace ReversiApp.Controllers
                     {
                         var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
 
-                        Logger.LogInformation("De admin " + loggedinUser.UserName + " created a new account with the name " + Input.Email + ".");
+                        _logger.LogInformation("De admin " + loggedinUser.UserName + " created a new account with the name " + Input.Email + ".");
                         return RedirectToAction(nameof(Index));
                     }
                 }
@@ -167,6 +170,7 @@ namespace ReversiApp.Controllers
 
             if (userInformation == null)
             {
+                _logger.LogError("Er kon geen informatie gevonden worden over de gebruiker ");
                 return NotFound();
             }
 
@@ -256,7 +260,7 @@ namespace ReversiApp.Controllers
                         var claimResult = await UserManager.AddClaimsAsync(speler, claims);
                     }
                     var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
-                    Logger.LogInformation("De admin " + loggedinUser.UserName + " changed the account with the name " + Input.Email + ".");
+                    _logger.LogInformation("De admin " + loggedinUser.UserName + " changed the account with the name " + Input.Email + ".");
                 }
                 foreach (var error in result.Errors)
                 {
@@ -301,7 +305,7 @@ namespace ReversiApp.Controllers
                 if (result.Succeeded && User.IsInRole("Admin"))
                 {
                     var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
-                    Logger.LogInformation("De admin " + loggedinUser.UserName + " archived the account with the email " + Input.Email + ".");
+                    _logger.LogInformation("De admin " + loggedinUser.UserName + " archived the account with the email " + Input.Email + ".");
                 }
                 foreach (var error in result.Errors)
                 {
@@ -316,6 +320,7 @@ namespace ReversiApp.Controllers
         [HttpGet]
         public async Task<IActionResult> Delete(string id)
         {
+            _logger.LogInformation("Delete deez nu-");
             var userInformation = await UserManager.FindByIdAsync(id);
 
             if (userInformation == null)
@@ -360,7 +365,7 @@ namespace ReversiApp.Controllers
                     if (result.Succeeded)
                     {
                         var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
-                        Logger.LogInformation("De admin " + loggedinUser.UserName + " deleted the account with the name " + speler.UserName + ".");
+                        _logger.LogInformation("De admin " + loggedinUser.UserName + " deleted the account with the name " + speler.UserName + ".");
 
                         return RedirectToAction(nameof(Index));
                     }

@@ -12,9 +12,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging;
 using ReversiApp.DAL;
 using ReversiApp.Models;
 using ReversiApp.Services;
+//using Serilog;
 
 namespace ReversiApp
 {
@@ -26,7 +29,6 @@ namespace ReversiApp
         }
 
         public IConfiguration Configuration { get; }
-
 
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -75,7 +77,7 @@ namespace ReversiApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager, ILoggerFactory loggerFactory)
         {
             Seeddata.Initialize(context, userManager, roleManager);
 
@@ -113,6 +115,9 @@ namespace ReversiApp
                     pattern: "{controller=Spel}/{action=Index}/{id?}").RequireAuthorization();
                 endpoints.MapRazorPages();
             });
+
+            //loggerFactory.AddFile("Logs/Information/InformationLog-{Date}.txt", LogLevel.Information);
+            //loggerFactory.AddFile("Logs/Warnings/WarningLog-{Date}.txt", LogLevel.Warning);
         }
     }
 }

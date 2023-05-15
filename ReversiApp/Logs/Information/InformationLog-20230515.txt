@@ -1,0 +1,2 @@
+2023-05-15T11:16:07.0498854+02:00  [INF] Application is starting up... (140ddd75)
+2023-05-15T11:16:07.0659763+02:00  [WRN] Something went wrong! This is a test message can be safely ignored. (1ecb8fa8)

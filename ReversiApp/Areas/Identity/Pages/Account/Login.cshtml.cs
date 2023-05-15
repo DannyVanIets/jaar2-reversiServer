@@ -22,11 +22,11 @@ namespace ReversiApp.Areas.Identity.Pages.Account
     {
         private readonly UserManager<Speler> _userManager;
         private readonly SignInManager<Speler> _signInManager;
-        private readonly ILogger<LoginModel> _logger;
+        private readonly ILogger _logger;
 
         public LoginModel(SignInManager<Speler> signInManager,
-            ILogger<LoginModel> logger,
-            UserManager<Speler> userManager)
+            UserManager<Speler> userManager,
+            ILogger<LoginModel> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -141,9 +141,16 @@ namespace ReversiApp.Areas.Identity.Pages.Account
                     }
                     else
                     {
+                        _logger.LogWarning($"Invalid login attempt with the email {Input.Email}");
                         ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                         return Page();
                     }
+                }
+                else
+                {
+                    _logger.LogWarning($"Invalid login attempt with the username {Input.Email}");
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return Page();
                 }
             }
 

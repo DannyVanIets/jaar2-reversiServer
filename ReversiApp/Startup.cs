@@ -40,10 +40,14 @@ namespace ReversiApp
             };
 
             services.AddControllersWithViews();
+            // Can change the signin, user, identity and password options, like the length of a password.
             services.AddIdentity<Speler, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = true;
+                options.User.RequireUniqueEmail = true;
             })
+
+            // Password needs: digit, non-alphanumeric character, unique char, lower-case, upper-case. Length must be above 6.
                 .AddEntityFrameworkStores<ReversiContext>()
                 .AddDefaultTokenProviders()
                 .AddDefaultUI();
@@ -70,12 +74,11 @@ namespace ReversiApp
             });
 
             services.AddControllers().AddNewtonsoftJson();
-
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager)
         {
             Seeddata.Initialize(context, userManager, roleManager);
 
@@ -113,9 +116,6 @@ namespace ReversiApp
                     pattern: "{controller=Spel}/{action=Index}/{id?}").RequireAuthorization();
                 endpoints.MapRazorPages();
             });
-
-            //loggerFactory.AddFile("Logs/Information/InformationLog-{Date}.txt", LogLevel.Information);
-            //loggerFactory.AddFile("Logs/Warnings/WarningLog-{Date}.txt", LogLevel.Warning);
         }
     }
 }

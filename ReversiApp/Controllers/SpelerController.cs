@@ -150,7 +150,10 @@ namespace ReversiApp.Controllers
                     {
                         var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
 
-                        _logger.LogInformation("De admin " + loggedinUser.UserName + " created a new account with the name " + Input.Email + ".");
+                        #if (DEBUG)
+                            _logger.LogInformation("De admin '" + loggedinUser.UserName + "' created a new account with the username '" + Input.Username + "'.");
+                        #endif
+
                         return RedirectToAction(nameof(Index));
                     }
                 }

@@ -1,0 +1,154 @@
+2023-05-15 15:52:22.435 +02:00 [INF] Application is starting up...
+2023-05-15 15:52:22.531 +02:00 [WRN] This test message can be safely ignored!
+2023-05-15 15:52:24.659 +02:00 [INF] User profile is available. Using 'C:\Users\Danny\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-15 15:52:25.901 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-05-15 15:52:26.585 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-05-15 15:52:26.660 +02:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-05-15 15:52:27.166 +02:00 [INF] Executed DbCommand (90ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-05-15 15:52:27.303 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-05-15 15:52:27.306 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-05-15 15:52:27.344 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-05-15 15:52:27.394 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-05-15 15:52:27.396 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-05-15 15:52:27.759 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-15 15:52:27.760 +02:00 [INF] Hosting environment: Development
+2023-05-15 15:52:27.760 +02:00 [INF] Content root path: D:\code\git\jaar2-reversiServer\ReversiApp
+2023-05-15 15:52:27.810 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/  
+2023-05-15 15:52:27.935 +02:00 [INF] Authorization failed.
+2023-05-15 15:52:27.948 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-05-15 15:52:27.964 +02:00 [INF] Request finished in 159.8432ms 302 
+2023-05-15 15:52:27.964 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%2F  
+2023-05-15 15:52:27.993 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-15 15:52:28.059 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-15 15:52:28.112 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-15 15:52:28.125 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-15 15:52:28.126 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-15 15:52:28.136 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-15 15:52:28.136 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-15 15:52:28.454 +02:00 [INF] Executed page /Account/Login in 389.5315ms
+2023-05-15 15:52:28.455 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-15 15:52:28.496 +02:00 [INF] Request finished in 531.4472ms 200 text/html; charset=utf-8
+2023-05-15 15:52:29.080 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-15 15:52:29.089 +02:00 [INF] Request finished in 9.3699ms 200 application/javascript; charset=utf-8
+2023-05-15 15:52:29.471 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-05-15 15:52:29.584 +02:00 [INF] Request finished in 113.4086ms 200 text/javascript; charset=UTF-8
+2023-05-15 15:52:35.217 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/?area=Identity&page=%2FAccount%2FPrivacy  
+2023-05-15 15:52:35.224 +02:00 [INF] Authorization failed.
+2023-05-15 15:52:35.225 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-05-15 15:52:35.228 +02:00 [INF] Request finished in 10.3683ms 302 
+2023-05-15 15:52:35.241 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%2F%3Farea%3DIdentity%26page%3D%252FAccount%252FPrivacy  
+2023-05-15 15:52:35.248 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-15 15:52:35.249 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-15 15:52:35.258 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-15 15:52:35.259 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-15 15:52:35.259 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-15 15:52:35.259 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-15 15:52:35.259 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-15 15:52:35.278 +02:00 [INF] Executed page /Account/Login in 29.2293ms
+2023-05-15 15:52:35.278 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-15 15:52:35.283 +02:00 [INF] Request finished in 41.7808ms 200 text/html; charset=utf-8
+2023-05-15 15:52:35.319 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-15 15:52:35.321 +02:00 [INF] Request finished in 1.36ms 200 application/javascript; charset=utf-8
+2023-05-15 15:52:35.359 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-05-15 15:52:35.732 +02:00 [INF] Request finished in 372.554ms 200 text/javascript; charset=UTF-8
+2023-05-15 15:52:39.208 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/?area=Identity&page=%2FAccount%2FPrivacy  
+2023-05-15 15:52:39.213 +02:00 [INF] Authorization failed.
+2023-05-15 15:52:39.214 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-05-15 15:52:39.215 +02:00 [INF] Request finished in 6.9716ms 302 
+2023-05-15 15:52:39.219 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%2F%3Farea%3DIdentity%26page%3D%252FAccount%252FPrivacy  
+2023-05-15 15:52:39.221 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-15 15:52:39.223 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-15 15:52:39.225 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-15 15:52:39.226 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-15 15:52:39.226 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-15 15:52:39.227 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-15 15:52:39.227 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-15 15:52:39.244 +02:00 [INF] Executed page /Account/Login in 20.6588ms
+2023-05-15 15:52:39.244 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-15 15:52:39.249 +02:00 [INF] Request finished in 30.4546ms 200 text/html; charset=utf-8
+2023-05-15 15:52:39.294 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-15 15:52:39.294 +02:00 [INF] Request finished in 0.919ms 200 application/javascript; charset=utf-8
+2023-05-15 15:52:39.341 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-05-15 15:52:39.389 +02:00 [INF] Request finished in 47.6761ms 200 text/javascript; charset=UTF-8
+2023-05-15 15:52:43.967 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Register  
+2023-05-15 15:52:43.974 +02:00 [INF] Executing endpoint '/Account/Register'
+2023-05-15 15:52:43.984 +02:00 [INF] Route matched with {page = "/Account/Register", area = "Identity", action = "", controller = ""}. Executing page /Account/Register
+2023-05-15 15:52:43.988 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.RegisterModel.OnGetAsync - ModelState is "Valid"
+2023-05-15 15:52:43.990 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-15 15:52:43.990 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-15 15:52:43.990 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-15 15:52:44.026 +02:00 [INF] Executed page /Account/Register in 41.8572ms
+2023-05-15 15:52:44.026 +02:00 [INF] Executed endpoint '/Account/Register'
+2023-05-15 15:52:44.031 +02:00 [INF] Request finished in 64.7715ms 200 text/html; charset=utf-8
+2023-05-15 15:52:44.062 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-15 15:52:44.062 +02:00 [INF] Request finished in 0.6184ms 200 application/javascript; charset=utf-8
+2023-05-15 15:52:44.111 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-05-15 15:52:44.172 +02:00 [INF] Request finished in 61.2687ms 200 text/javascript; charset=UTF-8
+2023-05-15 15:52:45.349 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login  
+2023-05-15 15:52:45.353 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-15 15:52:45.353 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-15 15:52:45.355 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-15 15:52:45.356 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-15 15:52:45.356 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-15 15:52:45.356 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-15 15:52:45.357 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-15 15:52:45.368 +02:00 [INF] Executed page /Account/Login in 14.0608ms
+2023-05-15 15:52:45.368 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-15 15:52:45.383 +02:00 [INF] Request finished in 33.9556ms 200 text/html; charset=utf-8
+2023-05-15 15:52:45.416 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-15 15:52:45.416 +02:00 [INF] Request finished in 0.5972ms 200 application/javascript; charset=utf-8
+2023-05-15 15:52:45.459 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-05-15 15:52:45.513 +02:00 [INF] Request finished in 54.9832ms 200 text/javascript; charset=UTF-8
+2023-05-15 15:52:52.485 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/?area=Identity&page=%2FAccount%2FPrivacy  
+2023-05-15 15:52:52.489 +02:00 [INF] Authorization failed.
+2023-05-15 15:52:52.490 +02:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2023-05-15 15:52:52.493 +02:00 [INF] Request finished in 7.4898ms 302 
+2023-05-15 15:52:52.498 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%2F%3Farea%3DIdentity%26page%3D%252FAccount%252FPrivacy  
+2023-05-15 15:52:52.499 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-15 15:52:52.499 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-15 15:52:52.501 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-15 15:52:52.501 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-15 15:52:52.501 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-15 15:52:52.501 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-15 15:52:52.501 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-15 15:52:52.514 +02:00 [INF] Executed page /Account/Login in 14.8205ms
+2023-05-15 15:52:52.514 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-15 15:52:52.518 +02:00 [INF] Request finished in 19.9763ms 200 text/html; charset=utf-8
+2023-05-15 15:52:52.546 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-15 15:52:52.546 +02:00 [INF] Request finished in 0.5592ms 200 application/javascript; charset=utf-8
+2023-05-15 15:52:52.597 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-05-15 15:52:52.664 +02:00 [INF] Request finished in 67.3882ms 200 text/javascript; charset=UTF-8

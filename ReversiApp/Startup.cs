@@ -41,13 +41,12 @@ namespace ReversiApp
 
             services.AddControllersWithViews();
             // Can change the signin, user, identity and password options, like the length of a password.
+            // Password needs: digit, non-alphanumeric character, unique char, lower-case, upper-case. Length must be above 6.
             services.AddIdentity<Speler, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = true;
-                options.User.RequireUniqueEmail = true;
+                //options.User.RequireUniqueEmail = true;
             })
-
-            // Password needs: digit, non-alphanumeric character, unique char, lower-case, upper-case. Length must be above 6.
                 .AddEntityFrameworkStores<ReversiContext>()
                 .AddDefaultTokenProviders()
                 .AddDefaultUI();
@@ -75,6 +74,7 @@ namespace ReversiApp
             });
 
             services.AddControllers().AddNewtonsoftJson();
+            
             services.AddRazorPages();
         }
 
@@ -86,15 +86,15 @@ namespace ReversiApp
             // Through this we don't need to use a middleware application.
             app.Use(async (context, next) =>
             {
-                context.Response.Headers.Add("Content-Security-Policy", 
-                    "default-src 'self' ; " +
-                    "frame-src https://www.google.com/ ; " +
-                    "connect-src wss://localhost:44318/ReversiApp/ ; " +
-                    "script-src 'self' https://www.google.com/recaptcha/api.js https://www.gstatic.com/recaptcha/releases/wqcyhEwminqmAoT8QO_BkXCr/recaptcha__nl.js ;");
+                //context.Response.Headers.Add("Content-Security-Policy", 
+                //    "default-src 'self' ; " +
+                //    "frame-src https://www.google.com/ ; " +
+                //    "connect-src wss://localhost:44318/ReversiApp/ ; " +
+                //    "script-src 'self' https://www.google.com/recaptcha/api.js https://www.gstatic.com/recaptcha/releases/wqcyhEwminqmAoT8QO_BkXCr/recaptcha__nl.js ;");
                 context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
                 context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
                 context.Response.Headers.Add("X-XSS-Protection", "1; mode=block");
-                context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+                //context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
                 context.Response.Headers.Remove("X-Powered-By");
                 await next();
             });

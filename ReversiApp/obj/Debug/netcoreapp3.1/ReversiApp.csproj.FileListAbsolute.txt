@@ -666,3 +666,8 @@ D:\code\git\jaar2-reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.cs
 D:\code\git\jaar2-reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\code\git\jaar2-reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.csproj.CoreCompileInputs.cache
 D:\code\git\jaar2-reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\ReversiApp.genruntimeconfig.cache
+D:\code\git\jaar2-reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\staticwebassets\ReversiApp.StaticWebAssets.Pack.cache
+D:\code\git\jaar2-reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.ReversiApp.Microsoft.AspNetCore.StaticWebAssets.props
+D:\code\git\jaar2-reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.ReversiApp.props
+D:\code\git\jaar2-reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.ReversiApp.props
+D:\code\git\jaar2-reversiServer\ReversiApp\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.ReversiApp.props

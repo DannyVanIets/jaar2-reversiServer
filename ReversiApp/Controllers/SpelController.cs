@@ -28,6 +28,10 @@ namespace ReversiApp.Controllers
         public async Task<IActionResult> Index()
         {
             Speler speler = await UserManager.FindByNameAsync(User.Identity.Name);
+            if(speler == null)
+            {
+                return View("Error");
+            }
             if (speler.SpelId != null)
             {
                 return RedirectToAction(nameof(Game), new { ID = speler.SpelId });

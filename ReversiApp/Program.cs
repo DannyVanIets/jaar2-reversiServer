@@ -17,11 +17,11 @@ namespace ReversiApp
         {
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console()
-                #if (DEBUG)
+#if (DEBUG)
                     .WriteTo.File($"Logs/Information/InformationLog-.txt",
                     restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
                     rollingInterval: RollingInterval.Minute)
-                #endif
+#endif
                 .WriteTo.File($"Logs/Warnings/WarningLog-.txt",
                 restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Warning,
                 rollingInterval: RollingInterval.Minute)
@@ -48,6 +48,11 @@ namespace ReversiApp
         .UseSerilog()
         .ConfigureWebHostDefaults(webBuilder =>
         {
+            //webBuilder.UseKestrel((options) =>
+            //{
+            //    // Do not add the Server HTTP header.
+            //    options.AddServerHeader = false;
+            //});
             webBuilder.UseStartup<Startup>();
         });
     }

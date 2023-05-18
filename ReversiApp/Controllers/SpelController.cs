@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using ReversiApp.DAL;
 using ReversiApp.Models;
+using Serilog.Core;
 
 namespace ReversiApp.Controllers
 {
@@ -16,25 +18,47 @@ namespace ReversiApp.Controllers
         private readonly ReversiContext _context;
         private readonly UserManager<Speler> UserManager;
         private readonly RoleManager<IdentityRole> RoleManager;
+        private readonly ILogger _logger;
 
-        public SpelController(ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager)
+        public SpelController(ReversiContext context, UserManager<Speler> userManager, RoleManager<IdentityRole> roleManager,
+            ILogger<SpelController> logger)
         {
             _context = context;
             UserManager = userManager;
             RoleManager = roleManager;
+            _logger = logger;
         }
 
         // GET: Spel
         public async Task<IActionResult> Index()
         {
-            Speler speler = await UserManager.FindByNameAsync(User.Identity.Name);
-            if (speler.SpelId != null)
+            try
             {
-                return RedirectToAction(nameof(Game), new { ID = speler.SpelId });
+                Speler speler = await UserManager.FindByNameAsync(User.Identity.Name);
+
+                if (speler != null)
+                {
+
+                    if (speler.SpelId != null)
+                    {
+                        return RedirectToAction(nameof(Game), new { ID = speler.SpelId });
+                    }
+
+                    var spellen = await _context.Spel.Include(s => s.Spelers).Where(s => s.Spelers.Count < 2 && s.Status == Status.NietGestart).ToListAsync();
+                    ViewBag.AantalSpellen = spellen.Count;
+                    return View(spellen);
+                }
+                else
+                {
+                    _logger.LogCritical($"Een gebruiker met de naam {User.Identity.Name} kon niet worden gevonden tijdens het laden van de website na het inloggen!");
+                    return NotFound();
+                }
             }
-            var spellen = await _context.Spel.Include(s => s.Spelers).Where(s => s.Spelers.Count < 2 && s.Status == Status.NietGestart).ToListAsync();
-            ViewBag.AantalSpellen = spellen.Count;
-            return View(spellen);
+            catch (Exception e)
+            {
+                _logger.LogCritical(e, $"Een gebruiker met de naam {User.Identity.Name} kon niet worden gevonden!");
+                return NotFound();
+            }
         }
 
         // GET: Spel/Details/5
@@ -70,7 +94,7 @@ namespace ReversiApp.Controllers
             }
             foreach (var speler in spel.Spelers)
             {
-                if (speler.Email == User.Identity.Name)
+                if (speler.UserName == User.Identity.Name)
                 {
                     if (spel.Spelers.Count == 1)
                     {
@@ -102,11 +126,28 @@ namespace ReversiApp.Controllers
                 var lastAddedGame = _context.Spel.ToList().LastOrDefault();
 
                 Speler speler = await UserManager.FindByNameAsync(User.Identity.Name);
-                speler.SpelId = lastAddedGame.ID;
-                speler.Kleur = Kleur.Wit;
-                var result = await UserManager.UpdateAsync(speler);
 
-                return RedirectToAction(nameof(Game), new { ID = lastAddedGame.ID });
+                if (speler != null)
+                {
+                    speler.SpelId = lastAddedGame.ID;
+                    speler.Kleur = Kleur.Wit;
+
+                    try
+                    {
+                        var result = await UserManager.UpdateAsync(speler);
+                        return RedirectToAction(nameof(Game), new { ID = lastAddedGame.ID });
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogCritical(ex, $"Een gebruiker met de naam {User.Identity.Name} kon niet worden geupdatet tijdens het maken van een game!");
+                        return NotFound();
+                    }
+                }
+                else
+                {
+                    _logger.LogCritical($"Een gebruiker met de naam {User.Identity.Name} kon niet worden gevonden tijdens het maken van een spel!");
+                    return NotFound();
+                }
             }
             return View(spel);
         }
@@ -297,7 +338,7 @@ namespace ReversiApp.Controllers
 
                 foreach (var winner in spel.Spelers)
                 {
-                    if(winner.Id != speler.Id)
+                    if (winner.Id != speler.Id)
                     {
                         winner.Highscore++;
                         await UserManager.UpdateAsync(winner);

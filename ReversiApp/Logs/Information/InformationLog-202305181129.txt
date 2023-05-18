@@ -1,0 +1,699 @@
+2023-05-18 11:29:00.532 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:00.547 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:00.547 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:00.548 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:00.548 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:00.548 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:00.548 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:00.548 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:00.614 +02:00 [INF] Executed page /Account/Login in 66.205ms
+2023-05-18 11:29:00.614 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:00.621 +02:00 [INF] Request finished in 89.1262ms 200 text/html; charset=utf-8
+2023-05-18 11:29:00.860 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:00.886 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:00.886 +02:00 [INF] Request finished in 0.6339ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:01.036 +02:00 [INF] Request finished in 176.2915ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:01.999 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:02.625 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:02.625 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:02.625 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:02.625 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:02.625 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:02.625 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:02.625 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:02.666 +02:00 [INF] Executed page /Account/Login in 41.4368ms
+2023-05-18 11:29:02.666 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:02.692 +02:00 [INF] Request finished in 692.774ms 200 text/html; charset=utf-8
+2023-05-18 11:29:02.866 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:03.182 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:03.185 +02:00 [INF] Request finished in 3.4324ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:03.311 +02:00 [INF] Request finished in 444.9322ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:04.364 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:04.366 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:04.366 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:04.367 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:04.367 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:04.367 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:04.367 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:04.367 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:04.388 +02:00 [INF] Executed page /Account/Login in 21.5011ms
+2023-05-18 11:29:04.388 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:04.394 +02:00 [INF] Request finished in 29.5465ms 200 text/html; charset=utf-8
+2023-05-18 11:29:04.643 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:04.643 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:04.644 +02:00 [INF] Request finished in 0.8883ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:04.760 +02:00 [INF] Request finished in 116.6877ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:05.769 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:05.771 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:05.772 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:05.772 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:05.772 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:05.772 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:05.772 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:05.773 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:05.786 +02:00 [INF] Executed page /Account/Login in 14.6685ms
+2023-05-18 11:29:05.786 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:05.797 +02:00 [INF] Request finished in 28.4699ms 200 text/html; charset=utf-8
+2023-05-18 11:29:06.202 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:06.233 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:06.233 +02:00 [INF] Request finished in 1.0441ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:06.383 +02:00 [INF] Request finished in 180.7831ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:07.268 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:07.272 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:07.272 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:07.272 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:07.273 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:07.273 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:07.273 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:07.273 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:07.289 +02:00 [INF] Executed page /Account/Login in 16.2465ms
+2023-05-18 11:29:07.289 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:07.301 +02:00 [INF] Request finished in 32.6255ms 200 text/html; charset=utf-8
+2023-05-18 11:29:07.563 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:07.563 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:07.563 +02:00 [INF] Request finished in 0.6297ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:07.671 +02:00 [INF] Request finished in 108.5222ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:08.478 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:08.480 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:08.480 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:08.480 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:08.480 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:08.480 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:08.480 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:08.481 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:08.496 +02:00 [INF] Executed page /Account/Login in 15.6706ms
+2023-05-18 11:29:08.496 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:08.503 +02:00 [INF] Request finished in 24.7393ms 200 text/html; charset=utf-8
+2023-05-18 11:29:08.731 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:08.732 +02:00 [INF] Request finished in 0.6406ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:08.735 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:08.868 +02:00 [INF] Request finished in 133.1269ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:09.488 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:09.490 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:09.491 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:09.491 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:09.491 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:09.491 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:09.492 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:09.492 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:09.507 +02:00 [INF] Executed page /Account/Login in 16.556ms
+2023-05-18 11:29:09.507 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:09.514 +02:00 [INF] Request finished in 25.6682ms 200 text/html; charset=utf-8
+2023-05-18 11:29:09.714 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:09.715 +02:00 [INF] Request finished in 0.5739ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:09.722 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:09.826 +02:00 [INF] Request finished in 103.6128ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:10.928 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:10.931 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:10.931 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:10.931 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:10.931 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:10.931 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:10.932 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:10.932 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:10.967 +02:00 [INF] Executed page /Account/Login in 36.5574ms
+2023-05-18 11:29:10.967 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:10.977 +02:00 [INF] Request finished in 48.1928ms 200 text/html; charset=utf-8
+2023-05-18 11:29:11.099 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:11.259 +02:00 [INF] Request finished in 160.4819ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:11.441 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:11.492 +02:00 [INF] Request finished in 50.594ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:12.487 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:12.490 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:12.490 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:12.492 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:12.492 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:12.492 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:12.492 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:12.493 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:12.516 +02:00 [INF] Executed page /Account/Login in 25.8856ms
+2023-05-18 11:29:12.516 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:12.526 +02:00 [INF] Request finished in 38.8265ms 200 text/html; charset=utf-8
+2023-05-18 11:29:12.815 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:12.817 +02:00 [INF] Request finished in 1.814ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:12.821 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:12.962 +02:00 [INF] Request finished in 141.0046ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:13.881 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:13.886 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:13.888 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:13.889 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:13.890 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:13.890 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:13.890 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:13.890 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:13.921 +02:00 [INF] Executed page /Account/Login in 32.6835ms
+2023-05-18 11:29:13.921 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:13.930 +02:00 [INF] Request finished in 49.8503ms 200 text/html; charset=utf-8
+2023-05-18 11:29:14.140 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:14.141 +02:00 [INF] Request finished in 1.5645ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:14.144 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:14.289 +02:00 [INF] Request finished in 145.3452ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:15.306 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:15.309 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:15.309 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:15.310 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:15.310 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:15.310 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:15.311 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:15.311 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:15.329 +02:00 [INF] Executed page /Account/Login in 19.3268ms
+2023-05-18 11:29:15.329 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:15.345 +02:00 [INF] Request finished in 39.2964ms 200 text/html; charset=utf-8
+2023-05-18 11:29:15.602 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:15.617 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:15.621 +02:00 [INF] Request finished in 4.1774ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:15.736 +02:00 [INF] Request finished in 134.4517ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:16.850 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:16.861 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:16.861 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:16.861 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:16.861 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:16.861 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:16.862 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:16.862 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:16.914 +02:00 [INF] Executed page /Account/Login in 53.4471ms
+2023-05-18 11:29:16.915 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:16.931 +02:00 [INF] Request finished in 80.5204ms 200 text/html; charset=utf-8
+2023-05-18 11:29:17.029 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:17.137 +02:00 [INF] Request finished in 107.1032ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:17.284 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:17.285 +02:00 [INF] Request finished in 1.1743ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:18.193 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:18.195 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:18.195 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:18.196 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:18.197 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:18.197 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:18.197 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:18.197 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:18.219 +02:00 [INF] Executed page /Account/Login in 23.4182ms
+2023-05-18 11:29:18.219 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:18.227 +02:00 [INF] Request finished in 34.1096ms 200 text/html; charset=utf-8
+2023-05-18 11:29:18.481 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:18.483 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:18.486 +02:00 [INF] Request finished in 3.1031ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:18.573 +02:00 [INF] Request finished in 91.4177ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:19.956 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:20.792 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:20.800 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:20.801 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:20.801 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:20.801 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:20.801 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:20.801 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:20.817 +02:00 [INF] Executed page /Account/Login in 16.3794ms
+2023-05-18 11:29:20.852 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:20.858 +02:00 [INF] Request finished in 902.139ms 200 text/html; charset=utf-8
+2023-05-18 11:29:21.114 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:21.115 +02:00 [INF] Request finished in 0.8291ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:21.116 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:21.264 +02:00 [INF] Request finished in 147.5738ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:22.101 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:22.104 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:22.105 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:22.105 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:22.106 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:22.106 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:22.106 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:22.106 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:22.139 +02:00 [INF] Executed page /Account/Login in 34.2415ms
+2023-05-18 11:29:22.139 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:22.152 +02:00 [INF] Request finished in 50.4535ms 200 text/html; charset=utf-8
+2023-05-18 11:29:22.374 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:22.379 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:22.380 +02:00 [INF] Request finished in 1.5ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:22.449 +02:00 [INF] Request finished in 75.2506ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:23.139 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:23.147 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:23.147 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:23.148 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:23.148 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:23.148 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:23.149 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:23.149 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:23.241 +02:00 [INF] Executed page /Account/Login in 93.2576ms
+2023-05-18 11:29:23.242 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:23.251 +02:00 [INF] Request finished in 113.4591ms 200 text/html; charset=utf-8
+2023-05-18 11:29:23.497 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:23.497 +02:00 [INF] Request finished in 0.479ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:23.509 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:23.577 +02:00 [INF] Request finished in 67.4749ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:24.408 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:24.410 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:24.411 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:24.411 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:24.411 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:24.412 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:24.412 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:24.412 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:24.429 +02:00 [INF] Executed page /Account/Login in 18.4573ms
+2023-05-18 11:29:24.429 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:24.439 +02:00 [INF] Request finished in 30.6365ms 200 text/html; charset=utf-8
+2023-05-18 11:29:24.648 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:24.649 +02:00 [INF] Request finished in 0.4929ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:24.651 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:24.721 +02:00 [INF] Request finished in 70.5157ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:25.568 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:25.571 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:25.571 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:25.572 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:25.572 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:25.572 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:25.572 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:25.572 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:25.586 +02:00 [INF] Executed page /Account/Login in 14.6715ms
+2023-05-18 11:29:25.586 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:25.593 +02:00 [INF] Request finished in 25.242ms 200 text/html; charset=utf-8
+2023-05-18 11:29:25.846 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:25.846 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:25.847 +02:00 [INF] Request finished in 0.8847ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:26.029 +02:00 [INF] Request finished in 183.8667ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:26.916 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:26.919 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:26.919 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:26.920 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:26.920 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:26.920 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:26.920 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:26.920 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:26.941 +02:00 [INF] Executed page /Account/Login in 21.7946ms
+2023-05-18 11:29:26.941 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:26.949 +02:00 [INF] Request finished in 33.8222ms 200 text/html; charset=utf-8
+2023-05-18 11:29:27.276 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:27.287 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:27.288 +02:00 [INF] Request finished in 0.7616ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:27.460 +02:00 [INF] Request finished in 183.6514ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:28.248 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:28.250 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:28.250 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:28.251 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:28.251 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:28.251 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:28.251 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:28.251 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:28.266 +02:00 [INF] Executed page /Account/Login in 16.0475ms
+2023-05-18 11:29:28.267 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:28.274 +02:00 [INF] Request finished in 26.0304ms 200 text/html; charset=utf-8
+2023-05-18 11:29:28.517 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:28.519 +02:00 [INF] Request finished in 1.2529ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:28.522 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:28.703 +02:00 [INF] Request finished in 180.49ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:29.718 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:29.720 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:29.720 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:29.721 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:29.721 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:29.722 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:29.722 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:29.722 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:29.749 +02:00 [INF] Executed page /Account/Login in 28.523ms
+2023-05-18 11:29:29.749 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:29.760 +02:00 [INF] Request finished in 42.1188ms 200 text/html; charset=utf-8
+2023-05-18 11:29:30.057 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:30.058 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:30.059 +02:00 [INF] Request finished in 1.1168ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:30.275 +02:00 [INF] Request finished in 217.3185ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:31.125 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:31.128 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:31.128 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:31.128 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:31.129 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:31.129 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:31.129 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:31.129 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:31.159 +02:00 [INF] Executed page /Account/Login in 30.5423ms
+2023-05-18 11:29:31.159 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:31.167 +02:00 [INF] Request finished in 42.748ms 200 text/html; charset=utf-8
+2023-05-18 11:29:31.447 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:31.450 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:31.451 +02:00 [INF] Request finished in 1.1527ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:31.563 +02:00 [INF] Request finished in 116.1429ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:32.438 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cscript%3Ealert(1)%3C/script%3E  
+2023-05-18 11:29:32.444 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:32.445 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:32.447 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:32.448 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:32.448 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:32.448 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:32.449 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:32.489 +02:00 [INF] Executed page /Account/Login in 43.9465ms
+2023-05-18 11:29:32.490 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:32.498 +02:00 [INF] Request finished in 59.8699ms 200 text/html; charset=utf-8
+2023-05-18 11:29:32.707 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:32.707 +02:00 [INF] Request finished in 0.4387ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:32.708 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:32.779 +02:00 [INF] Request finished in 71.0351ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:33.316 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:33.317 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:33.317 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:33.318 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:33.318 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:33.318 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:33.318 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:33.318 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:33.349 +02:00 [INF] Executed page /Account/Login in 31.4101ms
+2023-05-18 11:29:33.349 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:33.361 +02:00 [INF] Request finished in 45.1737ms 200 text/html; charset=utf-8
+2023-05-18 11:29:33.421 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:33.543 +02:00 [INF] Request finished in 122.1927ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:33.659 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:33.670 +02:00 [INF] Request finished in 11.5271ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:34.609 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:34.610 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:34.610 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:34.611 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:34.611 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:34.611 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:34.611 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:34.611 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:34.629 +02:00 [INF] Executed page /Account/Login in 18.4131ms
+2023-05-18 11:29:34.629 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:34.639 +02:00 [INF] Request finished in 30.1958ms 200 text/html; charset=utf-8
+2023-05-18 11:29:34.885 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:34.885 +02:00 [INF] Request finished in 0.4068ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:34.886 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:34.952 +02:00 [INF] Request finished in 66.1329ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:35.786 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:35.788 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:35.788 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:35.789 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:35.789 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:35.789 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:35.789 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:35.789 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:35.803 +02:00 [INF] Executed page /Account/Login in 14.5482ms
+2023-05-18 11:29:36.089 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:36.095 +02:00 [INF] Request finished in 308.6351ms 200 text/html; charset=utf-8
+2023-05-18 11:29:36.291 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:36.292 +02:00 [INF] Request finished in 0.6382ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:36.294 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:36.379 +02:00 [INF] Request finished in 84.7419ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:37.250 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:37.252 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:37.252 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:37.252 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:37.253 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:37.253 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:37.253 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:37.253 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:37.270 +02:00 [INF] Executed page /Account/Login in 17.3919ms
+2023-05-18 11:29:37.270 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:37.276 +02:00 [INF] Request finished in 25.9776ms 200 text/html; charset=utf-8
+2023-05-18 11:29:37.489 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:37.494 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:37.495 +02:00 [INF] Request finished in 0.4533ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:37.576 +02:00 [INF] Request finished in 86.872ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:38.134 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:38.135 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:38.135 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:38.136 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:38.136 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:38.136 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:38.136 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:38.136 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:38.147 +02:00 [INF] Executed page /Account/Login in 11.7462ms
+2023-05-18 11:29:38.147 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:38.153 +02:00 [INF] Request finished in 19.5839ms 200 text/html; charset=utf-8
+2023-05-18 11:29:38.338 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:38.339 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:38.340 +02:00 [INF] Request finished in 0.6002ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:38.419 +02:00 [INF] Request finished in 80.8544ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:38.895 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:38.896 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:38.896 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:38.897 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:38.897 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:38.897 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:38.898 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:38.898 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:38.914 +02:00 [INF] Executed page /Account/Login in 18.0395ms
+2023-05-18 11:29:38.915 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:38.921 +02:00 [INF] Request finished in 26.5165ms 200 text/html; charset=utf-8
+2023-05-18 11:29:39.180 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:39.237 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:39.238 +02:00 [INF] Request finished in 1.0236ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:39.383 +02:00 [INF] Request finished in 203.6439ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:39.991 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:39.993 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:39.994 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:39.995 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:39.995 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:39.995 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:39.995 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:39.996 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:40.039 +02:00 [INF] Executed page /Account/Login in 45.6095ms
+2023-05-18 11:29:40.040 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:40.046 +02:00 [INF] Request finished in 54.9395ms 200 text/html; charset=utf-8
+2023-05-18 11:29:40.269 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:40.269 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:40.269 +02:00 [INF] Request finished in 0.6115ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:40.399 +02:00 [INF] Request finished in 130.6613ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:41.207 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:41.211 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:41.212 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:41.212 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:41.212 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:41.212 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:41.212 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:41.212 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:41.244 +02:00 [INF] Executed page /Account/Login in 32.1911ms
+2023-05-18 11:29:41.244 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:41.258 +02:00 [INF] Request finished in 50.5963ms 200 text/html; charset=utf-8
+2023-05-18 11:29:41.505 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:41.505 +02:00 [INF] Request finished in 0.4771ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:41.512 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:41.606 +02:00 [INF] Request finished in 94.3146ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:42.518 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:42.522 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:42.522 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:42.523 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:42.523 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:42.523 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:42.524 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:42.524 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:42.568 +02:00 [INF] Executed page /Account/Login in 45.5976ms
+2023-05-18 11:29:42.568 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:42.588 +02:00 [INF] Request finished in 69.9548ms 200 text/html; charset=utf-8
+2023-05-18 11:29:42.854 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:42.856 +02:00 [INF] Request finished in 1.7459ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:42.862 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:42.994 +02:00 [INF] Request finished in 131.9043ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:43.755 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:43.756 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:43.756 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:43.756 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:43.756 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:43.756 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:43.757 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:43.757 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:43.767 +02:00 [INF] Executed page /Account/Login in 10.9093ms
+2023-05-18 11:29:43.767 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:43.772 +02:00 [INF] Request finished in 16.6262ms 200 text/html; charset=utf-8
+2023-05-18 11:29:43.970 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:43.971 +02:00 [INF] Request finished in 0.458ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:43.977 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:44.168 +02:00 [INF] Request finished in 190.9284ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:44.910 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:44.911 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:44.912 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:44.912 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:44.912 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:44.912 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:44.912 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:44.912 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:44.926 +02:00 [INF] Executed page /Account/Login in 14.5443ms
+2023-05-18 11:29:44.926 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:44.933 +02:00 [INF] Request finished in 23.0813ms 200 text/html; charset=utf-8
+2023-05-18 11:29:45.124 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:45.153 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:45.154 +02:00 [INF] Request finished in 0.7937ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:45.244 +02:00 [INF] Request finished in 119.9477ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:46.034 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:46.036 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:46.036 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:46.036 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:46.036 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:46.036 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:46.037 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:46.037 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:46.049 +02:00 [INF] Executed page /Account/Login in 13.2946ms
+2023-05-18 11:29:46.049 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:46.055 +02:00 [INF] Request finished in 21.155ms 200 text/html; charset=utf-8
+2023-05-18 11:29:46.470 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:46.470 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:46.472 +02:00 [INF] Request finished in 1.5642ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:46.561 +02:00 [INF] Request finished in 91.5977ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:47.295 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:47.298 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:47.299 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:47.299 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:47.300 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:47.300 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:47.300 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:47.300 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:47.313 +02:00 [INF] Executed page /Account/Login in 14.17ms
+2023-05-18 11:29:47.313 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:47.320 +02:00 [INF] Request finished in 25.063ms 200 text/html; charset=utf-8
+2023-05-18 11:29:47.568 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:47.569 +02:00 [INF] Request finished in 1.2328ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:47.573 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:47.656 +02:00 [INF] Request finished in 82.9611ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:48.439 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:48.440 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:48.440 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:48.441 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:48.441 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:48.441 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:48.441 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:48.441 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:48.456 +02:00 [INF] Executed page /Account/Login in 15.6482ms
+2023-05-18 11:29:48.456 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:48.462 +02:00 [INF] Request finished in 22.8443ms 200 text/html; charset=utf-8
+2023-05-18 11:29:48.661 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:48.665 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:48.666 +02:00 [INF] Request finished in 1.4941ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:48.765 +02:00 [INF] Request finished in 104.0515ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:49.558 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:49.560 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:49.560 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:49.560 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:49.560 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:49.561 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:49.561 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:49.561 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:49.581 +02:00 [INF] Executed page /Account/Login in 21.2148ms
+2023-05-18 11:29:49.581 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:49.591 +02:00 [INF] Request finished in 32.662ms 200 text/html; charset=utf-8
+2023-05-18 11:29:49.780 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:49.781 +02:00 [INF] Request finished in 0.4916ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:49.785 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:49.927 +02:00 [INF] Request finished in 141.3208ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:50.758 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:50.761 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:50.761 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:50.761 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:50.762 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:50.764 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:50.764 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:50.765 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:50.785 +02:00 [INF] Executed page /Account/Login in 23.9728ms
+2023-05-18 11:29:50.785 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:50.793 +02:00 [INF] Request finished in 34.6731ms 200 text/html; charset=utf-8
+2023-05-18 11:29:51.034 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:51.035 +02:00 [INF] Request finished in 0.6907ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:51.040 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:51.151 +02:00 [INF] Request finished in 110.6125ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:51.897 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:51.899 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:51.899 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:51.899 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:51.900 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:51.900 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:51.900 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:51.900 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:51.914 +02:00 [INF] Executed page /Account/Login in 14.9741ms
+2023-05-18 11:29:51.914 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:51.922 +02:00 [INF] Request finished in 24.5867ms 200 text/html; charset=utf-8
+2023-05-18 11:29:52.115 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:52.116 +02:00 [INF] Request finished in 0.4626ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:52.922 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:52.925 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:52.925 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:52.926 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:52.926 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:52.926 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:52.926 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:52.927 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:52.951 +02:00 [INF] Executed page /Account/Login in 25.9904ms
+2023-05-18 11:29:52.951 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:52.961 +02:00 [INF] Request finished in 39.4645ms 200 text/html; charset=utf-8
+2023-05-18 11:29:53.205 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:53.206 +02:00 [INF] Request finished in 0.9526ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:53.209 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:53.372 +02:00 [INF] Request finished in 163.193ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:54.163 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:54.167 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:54.167 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:54.168 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:54.169 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:54.170 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:54.170 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:54.171 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:54.208 +02:00 [INF] Executed page /Account/Login in 40.98ms
+2023-05-18 11:29:54.209 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:54.224 +02:00 [INF] Request finished in 60.9964ms 200 text/html; charset=utf-8
+2023-05-18 11:29:54.552 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:54.555 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:54.556 +02:00 [INF] Request finished in 0.6961ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:54.634 +02:00 [INF] Request finished in 81.7765ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:55.377 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:55.378 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:55.379 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:55.379 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:55.380 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:55.380 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:55.380 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:55.380 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:55.392 +02:00 [INF] Executed page /Account/Login in 13.2969ms
+2023-05-18 11:29:55.392 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:55.399 +02:00 [INF] Request finished in 21.8388ms 200 text/html; charset=utf-8
+2023-05-18 11:29:55.621 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:55.621 +02:00 [INF] Request finished in 0.4656ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:55.624 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:55.696 +02:00 [INF] Request finished in 72.2945ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:56.491 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:56.492 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:56.492 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:56.493 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:56.493 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:56.493 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:56.493 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:56.493 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:56.510 +02:00 [INF] Executed page /Account/Login in 17.5074ms
+2023-05-18 11:29:56.510 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:56.518 +02:00 [INF] Request finished in 27.4303ms 200 text/html; charset=utf-8
+2023-05-18 11:29:56.739 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:56.740 +02:00 [INF] Request finished in 0.6215ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:56.746 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:56.835 +02:00 [INF] Request finished in 89.2502ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:57.735 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:57.736 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:57.736 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:57.737 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:57.737 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:57.737 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:57.737 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:57.737 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:57.749 +02:00 [INF] Executed page /Account/Login in 12.2616ms
+2023-05-18 11:29:57.749 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:57.754 +02:00 [INF] Request finished in 18.7826ms 200 text/html; charset=utf-8
+2023-05-18 11:29:57.959 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:57.962 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:57.962 +02:00 [INF] Request finished in 0.8862ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:58.045 +02:00 [INF] Request finished in 86.0788ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:58.859 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=javascript:alert(1)  
+2023-05-18 11:29:58.863 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:58.863 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:58.864 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:58.864 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:58.865 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:58.865 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:58.865 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:58.895 +02:00 [INF] Executed page /Account/Login in 31.844ms
+2023-05-18 11:29:58.896 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:58.909 +02:00 [INF] Request finished in 49.9411ms 200 text/html; charset=utf-8
+2023-05-18 11:29:59.140 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-05-18 11:29:59.141 +02:00 [INF] Request finished in 0.5242ms 200 application/javascript; charset=utf-8
+2023-05-18 11:29:59.144 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/_vs/browserLink  
+2023-05-18 11:29:59.235 +02:00 [INF] Request finished in 90.8006ms 200 text/javascript; charset=UTF-8
+2023-05-18 11:29:59.776 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44339/Identity/Account/Login?ReturnUrl=%3Cimg%20src=%22random.gif%22%20onerror=alert(1)%3E  
+2023-05-18 11:29:59.779 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-05-18 11:29:59.779 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-05-18 11:29:59.780 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-05-18 11:29:59.780 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-05-18 11:29:59.780 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-05-18 11:29:59.780 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-05-18 11:29:59.780 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-05-18 11:29:59.794 +02:00 [INF] Executed page /Account/Login in 14.5378ms
+2023-05-18 11:29:59.794 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-05-18 11:29:59.805 +02:00 [INF] Request finished in 28.2234ms 200 text/html; charset=utf-8

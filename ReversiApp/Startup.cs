@@ -16,6 +16,7 @@ using Microsoft.Extensions.Logging;
 using ReversiApp.DAL;
 using ReversiApp.Models;
 using ReversiApp.Services;
+using SendGrid;
 
 namespace ReversiApp
 {
@@ -72,10 +73,10 @@ namespace ReversiApp
                 options.LoginPath = "/Identity/Account/Login";
             });
 
-            //services.AddAntiforgery(options =>
-            //{
-            //    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-            //});
+            services.AddAntiforgery(options =>
+            {
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+            });
 
             services.AddControllers().AddNewtonsoftJson();
             
@@ -103,6 +104,9 @@ namespace ReversiApp
                     "script-src 'self' 'unsafe-inline' https: ;");
                     //"script-src 'self' https: https://www.google.com/recaptcha/api.js https://www.gstatic.com/recaptcha/releases/wqcyhEwminqmAoT8QO_BkXCr/recaptcha__nl.js ;");
                 context.Response.Headers.Remove("X-Powered-By");
+                context.Response.Headers.Remove("Server");
+                context.Response.Headers.Remove("X-AspNet-Version");
+                context.Response.Headers.Remove("X-AspNetMvc-Version");
                 await next();
             });
 

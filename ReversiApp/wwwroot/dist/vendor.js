@@ -9,7 +9,7 @@
 /**!
 
  @license
- handlebars v4.7.3
+ handlebars v4.7.7
 
 Copyright (C) 2011-2019 by Yehuda Katz
 

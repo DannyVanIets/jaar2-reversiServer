@@ -38,8 +38,6 @@ namespace ReversiApp.Controllers
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> Index()
         {
-            _logger.LogInformation("Whatever");
-
             List<UserAndRolesModel> users = new List<UserAndRolesModel>();
 
             try

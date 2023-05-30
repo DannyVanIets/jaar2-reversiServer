@@ -45,7 +45,7 @@ namespace ReversiApp
             // Password needs: digit, non-alphanumeric character, unique char, lower-case, upper-case. Length must be above 6.
             services.AddIdentity<Speler, IdentityRole>(options =>
             {
-                options.SignIn.RequireConfirmedAccount = true;
+                //options.SignIn.RequireConfirmedAccount = true;
                 options.User.RequireUniqueEmail = true;
             })
                 .AddEntityFrameworkStores<ReversiContext>()
@@ -67,6 +67,17 @@ namespace ReversiApp
             services.AddSingleton<IConfiguration>(Configuration);
             //services.Configure<AuthMessageSenderOptions>(Configuration);
 
+            services.AddRazorPages(options =>
+            {
+                //options.Conventions.AllowAnonymousToPage("/Home/Privacy");
+                options.Conventions.AllowAnonymousToFolder("/Identity/");
+                options.Conventions.AllowAnonymousToFolder("/Home/");
+                options.Conventions.AllowAnonymousToFolder("/Shared/");
+                options.Conventions.AuthorizeFolder("/Spel/");
+                options.Conventions.AuthorizeFolder("/Speler/");
+            });
+
+            // https://learn.microsoft.com/en-us/aspnet/core/security/authorization/razor-pages-authorization?view=aspnetcore-7.0
             //For redirecting always to the login page and email inactivity timeout
             services.ConfigureApplicationCookie(options =>
             {
@@ -80,7 +91,7 @@ namespace ReversiApp
 
             services.AddControllers().AddNewtonsoftJson();
             
-            services.AddRazorPages();
+            //services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -131,7 +142,8 @@ namespace ReversiApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Spel}/{action=Index}/{id?}").RequireAuthorization();
+                    //pattern: "{controller=Spel}/{action=Index}/{id?}").RequireAuthorization();
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

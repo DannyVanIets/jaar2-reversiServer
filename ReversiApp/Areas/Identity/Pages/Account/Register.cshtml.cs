@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using ReversiApp.Models;
 
 namespace ReversiApp.Areas.Identity.Pages.Account
@@ -91,6 +93,23 @@ namespace ReversiApp.Areas.Identity.Pages.Account
             
             if (ModelState.IsValid)
             {
+                var response = Request.Form["g-recaptcha-response"];
+                //secret that was generated in key value pair
+                const string secret = "6Le15uMUAAAAALTlLQwcmG6zJNrfhEnbTGvMJnHE";
+
+                var client = new WebClient();
+                var reply = client.DownloadString(
+                        string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}",
+                    secret, response));
+
+                var captchaResponse = JsonConvert.DeserializeObject<CaptchaReponse>(reply);
+
+                //when response is false check for the error message
+                if (!captchaResponse.Success)
+                {
+                    ModelState.AddModelError(string.Empty, "Captcha check failed");
+                }
+
                 if (!Input.AgreedToPrivacy)
                 {
                     ModelState.AddModelError(string.Empty, "Je moet met de privacy statement akkoord gaan als je de website wilt gebruiken met een account.");

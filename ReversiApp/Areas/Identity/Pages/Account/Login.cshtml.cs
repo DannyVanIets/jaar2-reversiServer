@@ -59,7 +59,7 @@ namespace ReversiApp.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
-            // User already logged in? We don't want that. DOESN'T WORK RIGHT NOW!
+            // User already logged in? We don't want that! Send them back.
             var user = await _userManager.GetUserAsync(User);
             if (user != null)
             {

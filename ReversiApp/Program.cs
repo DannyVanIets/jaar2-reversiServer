@@ -48,11 +48,6 @@ namespace ReversiApp
         .UseSerilog()
         .ConfigureWebHostDefaults(webBuilder =>
         {
-            //webBuilder.UseKestrel((options) =>
-            //{
-            //    // Do not add the Server HTTP header.
-            //    options.AddServerHeader = false;
-            //});
             webBuilder.UseStartup<Startup>();
         });
     }

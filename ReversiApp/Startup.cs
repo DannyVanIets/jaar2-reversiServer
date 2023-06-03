@@ -52,6 +52,16 @@ namespace ReversiApp
                 .AddDefaultTokenProviders()
                 .AddDefaultUI();
             services.AddDbContext<ReversiContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ReversiContextConnection")));
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "_allowedSpecificOrigins",
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("http://localhost:50433").AllowAnyMethod();
+                                  });
+            });
+
             services.AddMvc();
 
             //for the captcha
@@ -67,16 +77,6 @@ namespace ReversiApp
             services.AddSingleton<IConfiguration>(Configuration);
             //services.Configure<AuthMessageSenderOptions>(Configuration);
 
-            services.AddRazorPages(options =>
-            {
-                //options.Conventions.AllowAnonymousToPage("/Home/Privacy");
-                options.Conventions.AllowAnonymousToFolder("/Identity/");
-                options.Conventions.AllowAnonymousToFolder("/Home/");
-                options.Conventions.AllowAnonymousToFolder("/Shared/");
-                options.Conventions.AuthorizeFolder("/Spel/");
-                options.Conventions.AuthorizeFolder("/Speler/");
-            });
-
             // https://learn.microsoft.com/en-us/aspnet/core/security/authorization/razor-pages-authorization?view=aspnetcore-7.0
             //For redirecting always to the login page and email inactivity timeout
             services.ConfigureApplicationCookie(options =>
@@ -90,8 +90,15 @@ namespace ReversiApp
             });
 
             services.AddControllers().AddNewtonsoftJson();
-            
-            //services.AddRazorPages();
+
+            services.AddRazorPages(options =>
+            {
+                options.Conventions.AllowAnonymousToFolder("/Identity");
+                options.Conventions.AllowAnonymousToFolder("/Home");
+                options.Conventions.AllowAnonymousToFolder("/Shared");
+                options.Conventions.AuthorizeFolder("/Spel");
+                options.Conventions.AuthorizeFolder("/Speler");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -131,6 +138,9 @@ namespace ReversiApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseCors("_allowedSpecificOrigins");
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

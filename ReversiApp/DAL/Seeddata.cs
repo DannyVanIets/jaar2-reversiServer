@@ -18,7 +18,7 @@ namespace ReversiApp.DAL
             AddRol(roleManager, "Moderator").Wait();
             AddRol(roleManager, "Normal").Wait();
 
-            AddSpeler(userManager, roleManager, "De grote enge baas", "dannyvanbokhorst@live.nl", "Iets-123", "Admin").Wait();
+            AddSpeler(userManager, roleManager, "DeGroteEngeBaas", "dannyvanbokhorst@live.nl", "Iets-123", "Admin").Wait();
             AddSpeler(userManager, roleManager, "Aapje123", "amonkeyeatingicecream@live.nl", "Nogwat-123", "Moderator").Wait();
             AddSpeler(userManager, roleManager, "Groentje", "hendrikgroen@live.nl", "Test-123", "Normal").Wait();
             context.SaveChanges();

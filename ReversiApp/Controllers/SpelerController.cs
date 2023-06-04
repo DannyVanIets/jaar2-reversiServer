@@ -38,6 +38,11 @@ namespace ReversiApp.Controllers
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> Index()
         {
+            if (User.IsInRole("Normal"))
+            {
+                return View();
+            }
+
             List<UserAndRolesModel> users = new List<UserAndRolesModel>();
 
             try
@@ -84,7 +89,7 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> ArchivedAsync()
         {
             List<UserAndRolesModel> users = new List<UserAndRolesModel>();
@@ -93,7 +98,7 @@ namespace ReversiApp.Controllers
             {
                 string rol = await ReturnRoleAsync(user);
 
-                if (User.IsInRole("Admin") && user.Archived)
+                if ((User.IsInRole("Admin") || User.IsInRole("Moderator")) && user.Archived)
                 {
                     users.Add(new UserAndRolesModel
                     {
@@ -112,6 +117,7 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewBag.Rollen = new SelectList(RoleManager.Roles);
@@ -123,11 +129,12 @@ namespace ReversiApp.Controllers
 
         [HttpPost, ActionName("Create")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateAccount()
         {
             ViewBag.Rollen = new SelectList(RoleManager.Roles);
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && User.IsInRole("Admin"))
             {
                 var claims = new List<Claim>();
 
@@ -148,9 +155,9 @@ namespace ReversiApp.Controllers
                     {
                         var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
 
-                        #if (DEBUG)
-                            _logger.LogInformation("De admin '" + loggedinUser.UserName + "' created a new account with the username '" + Input.Username + "'.");
-                        #endif
+#if (DEBUG)
+                        _logger.LogInformation("De admin '" + loggedinUser.UserName + "' created a new account with the username '" + Input.Username + "'.");
+#endif
 
                         return RedirectToAction(nameof(Index));
                     }
@@ -165,6 +172,7 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> Details(string id)
         {
             var userInformation = await UserManager.FindByIdAsync(id);
@@ -193,6 +201,7 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> Edit(string id)
         {
             var userInformation = await UserManager.FindByIdAsync(id);
@@ -219,12 +228,13 @@ namespace ReversiApp.Controllers
 
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> EditAccount(UserAndRolesModel userAndRoles)
         {
             ViewBag.Rollen = new SelectList(RoleManager.Roles);
             Speler speler = await UserManager.FindByIdAsync(userAndRoles.UserId);
 
-            if (speler != null)
+            if (speler != null && User.IsInRole("Moderator"))
             {
                 if (User.IsInRole("Admin"))
                 {
@@ -274,6 +284,7 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> ArchiveSpeler(string id)
         {
             var userInformation = await UserManager.FindByIdAsync(id);
@@ -293,20 +304,21 @@ namespace ReversiApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> ArchiveSpeler(UserAndRolesModel userAndRoles)
         {
             Speler speler = await UserManager.FindByIdAsync(userAndRoles.UserId);
 
-            if (speler != null)
+            if (speler != null && (User.IsInRole("Moderator") || User.IsInRole("Admin")))
             {
                 speler.Archived = userAndRoles.Archived;
 
                 var result = await UserManager.UpdateAsync(speler);
 
-                if (result.Succeeded && User.IsInRole("Admin"))
+                if (result.Succeeded && (User.IsInRole("Moderator") || User.IsInRole("Admin")))
                 {
                     var loggedinUser = await UserManager.GetUserAsync(HttpContext.User);
-                    _logger.LogInformation("De admin " + loggedinUser.UserName + " archived the account with the email " + Input.Email + ".");
+                    _logger.LogInformation("De admin/moderator " + loggedinUser.UserName + " archived the account with the email " + Input.Email + ".");
                 }
                 foreach (var error in result.Errors)
                 {
@@ -319,9 +331,9 @@ namespace ReversiApp.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(string id)
         {
-            _logger.LogInformation("Delete deez nu-");
             var userInformation = await UserManager.FindByIdAsync(id);
 
             if (userInformation == null)
@@ -345,11 +357,12 @@ namespace ReversiApp.Controllers
         }
 
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteAccount(string id)
         {
             Speler speler = await UserManager.FindByIdAsync(id);
 
-            if (speler != null)
+            if (speler != null && User.IsInRole("Admin"))
             {
                 //Eerst halen we de rollen en claims weg die bij de speler hoort
                 var alleRollen = await UserManager.GetRolesAsync(speler);

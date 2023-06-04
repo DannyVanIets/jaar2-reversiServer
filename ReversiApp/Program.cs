@@ -18,13 +18,13 @@ namespace ReversiApp
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console()
 #if (DEBUG)
-                    //.WriteTo.File($"Logs/Information/InformationLog-.txt",
-                    //restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
-                    //rollingInterval: RollingInterval.Minute)
+                    .WriteTo.File($"Logs/Information/InformationLog-.txt",
+                    restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
+                    rollingInterval: RollingInterval.Minute)
 #endif
                 .WriteTo.File($"Logs/Warnings/WarningLog-.txt",
                 restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Warning,
-                rollingInterval: RollingInterval.Minute)
+                rollingInterval: RollingInterval.Day)
                 .CreateLogger();
             try
             {

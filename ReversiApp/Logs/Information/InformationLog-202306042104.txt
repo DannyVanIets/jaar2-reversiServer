@@ -1,0 +1,27 @@
+2023-06-04 21:04:01.592 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login  
+2023-06-04 21:04:01.747 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 21:04:01.772 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 21:04:01.803 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 21:04:01.811 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 21:04:01.813 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 21:04:01.927 +02:00 [INF] Executed page /Account/Login in 155.444ms
+2023-06-04 21:04:01.927 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 21:04:01.932 +02:00 [INF] Request finished in 343.8422ms 200 text/html; charset=utf-8
+2023-06-04 21:04:02.018 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 21:04:02.020 +02:00 [INF] Request finished in 1.6044ms 200 application/javascript; charset=utf-8
+2023-06-04 21:04:02.218 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 21:04:02.348 +02:00 [INF] Request finished in 130.7033ms 200 text/javascript; charset=UTF-8
+2023-06-04 21:04:04.093 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44339/Identity/Account/Login application/x-www-form-urlencoded 290
+2023-06-04 21:04:04.103 +02:00 [INF] CORS policy execution failed.
+2023-06-04 21:04:04.103 +02:00 [INF] Request origin https://localhost:44339 does not have permission to access the resource.
+2023-06-04 21:04:04.119 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 21:04:04.123 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 21:04:04.178 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2023-06-04 21:04:04.797 +02:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 21:04:04.815 +02:00 [INF] Executed page /Account/Login in 690.6839ms
+2023-06-04 21:04:04.816 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 21:04:04.822 +02:00 [INF] Request finished in 729.3935ms 200 text/html; charset=utf-8
+2023-06-04 21:04:04.907 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 21:04:04.910 +02:00 [INF] Request finished in 3.5803ms 200 application/javascript; charset=utf-8
+2023-06-04 21:04:05.075 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 21:04:05.251 +02:00 [INF] Request finished in 174.7ms 200 text/javascript; charset=UTF-8

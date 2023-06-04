@@ -1,0 +1,64 @@
+2023-06-04 19:43:05.721 +02:00 [INF] Application is starting up...
+2023-06-04 19:43:05.970 +02:00 [WRN] This test message can be safely ignored!
+2023-06-04 19:43:09.367 +02:00 [INF] User profile is available. Using 'C:\Users\Danny\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 19:43:12.539 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 19:43:16.539 +02:00 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-04 19:43:16.723 +02:00 [INF] Executed DbCommand (145ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-06-04 19:43:19.094 +02:00 [INF] Executed DbCommand (170ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-06-04 19:43:19.279 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-06-04 19:43:19.288 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-06-04 19:43:19.365 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 19:43:19.794 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 19:43:19.799 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 19:43:20.635 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-04 19:43:20.636 +02:00 [INF] Hosting environment: Development
+2023-06-04 19:43:20.636 +02:00 [INF] Content root path: D:\code\git\jaar2-reversiServer\ReversiApp
+2023-06-04 19:43:20.758 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/  
+2023-06-04 19:43:21.011 +02:00 [INF] Executing endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 19:43:21.093 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ReversiApp.Controllers.HomeController (ReversiApp).
+2023-06-04 19:43:21.120 +02:00 [INF] Executing ViewResult, running view Index.
+2023-06-04 19:43:21.919 +02:00 [INF] Executed ViewResult - view Index executed in 801.8104ms.
+2023-06-04 19:43:21.934 +02:00 [INF] Executed action ReversiApp.Controllers.HomeController.Index (ReversiApp) in 839.659ms
+2023-06-04 19:43:21.936 +02:00 [INF] Executed endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 19:43:22.029 +02:00 [INF] Request finished in 1283.3015ms 200 text/html; charset=utf-8
+2023-06-04 19:43:22.095 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 19:43:22.098 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/dist/vendor.js  
+2023-06-04 19:43:22.104 +02:00 [INF] Request finished in 9.2238ms 200 application/javascript; charset=utf-8
+2023-06-04 19:43:22.112 +02:00 [INF] The file /dist/vendor.js was not modified
+2023-06-04 19:43:22.117 +02:00 [INF] Request finished in 19.207ms 304 application/javascript
+2023-06-04 19:43:22.222 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 19:43:22.399 +02:00 [INF] Request finished in 177.0476ms 200 text/javascript; charset=UTF-8

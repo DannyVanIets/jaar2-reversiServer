@@ -1,0 +1,144 @@
+2023-06-04 12:48:38.703 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44339/Identity/Account/Logout?returnUrl=%2F application/x-www-form-urlencoded 225
+2023-06-04 12:48:38.842 +02:00 [INF] CORS policy execution failed.
+2023-06-04 12:48:38.843 +02:00 [INF] Request origin https://localhost:44339 does not have permission to access the resource.
+2023-06-04 12:48:38.933 +02:00 [INF] Executing endpoint '/Account/Logout'
+2023-06-04 12:48:39.006 +02:00 [INF] Route matched with {page = "/Account/Logout", area = "Identity", action = "", controller = ""}. Executing page /Account/Logout
+2023-06-04 12:48:39.100 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LogoutModel.OnPost - ModelState is "Valid"
+2023-06-04 12:48:39.139 +02:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2023-06-04 12:48:39.142 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 12:48:39.143 +02:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2023-06-04 12:48:39.144 +02:00 [INF] User logged out.
+2023-06-04 12:48:39.146 +02:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-06-04 12:48:39.149 +02:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2023-06-04 12:48:39.149 +02:00 [INF] Executed page /Account/Logout in 142.4939ms
+2023-06-04 12:48:39.150 +02:00 [INF] Executed endpoint '/Account/Logout'
+2023-06-04 12:48:39.155 +02:00 [INF] Request finished in 457.2592ms 302 
+2023-06-04 12:48:39.166 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/  
+2023-06-04 12:48:39.171 +02:00 [INF] Executing endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 12:48:39.173 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ReversiApp.Controllers.HomeController (ReversiApp).
+2023-06-04 12:48:39.175 +02:00 [INF] Executing ViewResult, running view Index.
+2023-06-04 12:48:39.248 +02:00 [INF] Executed ViewResult - view Index executed in 74.2866ms.
+2023-06-04 12:48:39.248 +02:00 [INF] Executed action ReversiApp.Controllers.HomeController.Index (ReversiApp) in 75.6748ms
+2023-06-04 12:48:39.249 +02:00 [INF] Executed endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 12:48:39.261 +02:00 [INF] Request finished in 95.1718ms 200 text/html; charset=utf-8
+2023-06-04 12:48:39.322 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 12:48:39.324 +02:00 [INF] Request finished in 1.4349ms 200 application/javascript; charset=utf-8
+2023-06-04 12:48:39.415 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 12:48:39.563 +02:00 [INF] Request finished in 147.8438ms 200 text/javascript; charset=UTF-8
+2023-06-04 12:48:42.206 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login  
+2023-06-04 12:48:42.247 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 12:48:42.275 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 12:48:42.282 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 12:48:42.289 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 12:48:42.291 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-06-04 12:48:42.303 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-06-04 12:48:42.303 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 12:48:42.508 +02:00 [INF] Executed page /Account/Login in 232.8341ms
+2023-06-04 12:48:42.508 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 12:48:42.519 +02:00 [INF] Request finished in 314.3677ms 200 text/html; charset=utf-8
+2023-06-04 12:48:42.595 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 12:48:42.596 +02:00 [INF] Request finished in 1.6837ms 200 application/javascript; charset=utf-8
+2023-06-04 12:48:42.697 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 12:48:42.800 +02:00 [INF] Request finished in 102.7411ms 200 text/javascript; charset=UTF-8
+2023-06-04 12:48:46.144 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44339/Identity/Account/Login application/x-www-form-urlencoded 859
+2023-06-04 12:48:46.150 +02:00 [INF] CORS policy execution failed.
+2023-06-04 12:48:46.151 +02:00 [INF] Request origin https://localhost:44339 does not have permission to access the resource.
+2023-06-04 12:48:46.153 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 12:48:46.155 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 12:48:46.187 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2023-06-04 12:48:47.726 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 12:48:47.741 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 12:48:47.805 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2023-06-04 12:48:48.157 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-06-04 12:48:48.285 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-06-04 12:48:48.295 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-06-04 12:48:48.315 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-06-04 12:48:48.333 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2023-06-04 12:48:48.347 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 12:48:48.350 +02:00 [INF] User logged in.
+2023-06-04 12:48:48.356 +02:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-06-04 12:48:48.362 +02:00 [INF] Executing LocalRedirectResult, redirecting to /Spel.
+2023-06-04 12:48:48.363 +02:00 [INF] Executed page /Account/Login in 2207.7084ms
+2023-06-04 12:48:48.363 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 12:48:48.370 +02:00 [INF] Request finished in 2226.3136ms 302 
+2023-06-04 12:48:48.382 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Spel  
+2023-06-04 12:48:48.387 +02:00 [INF] Executing endpoint 'ReversiApp.Controllers.SpelController.Index (ReversiApp)'
+2023-06-04 12:48:48.400 +02:00 [INF] Route matched with {action = "Index", controller = "Spel", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ReversiApp.Controllers.SpelController (ReversiApp).
+2023-06-04 12:48:48.622 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 12:48:48.637 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2023-06-04 12:48:48.660 +02:00 [INF] Executing RedirectResult, redirecting to /Spel/Game/1024.
+2023-06-04 12:48:48.661 +02:00 [INF] Executed action ReversiApp.Controllers.SpelController.Index (ReversiApp) in 260.266ms
+2023-06-04 12:48:48.661 +02:00 [INF] Executed endpoint 'ReversiApp.Controllers.SpelController.Index (ReversiApp)'
+2023-06-04 12:48:48.662 +02:00 [INF] Request finished in 280.4826ms 302 
+2023-06-04 12:48:48.671 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Spel/Game/1024  
+2023-06-04 12:48:48.674 +02:00 [INF] Executing endpoint 'ReversiApp.Controllers.SpelController.Game (ReversiApp)'
+2023-06-04 12:48:48.683 +02:00 [INF] Route matched with {action = "Game", controller = "Spel", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Game(System.Nullable`1[System.Int32]) on controller ReversiApp.Controllers.SpelController (ReversiApp).
+2023-06-04 12:48:48.692 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 12:48:48.896 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[ID], [t].[AandeBeurt], [t].[Omschrijving], [t].[SerializedBord], [t].[Status], [t].[Token], [t0].[Id], [t0].[AccessFailedCount], [t0].[ConcurrencyStamp], [t0].[Discriminator], [t0].[Email], [t0].[EmailConfirmed], [t0].[LockoutEnabled], [t0].[LockoutEnd], [t0].[NormalizedEmail], [t0].[NormalizedUserName], [t0].[PasswordHash], [t0].[PhoneNumber], [t0].[PhoneNumberConfirmed], [t0].[SecurityStamp], [t0].[TwoFactorEnabled], [t0].[UserName], [t0].[Archived], [t0].[Highscore], [t0].[Kleur], [t0].[SpelId], [t0].[Token]
+FROM (
+    SELECT TOP(1) [s].[ID], [s].[AandeBeurt], [s].[Omschrijving], [s].[SerializedBord], [s].[Status], [s].[Token]
+    FROM [Spel] AS [s]
+    WHERE [s].[ID] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Discriminator] = N'Speler'
+) AS [t0] ON [t].[ID] = [t0].[SpelId]
+ORDER BY [t].[ID], [t0].[Id]
+2023-06-04 12:48:49.067 +02:00 [INF] Executing ViewResult, running view Game.
+2023-06-04 12:48:49.119 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2023-06-04 12:48:49.162 +02:00 [INF] Executed ViewResult - view Game executed in 97.4548ms.
+2023-06-04 12:48:49.162 +02:00 [INF] Executed action ReversiApp.Controllers.SpelController.Game (ReversiApp) in 478.9464ms
+2023-06-04 12:48:49.163 +02:00 [INF] Executed endpoint 'ReversiApp.Controllers.SpelController.Game (ReversiApp)'
+2023-06-04 12:48:49.170 +02:00 [INF] Request finished in 498.7129ms 200 text/html; charset=utf-8
+2023-06-04 12:48:49.215 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 12:48:49.217 +02:00 [INF] Request finished in 2.2436ms 200 application/javascript; charset=utf-8
+2023-06-04 12:48:49.264 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 12:48:49.360 +02:00 [INF] Request finished in 96.2877ms 200 text/javascript; charset=UTF-8
+2023-06-04 12:48:50.254 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login  
+2023-06-04 12:48:50.269 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 12:48:50.273 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 12:48:50.277 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 12:48:50.282 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 12:48:50.331 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-04 12:48:50.338 +02:00 [INF] Executed handler method OnGetAsync, returned result .
+2023-06-04 12:48:50.338 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2023-06-04 12:48:50.338 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 12:48:50.364 +02:00 [INF] Executed page /Account/Login in 90.279ms
+2023-06-04 12:48:50.364 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 12:48:50.374 +02:00 [INF] Request finished in 120.2322ms 200 text/html; charset=utf-8
+2023-06-04 12:48:50.420 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 12:48:50.421 +02:00 [INF] Request finished in 1.67ms 200 application/javascript; charset=utf-8

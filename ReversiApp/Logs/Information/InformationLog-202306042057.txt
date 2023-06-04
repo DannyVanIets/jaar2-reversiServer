@@ -1,0 +1,64 @@
+2023-06-04 20:57:13.896 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Manage/PersonalData  
+2023-06-04 20:57:13.939 +02:00 [INF] Authorization was successful.
+2023-06-04 20:57:13.940 +02:00 [INF] Executing endpoint '/Account/Manage/PersonalData'
+2023-06-04 20:57:13.946 +02:00 [INF] Route matched with {page = "/Account/Manage/PersonalData", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/PersonalData
+2023-06-04 20:57:13.946 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.PersonalDataModel.OnGet - ModelState is "Valid"
+2023-06-04 20:57:13.948 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 20:57:13.967 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-04 20:57:13.971 +02:00 [INF] Executed handler method OnGet, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 20:57:14.012 +02:00 [INF] Executed page /Account/Manage/PersonalData in 65.7102ms
+2023-06-04 20:57:14.016 +02:00 [INF] Executed endpoint '/Account/Manage/PersonalData'
+2023-06-04 20:57:14.022 +02:00 [INF] Request finished in 135.4426ms 200 text/html; charset=utf-8
+2023-06-04 20:57:14.046 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 20:57:14.047 +02:00 [INF] Request finished in 0.7486ms 200 application/javascript; charset=utf-8
+2023-06-04 20:57:14.125 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 20:57:14.278 +02:00 [INF] Request finished in 152.4399ms 200 text/javascript; charset=UTF-8
+2023-06-04 20:57:38.060 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/lib/bootstrap/dist/js/bootstrap.bundle.js.map  
+2023-06-04 20:57:38.191 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/lib/bootstrap/dist/css/bootstrap.css.map  
+2023-06-04 20:57:38.213 +02:00 [INF] Sending file. Request path: '/Identity/lib/bootstrap/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\lib\bootstrap\dist\js\bootstrap.bundle.js.map'
+2023-06-04 20:57:38.213 +02:00 [INF] Request finished in 153.2488ms 200 text/plain
+2023-06-04 20:57:38.219 +02:00 [INF] Sending file. Request path: '/Identity/lib/bootstrap/dist/css/bootstrap.css.map'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\lib\bootstrap\dist\css\bootstrap.css.map'
+2023-06-04 20:57:38.219 +02:00 [INF] Request finished in 32.1128ms 200 text/plain
+2023-06-04 20:57:51.238 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44339/Identity/Account/Logout?returnUrl=%2F application/x-www-form-urlencoded 225
+2023-06-04 20:57:51.243 +02:00 [INF] CORS policy execution failed.
+2023-06-04 20:57:51.243 +02:00 [INF] Request origin https://localhost:44339 does not have permission to access the resource.
+2023-06-04 20:57:51.262 +02:00 [INF] Executing endpoint '/Account/Logout'
+2023-06-04 20:57:51.275 +02:00 [INF] Route matched with {page = "/Account/Logout", area = "Identity", action = "", controller = ""}. Executing page /Account/Logout
+2023-06-04 20:57:51.283 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LogoutModel.OnPost - ModelState is "Valid"
+2023-06-04 20:57:51.292 +02:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2023-06-04 20:57:51.293 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 20:57:51.294 +02:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2023-06-04 20:57:51.294 +02:00 [INF] User logged out.
+2023-06-04 20:57:51.294 +02:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-06-04 20:57:51.294 +02:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2023-06-04 20:57:51.295 +02:00 [INF] Executed page /Account/Logout in 19.0338ms
+2023-06-04 20:57:51.295 +02:00 [INF] Executed endpoint '/Account/Logout'
+2023-06-04 20:57:51.296 +02:00 [INF] Request finished in 60.0839ms 302 
+2023-06-04 20:57:51.302 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/  
+2023-06-04 20:57:51.303 +02:00 [INF] Executing endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 20:57:51.303 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ReversiApp.Controllers.HomeController (ReversiApp).
+2023-06-04 20:57:51.304 +02:00 [INF] Executing ViewResult, running view Index.
+2023-06-04 20:57:51.320 +02:00 [INF] Executed ViewResult - view Index executed in 16.0164ms.
+2023-06-04 20:57:51.320 +02:00 [INF] Executed action ReversiApp.Controllers.HomeController.Index (ReversiApp) in 16.7025ms
+2023-06-04 20:57:51.320 +02:00 [INF] Executed endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 20:57:51.329 +02:00 [INF] Request finished in 27.4041ms 200 text/html; charset=utf-8
+2023-06-04 20:57:51.377 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 20:57:51.378 +02:00 [INF] Request finished in 1.5638ms 200 application/javascript; charset=utf-8
+2023-06-04 20:57:51.542 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 20:57:51.636 +02:00 [INF] Request finished in 93.7119ms 200 text/javascript; charset=UTF-8
+2023-06-04 20:57:54.057 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login  
+2023-06-04 20:57:54.062 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 20:57:54.063 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 20:57:54.066 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 20:57:54.068 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 20:57:54.068 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 20:57:54.093 +02:00 [INF] Executed page /Account/Login in 29.0619ms
+2023-06-04 20:57:54.093 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 20:57:54.106 +02:00 [INF] Request finished in 49.4638ms 200 text/html; charset=utf-8
+2023-06-04 20:57:54.209 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 20:57:54.217 +02:00 [INF] Request finished in 6.5011ms 200 application/javascript; charset=utf-8
+2023-06-04 20:57:54.283 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 20:57:54.362 +02:00 [INF] Request finished in 79.6566ms 200 text/javascript; charset=UTF-8

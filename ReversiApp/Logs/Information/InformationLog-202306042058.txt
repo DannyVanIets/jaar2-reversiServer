@@ -1,0 +1,199 @@
+2023-06-04 20:58:19.901 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login  
+2023-06-04 20:58:19.929 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 20:58:19.930 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 20:58:19.933 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 20:58:19.934 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 20:58:19.934 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 20:58:19.973 +02:00 [INF] Executed page /Account/Login in 42.5863ms
+2023-06-04 20:58:19.986 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 20:58:19.997 +02:00 [INF] Request finished in 95.7911ms 200 text/html; charset=utf-8
+2023-06-04 20:58:20.112 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/lib/bootstrap/dist/css/bootstrap.min.css  
+2023-06-04 20:58:20.118 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/dist/style.min.css  
+2023-06-04 20:58:20.118 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/lib/jquery/dist/jquery.min.js  
+2023-06-04 20:58:20.129 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/css/site.css  
+2023-06-04 20:58:20.132 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/dist/app.js  
+2023-06-04 20:58:20.139 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/js/site.js?v=H_cIsySpR-CcNcdVSPtsEhpurwCm8cwO18eKaiWu33g  
+2023-06-04 20:58:20.143 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/dist/vendor.js  
+2023-06-04 20:58:20.150 +02:00 [INF] Sending file. Request path: '/dist/style.min.css'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\dist\style.min.css'
+2023-06-04 20:58:20.150 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/dist/templates.js  
+2023-06-04 20:58:20.150 +02:00 [INF] Request finished in 32.3909ms 200 text/css
+2023-06-04 20:58:20.177 +02:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\js\site.js'
+2023-06-04 20:58:20.178 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/lib/bootstrap/dist/js/bootstrap.bundle.min.js  
+2023-06-04 20:58:20.178 +02:00 [INF] Request finished in 38.6205ms 200 application/javascript
+2023-06-04 20:58:20.178 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2023-06-04 20:58:20.178 +02:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\css\site.css'
+2023-06-04 20:58:20.178 +02:00 [INF] Sending file. Request path: '/dist/app.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\dist\app.js'
+2023-06-04 20:58:20.179 +02:00 [INF] Request finished in 50.8151ms 200 text/css
+2023-06-04 20:58:20.180 +02:00 [INF] Request finished in 50.0223ms 200 application/javascript
+2023-06-04 20:58:20.180 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 20:58:20.187 +02:00 [INF] Request finished in 7.341ms 200 application/javascript; charset=utf-8
+2023-06-04 20:58:20.186 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/lib/jquery-validation/dist/jquery.validate.js  
+2023-06-04 20:58:20.220 +02:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2023-06-04 20:58:20.220 +02:00 [INF] Request finished in 42.8909ms 200 application/javascript
+2023-06-04 20:58:20.231 +02:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\lib\jquery-validation\dist\jquery.validate.js'
+2023-06-04 20:58:20.232 +02:00 [INF] Request finished in 56.9086ms 200 application/javascript
+2023-06-04 20:58:20.236 +02:00 [INF] Sending file. Request path: '/dist/templates.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\dist\templates.js'
+2023-06-04 20:58:20.236 +02:00 [INF] Request finished in 86.5489ms 200 application/javascript
+2023-06-04 20:58:20.246 +02:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\lib\jquery\dist\jquery.min.js'
+2023-06-04 20:58:20.247 +02:00 [INF] Request finished in 128.989ms 200 application/javascript
+2023-06-04 20:58:20.269 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-06-04 20:58:20.271 +02:00 [INF] Request finished in 159.4365ms 200 text/css
+2023-06-04 20:58:20.329 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2023-06-04 20:58:20.330 +02:00 [INF] Request finished in 152.1147ms 200 application/javascript
+2023-06-04 20:58:20.367 +02:00 [INF] Sending file. Request path: '/dist/vendor.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\dist\vendor.js'
+2023-06-04 20:58:20.368 +02:00 [INF] Request finished in 224.4036ms 200 application/javascript
+2023-06-04 20:58:20.530 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 20:58:20.935 +02:00 [INF] Request finished in 433.5919ms 200 text/javascript; charset=UTF-8
+2023-06-04 20:58:21.335 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/lib/bootstrap/dist/css/bootstrap.min.css.map  
+2023-06-04 20:58:21.352 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map  
+2023-06-04 20:58:21.392 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map'
+2023-06-04 20:58:21.393 +02:00 [INF] Request finished in 41.2217ms 200 text/plain
+2023-06-04 20:58:21.454 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css.map'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map'
+2023-06-04 20:58:21.456 +02:00 [INF] Request finished in 120.3986ms 200 text/plain
+2023-06-04 20:58:24.482 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login  
+2023-06-04 20:58:24.485 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 20:58:24.486 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 20:58:24.489 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 20:58:24.490 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 20:58:24.491 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 20:58:24.528 +02:00 [INF] Executed page /Account/Login in 41.7937ms
+2023-06-04 20:58:24.529 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 20:58:24.546 +02:00 [INF] Request finished in 64.485ms 200 text/html; charset=utf-8
+2023-06-04 20:58:24.652 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/css/site.css  
+2023-06-04 20:58:24.654 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/dist/style.min.css  
+2023-06-04 20:58:24.653 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/lib/bootstrap/dist/css/bootstrap.min.css  
+2023-06-04 20:58:24.664 +02:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\css\site.css'
+2023-06-04 20:58:24.665 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/dist/app.js  
+2023-06-04 20:58:24.665 +02:00 [INF] Request finished in 12.8339ms 200 text/css
+2023-06-04 20:58:24.668 +02:00 [INF] Sending file. Request path: '/dist/app.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\dist\app.js'
+2023-06-04 20:58:24.668 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/dist/templates.js  
+2023-06-04 20:58:24.669 +02:00 [INF] Request finished in 4.0391ms 200 application/javascript
+2023-06-04 20:58:24.670 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/dist/vendor.js  
+2023-06-04 20:58:24.670 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2023-06-04 20:58:24.670 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/lib/jquery/dist/jquery.min.js  
+2023-06-04 20:58:24.670 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/lib/jquery-validation/dist/jquery.validate.js  
+2023-06-04 20:58:24.671 +02:00 [INF] Sending file. Request path: '/dist/templates.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\dist\templates.js'
+2023-06-04 20:58:24.671 +02:00 [INF] Request finished in 2.9326ms 200 application/javascript
+2023-06-04 20:58:24.680 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/js/site.js?v=H_cIsySpR-CcNcdVSPtsEhpurwCm8cwO18eKaiWu33g  
+2023-06-04 20:58:24.692 +02:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2023-06-04 20:58:24.692 +02:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\js\site.js'
+2023-06-04 20:58:24.692 +02:00 [INF] Request finished in 13.5882ms 200 application/javascript
+2023-06-04 20:58:24.698 +02:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\lib\jquery-validation\dist\jquery.validate.js'
+2023-06-04 20:58:24.698 +02:00 [INF] Request finished in 28.292ms 200 application/javascript
+2023-06-04 20:58:24.699 +02:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\lib\jquery\dist\jquery.min.js'
+2023-06-04 20:58:24.699 +02:00 [INF] Request finished in 29.2596ms 200 application/javascript
+2023-06-04 20:58:24.699 +02:00 [INF] Request finished in 29.3191ms 200 application/javascript
+2023-06-04 20:58:24.700 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-06-04 20:58:24.701 +02:00 [INF] Request finished in 47.2623ms 200 text/css
+2023-06-04 20:58:24.731 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 20:58:24.734 +02:00 [INF] Request finished in 2.6699ms 200 application/javascript; charset=utf-8
+2023-06-04 20:58:24.746 +02:00 [INF] Sending file. Request path: '/dist/style.min.css'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\dist\style.min.css'
+2023-06-04 20:58:24.746 +02:00 [INF] Request finished in 92.8192ms 200 text/css
+2023-06-04 20:58:24.761 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/lib/bootstrap/dist/js/bootstrap.bundle.min.js  
+2023-06-04 20:58:24.762 +02:00 [INF] Sending file. Request path: '/dist/vendor.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\dist\vendor.js'
+2023-06-04 20:58:24.831 +02:00 [INF] Request finished in 93.5547ms 200 application/javascript
+2023-06-04 20:58:24.880 +02:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2023-06-04 20:58:24.881 +02:00 [INF] Request finished in 119.6208ms 200 application/javascript
+2023-06-04 20:58:25.104 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 20:58:25.364 +02:00 [INF] Request finished in 259.5639ms 200 text/javascript; charset=UTF-8
+2023-06-04 20:58:27.346 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/favicon.ico  
+2023-06-04 20:58:27.396 +02:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\code\git\jaar2-reversiServer\ReversiApp\wwwroot\favicon.ico'
+2023-06-04 20:58:27.397 +02:00 [INF] Request finished in 53.441ms 200 image/x-icon
+2023-06-04 20:58:37.677 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/  
+2023-06-04 20:58:37.692 +02:00 [INF] Executing endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 20:58:37.694 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ReversiApp.Controllers.HomeController (ReversiApp).
+2023-06-04 20:58:37.698 +02:00 [INF] Executing ViewResult, running view Index.
+2023-06-04 20:58:37.714 +02:00 [INF] Executed ViewResult - view Index executed in 16.9959ms.
+2023-06-04 20:58:37.714 +02:00 [INF] Executed action ReversiApp.Controllers.HomeController.Index (ReversiApp) in 19.2376ms
+2023-06-04 20:58:37.714 +02:00 [INF] Executed endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 20:58:37.724 +02:00 [INF] Request finished in 46.4676ms 200 text/html; charset=utf-8
+2023-06-04 20:58:38.051 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 20:58:38.052 +02:00 [INF] Request finished in 0.9777ms 200 application/javascript; charset=utf-8
+2023-06-04 20:58:38.166 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 20:58:38.262 +02:00 [INF] Request finished in 95.4432ms 200 text/javascript; charset=UTF-8
+2023-06-04 20:58:39.699 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login  
+2023-06-04 20:58:39.701 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 20:58:39.703 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 20:58:39.705 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 20:58:39.706 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 20:58:39.707 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 20:58:39.743 +02:00 [INF] Executed page /Account/Login in 40.1597ms
+2023-06-04 20:58:39.743 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 20:58:39.749 +02:00 [INF] Request finished in 50.5318ms 200 text/html; charset=utf-8
+2023-06-04 20:58:39.803 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 20:58:39.806 +02:00 [INF] Request finished in 2.923ms 200 application/javascript; charset=utf-8
+2023-06-04 20:58:39.866 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 20:58:40.145 +02:00 [INF] Request finished in 279.0622ms 200 text/javascript; charset=UTF-8
+2023-06-04 20:58:50.973 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44339/Identity/Account/Login application/x-www-form-urlencoded 859
+2023-06-04 20:58:50.975 +02:00 [INF] CORS policy execution failed.
+2023-06-04 20:58:50.975 +02:00 [INF] Request origin https://localhost:44339 does not have permission to access the resource.
+2023-06-04 20:58:50.976 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 20:58:50.976 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 20:58:50.980 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2023-06-04 20:58:51.090 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 20:58:51.097 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 20:58:51.108 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2023-06-04 20:58:51.147 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-06-04 20:58:51.159 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-06-04 20:58:51.164 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-06-04 20:58:51.176 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-06-04 20:58:51.178 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2023-06-04 20:58:51.184 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 20:58:51.184 +02:00 [INF] User with the username DeGroteEngeBaas logged in.
+2023-06-04 20:58:51.185 +02:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2023-06-04 20:58:51.186 +02:00 [INF] Executing LocalRedirectResult, redirecting to /Spel.
+2023-06-04 20:58:51.186 +02:00 [INF] Executed page /Account/Login in 209.8585ms
+2023-06-04 20:58:51.187 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 20:58:51.188 +02:00 [INF] Request finished in 215.5715ms 302 
+2023-06-04 20:58:51.195 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Spel  
+2023-06-04 20:58:51.198 +02:00 [INF] Executing endpoint 'ReversiApp.Controllers.SpelController.Index (ReversiApp)'
+2023-06-04 20:58:51.198 +02:00 [INF] Route matched with {action = "Index", controller = "Spel", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller ReversiApp.Controllers.SpelController (ReversiApp).
+2023-06-04 20:58:51.199 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 20:58:51.206 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2023-06-04 20:58:51.223 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[ID], [s].[AandeBeurt], [s].[Omschrijving], [s].[SerializedBord], [s].[Status], [s].[Token], [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Discriminator], [t].[Email], [t].[EmailConfirmed], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t].[Archived], [t].[Highscore], [t].[Kleur], [t].[SpelId], [t].[Token]
+FROM [Spel] AS [s]
+LEFT JOIN (
+    SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+    FROM [AspNetUsers] AS [a]
+    WHERE [a].[Discriminator] = N'Speler'
+) AS [t] ON [s].[ID] = [t].[SpelId]
+WHERE ((
+    SELECT COUNT(*)
+    FROM [AspNetUsers] AS [a0]
+    WHERE ([a0].[Discriminator] = N'Speler') AND ([s].[ID] = [a0].[SpelId])) < 2) AND ([s].[Status] = 0)
+ORDER BY [s].[ID], [t].[Id]
+2023-06-04 20:58:51.224 +02:00 [INF] Executing ViewResult, running view Index.
+2023-06-04 20:58:51.242 +02:00 [INF] Executed ViewResult - view Index executed in 18.0497ms.
+2023-06-04 20:58:51.242 +02:00 [INF] Executed action ReversiApp.Controllers.SpelController.Index (ReversiApp) in 44.3196ms
+2023-06-04 20:58:51.242 +02:00 [INF] Executed endpoint 'ReversiApp.Controllers.SpelController.Index (ReversiApp)'
+2023-06-04 20:58:51.247 +02:00 [INF] Request finished in 52.5407ms 200 text/html; charset=utf-8
+2023-06-04 20:58:51.324 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 20:58:51.326 +02:00 [INF] Request finished in 2.0243ms 200 application/javascript; charset=utf-8
+2023-06-04 20:58:51.460 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 20:58:51.567 +02:00 [INF] Request finished in 106.0631ms 200 text/javascript; charset=UTF-8

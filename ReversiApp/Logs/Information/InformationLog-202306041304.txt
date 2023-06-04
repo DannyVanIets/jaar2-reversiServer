@@ -1,0 +1,4 @@
+2023-06-04 13:04:51.359 +02:00 [INF] Application is starting up...
+2023-06-04 13:04:51.530 +02:00 [WRN] This test message can be safely ignored!
+2023-06-04 13:04:54.146 +02:00 [INF] User profile is available. Using 'C:\Users\Danny\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-04 13:04:57.462 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None

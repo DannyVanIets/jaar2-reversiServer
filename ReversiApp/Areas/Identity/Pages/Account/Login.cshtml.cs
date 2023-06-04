@@ -57,13 +57,13 @@ namespace ReversiApp.Areas.Identity.Pages.Account
             public bool RememberMe { get; set; }
         }
 
-        public async Task OnGetAsync(string returnUrl = null)
+        public async Task<IActionResult> OnGetAsync(string returnUrl = null)
         {
             // User already logged in? We don't want that! Send them back.
             var user = await _userManager.GetUserAsync(User);
             if (user != null)
             {
-                return;
+                return RedirectToPage("Home");
             }
 
             if (!string.IsNullOrEmpty(ErrorMessage))
@@ -79,6 +79,8 @@ namespace ReversiApp.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
             ReturnUrl = returnUrl;
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
@@ -110,8 +112,6 @@ namespace ReversiApp.Areas.Identity.Pages.Account
 
                 if (resultEmail != null)
                 {
-                    // This doesn't count login failures towards account lockout
-                    // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                     // This uses the username to login, so it's a roundabout solution. E-mail just makes it more secure.
                     var result = await _signInManager.PasswordSignInAsync(resultEmail.UserName, Input.Password, Input.RememberMe, true);
 
@@ -120,7 +120,7 @@ namespace ReversiApp.Areas.Identity.Pages.Account
                         Speler user = await _userManager.FindByEmailAsync(Input.Email);
                         if (!user.Archived)
                         {
-                            _logger.LogInformation("User logged in.");
+                            _logger.LogInformation("User with the username " + user.UserName + " logged in.");
                             return LocalRedirect("/Spel");
                         }
                         else
@@ -129,7 +129,6 @@ namespace ReversiApp.Areas.Identity.Pages.Account
                             return Page();
                         }
                     }
-                    // Test if this works.
                     else if (result.RequiresTwoFactor)
                     {
                         return RedirectToPage("./LoginWith2fa", new { ReturnUrl = "/Spel", RememberMe = Input.RememberMe });

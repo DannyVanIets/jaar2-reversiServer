@@ -1,0 +1,212 @@
+2023-06-04 01:53:01.105 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Manage/TwoFactorAuthentication  
+2023-06-04 01:53:01.116 +02:00 [INF] Authorization was successful.
+2023-06-04 01:53:01.117 +02:00 [INF] Executing endpoint '/Account/Manage/TwoFactorAuthentication'
+2023-06-04 01:53:01.117 +02:00 [INF] Route matched with {page = "/Account/Manage/TwoFactorAuthentication", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/TwoFactorAuthentication
+2023-06-04 01:53:01.121 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.OnGet - ModelState is "Valid"
+2023-06-04 01:53:01.371 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 01:53:01.386 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-04 01:53:01.401 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-06-04 01:53:01.414 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-06-04 01:53:01.416 +02:00 [INF] Executed handler method OnGet, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 01:53:01.449 +02:00 [INF] Executed page /Account/Manage/TwoFactorAuthentication in 331.998ms
+2023-06-04 01:53:01.450 +02:00 [INF] Executed endpoint '/Account/Manage/TwoFactorAuthentication'
+2023-06-04 01:53:01.486 +02:00 [INF] Request finished in 381.0337ms 200 text/html; charset=utf-8
+2023-06-04 01:53:01.518 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 01:53:01.519 +02:00 [INF] Request finished in 0.8465ms 200 application/javascript; charset=utf-8
+2023-06-04 01:53:01.576 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 01:53:01.709 +02:00 [INF] Request finished in 132.6351ms 200 text/javascript; charset=UTF-8
+2023-06-04 01:53:04.313 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Manage/Disable2fa  
+2023-06-04 01:53:04.326 +02:00 [INF] Authorization was successful.
+2023-06-04 01:53:04.326 +02:00 [INF] Executing endpoint '/Account/Manage/Disable2fa'
+2023-06-04 01:53:04.335 +02:00 [INF] Route matched with {page = "/Account/Manage/Disable2fa", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/Disable2fa
+2023-06-04 01:53:04.338 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.Disable2faModel.OnGet - ModelState is "Valid"
+2023-06-04 01:53:04.371 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 01:53:04.379 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-04 01:53:04.381 +02:00 [INF] Executed handler method OnGet, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 01:53:04.415 +02:00 [INF] Executed page /Account/Manage/Disable2fa in 79.3525ms
+2023-06-04 01:53:04.415 +02:00 [INF] Executed endpoint '/Account/Manage/Disable2fa'
+2023-06-04 01:53:04.420 +02:00 [INF] Request finished in 107.27ms 200 text/html; charset=utf-8
+2023-06-04 01:53:04.450 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 01:53:04.450 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 01:53:04.450 +02:00 [INF] Request finished in 0.745ms 200 application/javascript; charset=utf-8
+2023-06-04 01:53:04.538 +02:00 [INF] Request finished in 88.1619ms 200 text/javascript; charset=UTF-8
+2023-06-04 01:53:05.576 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44339/Identity/Account/Manage/Disable2fa application/x-www-form-urlencoded 225
+2023-06-04 01:53:05.578 +02:00 [INF] CORS policy execution failed.
+2023-06-04 01:53:05.578 +02:00 [INF] Request origin https://localhost:44339 does not have permission to access the resource.
+2023-06-04 01:53:05.582 +02:00 [INF] Authorization was successful.
+2023-06-04 01:53:05.582 +02:00 [INF] Executing endpoint '/Account/Manage/Disable2fa'
+2023-06-04 01:53:05.582 +02:00 [INF] Route matched with {page = "/Account/Manage/Disable2fa", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/Disable2fa
+2023-06-04 01:53:05.585 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.Disable2faModel.OnPostAsync - ModelState is "Valid"
+2023-06-04 01:53:05.590 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 01:53:05.601 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-04 01:53:05.615 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2023-06-04 01:53:05.623 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 01:53:05.642 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p20='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p21='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p15='?' (DbType = Boolean), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Discriminator] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [LockoutEnabled] = @p5, [LockoutEnd] = @p6, [NormalizedEmail] = @p7, [NormalizedUserName] = @p8, [PasswordHash] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14, [Archived] = @p15, [Highscore] = @p16, [Kleur] = @p17, [SpelId] = @p18, [Token] = @p19
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+SELECT @@ROWCOUNT;
+2023-06-04 01:53:05.645 +02:00 [INF] User with ID 'e98f35c6-ea47-4353-a0f9-aca03d64ef7b' has disabled 2fa.
+2023-06-04 01:53:05.645 +02:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.RedirectToPageResult.
+2023-06-04 01:53:05.646 +02:00 [INF] Executing RedirectToPageResult, redirecting to ./TwoFactorAuthentication.
+2023-06-04 01:53:05.647 +02:00 [INF] Executed page /Account/Manage/Disable2fa in 65.2413ms
+2023-06-04 01:53:05.648 +02:00 [INF] Executed endpoint '/Account/Manage/Disable2fa'
+2023-06-04 01:53:05.649 +02:00 [INF] Request finished in 73.3785ms 302 
+2023-06-04 01:53:05.659 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Manage/TwoFactorAuthentication  
+2023-06-04 01:53:05.663 +02:00 [INF] Authorization was successful.
+2023-06-04 01:53:05.663 +02:00 [INF] Executing endpoint '/Account/Manage/TwoFactorAuthentication'
+2023-06-04 01:53:05.663 +02:00 [INF] Route matched with {page = "/Account/Manage/TwoFactorAuthentication", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/TwoFactorAuthentication
+2023-06-04 01:53:05.664 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.OnGet - ModelState is "Valid"
+2023-06-04 01:53:05.666 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 01:53:05.678 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-04 01:53:05.686 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-06-04 01:53:05.693 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-06-04 01:53:05.693 +02:00 [INF] Executed handler method OnGet, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 01:53:05.710 +02:00 [INF] Executed page /Account/Manage/TwoFactorAuthentication in 47.0589ms
+2023-06-04 01:53:05.711 +02:00 [INF] Executed endpoint '/Account/Manage/TwoFactorAuthentication'
+2023-06-04 01:53:05.717 +02:00 [INF] Request finished in 58.4983ms 200 text/html; charset=utf-8
+2023-06-04 01:53:05.776 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 01:53:05.776 +02:00 [INF] Request finished in 0.9326ms 200 application/javascript; charset=utf-8
+2023-06-04 01:53:05.777 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 01:53:05.871 +02:00 [INF] Request finished in 95.3481ms 200 text/javascript; charset=UTF-8
+2023-06-04 01:53:08.871 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Manage/ResetAuthenticator  
+2023-06-04 01:53:08.878 +02:00 [INF] Authorization was successful.
+2023-06-04 01:53:08.879 +02:00 [INF] Executing endpoint '/Account/Manage/ResetAuthenticator'
+2023-06-04 01:53:08.884 +02:00 [INF] Route matched with {page = "/Account/Manage/ResetAuthenticator", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/ResetAuthenticator
+2023-06-04 01:53:08.888 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel.OnGet - ModelState is "Valid"
+2023-06-04 01:53:08.891 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 01:53:08.897 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-04 01:53:08.898 +02:00 [INF] Executed handler method OnGet, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 01:53:09.018 +02:00 [INF] Executed page /Account/Manage/ResetAuthenticator in 133.063ms
+2023-06-04 01:53:09.018 +02:00 [INF] Executed endpoint '/Account/Manage/ResetAuthenticator'
+2023-06-04 01:53:09.021 +02:00 [INF] Request finished in 150.899ms 200 text/html; charset=utf-8
+2023-06-04 01:53:09.041 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 01:53:09.041 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 01:53:09.041 +02:00 [INF] Request finished in 0.5456ms 200 application/javascript; charset=utf-8
+2023-06-04 01:53:09.132 +02:00 [INF] Request finished in 91.4753ms 200 text/javascript; charset=UTF-8
+2023-06-04 01:53:10.104 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44339/Identity/Account/Manage/ResetAuthenticator application/x-www-form-urlencoded 225
+2023-06-04 01:53:10.108 +02:00 [INF] CORS policy execution failed.
+2023-06-04 01:53:10.109 +02:00 [INF] Request origin https://localhost:44339 does not have permission to access the resource.
+2023-06-04 01:53:10.113 +02:00 [INF] Authorization was successful.
+2023-06-04 01:53:10.113 +02:00 [INF] Executing endpoint '/Account/Manage/ResetAuthenticator'
+2023-06-04 01:53:10.113 +02:00 [INF] Route matched with {page = "/Account/Manage/ResetAuthenticator", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/ResetAuthenticator
+2023-06-04 01:53:10.115 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel.OnPostAsync - ModelState is "Valid"
+2023-06-04 01:53:10.119 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 01:53:10.132 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-04 01:53:10.141 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2023-06-04 01:53:10.145 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 01:53:10.157 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@p20='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p21='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p15='?' (DbType = Boolean), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Discriminator] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [LockoutEnabled] = @p5, [LockoutEnd] = @p6, [NormalizedEmail] = @p7, [NormalizedUserName] = @p8, [PasswordHash] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14, [Archived] = @p15, [Highscore] = @p16, [Kleur] = @p17, [SpelId] = @p18, [Token] = @p19
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+SELECT @@ROWCOUNT;
+2023-06-04 01:53:10.163 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-06-04 01:53:10.169 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedUserName] = @__normalizedUserName_0)
+2023-06-04 01:53:10.172 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[NormalizedEmail] = @__normalizedEmail_0)
+2023-06-04 01:53:10.179 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 450), @p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUserTokens] SET [Value] = @p0
+WHERE [UserId] = @p1 AND [LoginProvider] = @p2 AND [Name] = @p3;
+SELECT @@ROWCOUNT;
+2023-06-04 01:53:10.186 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@p20='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p21='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTimeOffset), @p7='?' (Size = 256), @p8='?' (Size = 256), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (DbType = Boolean), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 256), @p15='?' (DbType = Boolean), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Discriminator] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [LockoutEnabled] = @p5, [LockoutEnd] = @p6, [NormalizedEmail] = @p7, [NormalizedUserName] = @p8, [PasswordHash] = @p9, [PhoneNumber] = @p10, [PhoneNumberConfirmed] = @p11, [SecurityStamp] = @p12, [TwoFactorEnabled] = @p13, [UserName] = @p14, [Archived] = @p15, [Highscore] = @p16, [Kleur] = @p17, [SpelId] = @p18, [Token] = @p19
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+SELECT @@ROWCOUNT;
+2023-06-04 01:53:10.187 +02:00 [INF] User with ID 'e98f35c6-ea47-4353-a0f9-aca03d64ef7b' has reset their authentication app key.
+2023-06-04 01:53:10.192 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-06-04 01:53:10.197 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-06-04 01:53:10.201 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-06-04 01:53:10.205 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-06-04 01:53:10.206 +02:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2023-06-04 01:53:10.207 +02:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.RedirectToPageResult.
+2023-06-04 01:53:10.208 +02:00 [INF] Executing RedirectToPageResult, redirecting to ./EnableAuthenticator.
+2023-06-04 01:53:10.208 +02:00 [INF] Executed page /Account/Manage/ResetAuthenticator in 94.9511ms
+2023-06-04 01:53:10.208 +02:00 [INF] Executed endpoint '/Account/Manage/ResetAuthenticator'
+2023-06-04 01:53:10.210 +02:00 [INF] Request finished in 105.9344ms 302 
+2023-06-04 01:53:10.215 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Manage/EnableAuthenticator  
+2023-06-04 01:53:10.217 +02:00 [INF] Authorization was successful.
+2023-06-04 01:53:10.217 +02:00 [INF] Executing endpoint '/Account/Manage/EnableAuthenticator'
+2023-06-04 01:53:10.218 +02:00 [INF] Route matched with {page = "/Account/Manage/EnableAuthenticator", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/EnableAuthenticator
+2023-06-04 01:53:10.218 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 01:53:10.219 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-04 01:53:10.225 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-04 01:53:10.229 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450), @__p_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[LoginProvider], [a].[Name], [a].[Value]
+FROM [AspNetUserTokens] AS [a]
+WHERE (([a].[UserId] = @__p_0) AND ([a].[LoginProvider] = @__p_1)) AND ([a].[Name] = @__p_2)
+2023-06-04 01:53:10.230 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 01:53:10.240 +02:00 [INF] Executed page /Account/Manage/EnableAuthenticator in 22.2066ms
+2023-06-04 01:53:10.240 +02:00 [INF] Executed endpoint '/Account/Manage/EnableAuthenticator'
+2023-06-04 01:53:10.244 +02:00 [INF] Request finished in 29.4949ms 200 text/html; charset=utf-8
+2023-06-04 01:53:10.275 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 01:53:10.275 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 01:53:10.276 +02:00 [INF] Request finished in 0.7619ms 200 application/javascript; charset=utf-8
+2023-06-04 01:53:10.382 +02:00 [INF] Request finished in 106.9641ms 200 text/javascript; charset=UTF-8

@@ -1,0 +1,5 @@
+2023-05-30 14:35:27.189 +02:00 [FTL] Een gebruiker met de naam  kon niet worden gevonden!
+System.ArgumentNullException: Value cannot be null. (Parameter 'userName')
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByNameAsync(String userName)
+   at ReversiApp.Controllers.SpelController.Index() in D:\code\git\jaar2-reversiServer\ReversiApp\Controllers\SpelController.cs:line 37
+2023-05-30 14:35:52.055 +02:00 [WRN] This test message can be safely ignored!

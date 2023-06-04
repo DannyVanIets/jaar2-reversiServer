@@ -1,0 +1,38 @@
+2023-06-04 19:45:49.544 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/?callback=alert(1)  
+2023-06-04 19:45:49.696 +02:00 [INF] Executing endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 19:45:49.723 +02:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ReversiApp.Controllers.HomeController (ReversiApp).
+2023-06-04 19:45:49.728 +02:00 [INF] Executing ViewResult, running view Index.
+2023-06-04 19:45:49.853 +02:00 [INF] Executed ViewResult - view Index executed in 126.2835ms.
+2023-06-04 19:45:49.854 +02:00 [INF] Executed action ReversiApp.Controllers.HomeController.Index (ReversiApp) in 130.3012ms
+2023-06-04 19:45:49.857 +02:00 [INF] Executed endpoint 'ReversiApp.Controllers.HomeController.Index (ReversiApp)'
+2023-06-04 19:45:49.887 +02:00 [INF] Request finished in 349.7763ms 200 text/html; charset=utf-8
+2023-06-04 19:45:50.002 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 19:45:50.003 +02:00 [INF] Request finished in 1.3504ms 200 application/javascript; charset=utf-8
+2023-06-04 19:45:50.068 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 19:45:50.221 +02:00 [INF] Request finished in 153.5126ms 200 text/javascript; charset=UTF-8
+2023-06-04 19:45:53.392 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login  
+2023-06-04 19:45:53.440 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 19:45:53.530 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 19:45:53.593 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 19:45:53.613 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 19:45:53.618 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 19:45:53.806 +02:00 [INF] Executed page /Account/Login in 275.8892ms
+2023-06-04 19:45:53.807 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 19:45:53.817 +02:00 [INF] Request finished in 425.174ms 200 text/html; charset=utf-8
+2023-06-04 19:45:53.886 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 19:45:53.887 +02:00 [INF] Request finished in 1.0016ms 200 application/javascript; charset=utf-8
+2023-06-04 19:45:53.983 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 19:45:54.173 +02:00 [INF] Request finished in 189.3469ms 200 text/javascript; charset=UTF-8
+2023-06-04 19:45:56.498 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Login?callback=alert(1)  
+2023-06-04 19:45:56.527 +02:00 [INF] Executing endpoint '/Account/Login'
+2023-06-04 19:45:56.530 +02:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2023-06-04 19:45:56.542 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2023-06-04 19:45:56.543 +02:00 [INF] AuthenticationScheme: Identity.External signed out.
+2023-06-04 19:45:56.545 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-04 19:45:56.588 +02:00 [INF] Executed page /Account/Login in 57.4958ms
+2023-06-04 19:45:56.588 +02:00 [INF] Executed endpoint '/Account/Login'
+2023-06-04 19:45:56.598 +02:00 [INF] Request finished in 101.3474ms 200 text/html; charset=utf-8
+2023-06-04 19:45:56.672 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-04 19:45:56.673 +02:00 [INF] Request finished in 1.0867ms 200 application/javascript; charset=utf-8
+2023-06-04 19:45:56.741 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-04 19:45:56.911 +02:00 [INF] Request finished in 169.5304ms 200 text/javascript; charset=UTF-8

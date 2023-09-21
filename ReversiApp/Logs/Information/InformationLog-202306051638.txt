@@ -1,0 +1,51 @@
+2023-06-05 16:38:20.144 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Manage  
+2023-06-05 16:38:20.799 +02:00 [INF] Authorization was successful.
+2023-06-05 16:38:20.799 +02:00 [INF] Executing endpoint '/Account/Manage/Index'
+2023-06-05 16:38:21.613 +02:00 [INF] Route matched with {page = "/Account/Manage/Index", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/Index
+2023-06-05 16:38:21.615 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.IndexModel.OnGetAsync - ModelState is "Valid"
+2023-06-05 16:38:21.620 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-05 16:38:21.667 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-05 16:38:21.669 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-05 16:38:21.806 +02:00 [INF] Executed page /Account/Manage/Index in 193.0377ms
+2023-06-05 16:38:21.806 +02:00 [INF] Executed endpoint '/Account/Manage/Index'
+2023-06-05 16:38:21.812 +02:00 [INF] Request finished in 1669.9594ms 200 text/html; charset=utf-8
+2023-06-05 16:38:21.851 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/lib/bootstrap/dist/css/bootstrap.css  
+2023-06-05 16:38:21.851 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/css/site.css  
+2023-06-05 16:38:21.852 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/lib/jquery/dist/jquery.js  
+2023-06-05 16:38:21.855 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2023-06-05 16:38:21.861 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2023-06-05 16:38:21.862 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-05 16:38:21.865 +02:00 [INF] Request finished in 3.2543ms 200 application/javascript; charset=utf-8
+2023-06-05 16:38:21.883 +02:00 [INF] Sending file. Request path: '/Identity/js/site.js'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\js\site.js'
+2023-06-05 16:38:21.883 +02:00 [INF] Request finished in 22.132ms 200 application/javascript
+2023-06-05 16:38:21.888 +02:00 [INF] Sending file. Request path: '/Identity/css/site.css'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\css\site.css'
+2023-06-05 16:38:21.888 +02:00 [INF] Request finished in 37.1768ms 200 text/css
+2023-06-05 16:38:21.922 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-05 16:38:21.971 +02:00 [INF] Sending file. Request path: '/Identity/lib/bootstrap/dist/js/bootstrap.bundle.js'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\lib\bootstrap\dist\js\bootstrap.bundle.js'
+2023-06-05 16:38:21.971 +02:00 [INF] Sending file. Request path: '/Identity/lib/jquery/dist/jquery.js'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\lib\jquery\dist\jquery.js'
+2023-06-05 16:38:21.971 +02:00 [INF] Sending file. Request path: '/Identity/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\Users\Danny\.nuget\packages\microsoft.aspnetcore.identity.ui\3.1.5\staticwebassets\V4\lib\bootstrap\dist\css\bootstrap.css'
+2023-06-05 16:38:21.971 +02:00 [INF] Request finished in 116.2948ms 200 application/javascript
+2023-06-05 16:38:21.971 +02:00 [INF] Request finished in 119.6714ms 200 application/javascript
+2023-06-05 16:38:21.972 +02:00 [INF] Request finished in 120.7604ms 200 text/css
+2023-06-05 16:38:22.014 +02:00 [INF] Request finished in 91.9313ms 200 text/javascript; charset=UTF-8
+2023-06-05 16:38:24.681 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/Identity/Account/Manage/ChangePassword  
+2023-06-05 16:38:24.689 +02:00 [INF] Authorization was successful.
+2023-06-05 16:38:24.689 +02:00 [INF] Executing endpoint '/Account/Manage/ChangePassword'
+2023-06-05 16:38:24.695 +02:00 [INF] Route matched with {page = "/Account/Manage/ChangePassword", area = "Identity", action = "", controller = ""}. Executing page /Account/Manage/ChangePassword
+2023-06-05 16:38:24.696 +02:00 [INF] Executing handler method ReversiApp.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.OnGetAsync - ModelState is "Valid"
+2023-06-05 16:38:24.893 +02:00 [INF] Entity Framework Core 3.1.5 initialized 'ReversiContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2023-06-05 16:38:24.900 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [a].[Archived], [a].[Highscore], [a].[Kleur], [a].[SpelId], [a].[Token]
+FROM [AspNetUsers] AS [a]
+WHERE ([a].[Discriminator] = N'Speler') AND ([a].[Id] = @__p_0)
+2023-06-05 16:38:24.901 +02:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2023-06-05 16:38:24.944 +02:00 [INF] Executed page /Account/Manage/ChangePassword in 248.4909ms
+2023-06-05 16:38:24.944 +02:00 [INF] Executed endpoint '/Account/Manage/ChangePassword'
+2023-06-05 16:38:24.949 +02:00 [INF] Request finished in 267.961ms 200 text/html; charset=utf-8
+2023-06-05 16:38:24.971 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_framework/aspnetcore-browser-refresh.js  
+2023-06-05 16:38:24.972 +02:00 [INF] Request finished in 1.0948ms 200 application/javascript; charset=utf-8
+2023-06-05 16:38:25.009 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/_vs/browserLink  
+2023-06-05 16:38:25.079 +02:00 [INF] Request finished in 70.1041ms 200 text/javascript; charset=UTF-8

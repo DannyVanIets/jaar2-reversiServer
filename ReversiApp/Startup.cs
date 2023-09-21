@@ -124,7 +124,6 @@ namespace ReversiApp
                 context.Response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
                 context.Response.Headers.Add("X-Content-Type-Options", "nosniff");
                 context.Response.Headers.Add("X-XSS-Protection", "0");
-                context.Response.Headers.Add("Content-Disposition", "attachment; filename='api.json'");
                 context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
                 context.Response.Headers.Add("Referrer-Policy", "same-origin");
                 context.Response.Headers.Add("Content-Security-Policy",
